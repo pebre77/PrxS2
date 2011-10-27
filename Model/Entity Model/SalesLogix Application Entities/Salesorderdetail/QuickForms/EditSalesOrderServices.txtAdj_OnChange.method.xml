@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="f1e8bbb5-b892-49cf-8847-8b1dfdd9efbe" lastModifiedUtc="2011-10-07T17:26:57.68236Z" name="txtAdj_OnChange" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="EditSalesOrderServices">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="531b00e3-3a32-495b-8cc0-5cb1b62a450e" paramName="form" sequence="0" paramType="IEditSalesOrderServices" />
+    <OrmEntityMethodParam id="fa3e120d-50b3-4aa4-b323-798b4bd0fcf9" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="3e39b805-73b5-4b9c-87d5-f27e185268b2" lastModifiedUtc="2011-10-07T17:26:55.3189616Z" targetType="Sage.BusinessRules.CodeSnippets.EditSalesOrderServicesEventHandlers, Sage.SnippetLibrary.CSharp" targetMethod="txtAdj_OnChangeStep" active="true" codeSnippetId="791e391d-ca6b-4a4f-b79d-31d4f365a918">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

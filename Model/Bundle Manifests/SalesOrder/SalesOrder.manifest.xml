@@ -1,0 +1,1927 @@
+<?xml version="1.0"?>
+<BundleManifest id="9a850a9d-7ad0-409e-8372-2cc3f981e9fe">
+  <bundleProperties>
+    <name>SalesOrder</name>
+    <description><![CDATA[]]></description>
+    <address><![CDATA[]]></address>
+    <company />
+    <copyright><![CDATA[]]></copyright>
+    <majorVersion>0</majorVersion>
+    <minorVersion>0</minorVersion>
+    <revision>0</revision>
+    <build>1</build>
+    <autoIncrement>false</autoIncrement>
+    <installDate>2011-08-14T22:29:43.9266921Z</installDate>
+    <installPassword />
+  </bundleProperties>
+  <bundleItemHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.BundleManifestItem, Sage.Platform.BundleModel">
+      <BundleManifestItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>9a850a9d-7ad0-409e-8372-2cc3f981e9fe</ItemId>
+        <Url>\</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>SalesOrder</Caption>
+      </BundleManifestItem>
+      <children>
+        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityModelContext, Sage.Platform">
+          <EntityModelContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <ItemId>entitymodel</ItemId>
+            <Url>\::Entity Model</Url>
+            <BundleItemType>Container</BundleItemType>
+            <Caption>Entity Model</Caption>
+          </EntityModelContext>
+          <children>
+            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackagesContext, Sage.Platform">
+              <PackagesContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>entitymodel\packages</ItemId>
+                <Url>\::Entity Model::Packages</Url>
+                <BundleItemType>Container</BundleItemType>
+                <Caption>Packages</Caption>
+              </PackagesContext>
+              <children>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackageBundleItem, Sage.Platform">
+                  <PackageBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>7ddc7cbe-e71d-483a-8599-6c5c483ee050</ItemId>
+                    <Url>\Entity Model\SalesLogix Application Entities\SalesLogix Application Entities.T.package.xml</Url>
+                    <BundleItemType>Context</BundleItemType>
+                    <Caption>SalesLogix Application Entities</Caption>
+                  </PackageBundleItem>
+                  <children>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</Url>
+                        <BundleItemType>ModelItem</BundleItemType>
+                        <Caption>SalesOrder</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>5fb51ec3-61bd-4ea2-97d3-5b59f6abb842</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::AccountId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AccountId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>d959a094-2d16-4bf5-abe2-b32736db500f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::BillingId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>BillingId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f0b78b50-ea3c-45d1-b2bf-809cb9779ef5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::BillToName</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>BillToName</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>464d2183-b2ec-4434-bd96-9543de4d8b94</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Comments</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Comments</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>281bb3f8-e7a2-4ae8-a4a4-18a3ff61343c</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::CreateDate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>CreateDate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>3dfc4437-45d7-4712-aae3-d0c476314df2</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::CreateUser</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>CreateUser</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8a11061d-6422-4e76-8a35-fa8379bf3a5c</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::CurrencyCode</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>CurrencyCode</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>94dfd855-400c-4b8e-b748-b2da97cf0167</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::CustomerPurchaseOrderNumber</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>CustomerPurchaseOrderNumber</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c83fc8d7-9abb-439e-9dc7-c3e7e561a26b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::DocumentId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>DocumentId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>3322f0cb-934b-46db-9fd7-168a4dd83e44</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Fob</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Fob</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f392f71b-8282-430c-a906-8a4a02959256</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Freight</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Freight</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>cce1dcc8-96e5-41b3-b6d3-0d63d4a4e47c</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ModifyDate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ModifyDate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>7d190453-e70a-45c1-a116-b439a9d882f1</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ModifyUser</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ModifyUser</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>4992d324-ab8c-464e-9637-099687ac8e08</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::OpportunityId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>OpportunityId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>58a44d21-3a40-4ba9-9740-446ab0ce4a57</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::OrderDate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>OrderDate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>3c2bb060-d21e-4d92-93a4-b55d7ccfafc5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::OrderTotal</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>OrderTotal</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c2dc0101-1e9d-4e7e-b74a-f352b01509e5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::OrderType</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>OrderType</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>536563ba-705d-4317-82b4-f9d83eb2ec78</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::SalesCommission</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SalesCommission</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>17935caf-63d3-493c-a723-467cd86393d3</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::SalesOrderId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SalesOrderId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>1446bd9c-70e5-4f1e-8d38-83f51d266cc7</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ShippingId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ShippingId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b18fb1d4-04dd-4a9b-bd8d-c24822261650</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ShipToName</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ShipToName</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c30ee8a1-d773-4a98-ba57-a57da1a34546</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ShipVia</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ShipVia</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b200708f-cdc5-4c2b-8cd3-c486a27d84ab</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Status</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Status</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b4e8d45b-4cca-4e63-a6f5-6950e09f7ca2</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Tax</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Tax</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>59b7c002-08fc-47cd-ae33-2d110f17922f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::TermsId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TermsId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8aa4753d-9c10-4f09-a793-cf6de4641a11</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::TradeDiscount</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TradeDiscount</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>99a470db-d1d4-4d68-b02f-625a5d81b21e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::TransmitDate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TransmitDate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>094217e3-fd73-475c-920c-d06e91d61511</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>69057730-a965-4852-a47c-dddbce2a91e9</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::BillingContactID</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>BillingContactID</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b55e6b98-7dd1-4d50-a817-bb12de9ff0ed</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ShippingContactID</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ShippingContactID</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>5f625cdc-ddb1-4f02-9259-73e5c91eed5c</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField1</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField1</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>11b3802a-9d42-4faf-ba3e-80187ec21876</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField2</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField2</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>307685f6-e7cd-4753-a89e-e0dfef7e86db</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField3</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField3</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>99c750b6-0635-4cf3-8ae1-df0455d1f871</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField4</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField4</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>7db2d656-1f6d-4926-8634-46d56b1bce64</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField5</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField5</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>7c230409-30cf-403e-9ef9-276bbfb2243e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::UserField6</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>UserField6</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>0cd45e3a-7aca-4290-82b4-49c9957e19a5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::AlternateKeyPrefix</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AlternateKeyPrefix</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b499d583-7188-42eb-a596-2c5839165c2b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::AlternateKeySuffix</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AlternateKeySuffix</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f3853e2f-7d75-4e58-a8c2-cfff5c2ee114</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::SalesOrderNumber</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SalesOrderNumber</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2041af8f-1b69-4f99-aedb-71cdd620f29b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ExchangeRate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ExchangeRate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>3c30e7c1-649b-4076-bb7f-3a245b28a390</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ExchangeRateDate</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ExchangeRateDate</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>07d07f0b-3ded-4ddf-afb9-facc6c560aff</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::DatePromised</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>DatePromised</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8132b7ea-b51a-4dd7-81c9-0e161dbddca1</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::ExchangeRateLocked</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ExchangeRateLocked</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>d440eda2-6c66-4237-8996-915f328742c8</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::RequestedBy</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>RequestedBy</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>9f7c897a-5042-4d21-a86f-51fbdcad3166</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::Discount</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Discount</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2e7bcd26-7512-4f42-8576-a61bd24057be</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::GrandTotal</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>GrandTotal</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>77591cfd-6852-48f2-86f6-ad0588c041c0</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::AccountManagerId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AccountManagerId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f14a6ff6-382d-4e81-99f7-9f22163d4caa</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Properties::SecCodeId</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>SecCodeId</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086rules</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Business Rules</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Business Rules</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</ParentUrl>
+                            <CaptionKey>rules</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>916230a4-e28d-4c13-be2d-7300e74370d4</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>CopySalesOrder</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>916230a4-e28d-4c13-be2d-7300e74370d4pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>916230a4-e28d-4c13-be2d-7300e74370d4primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>1e2ebef1-6432-474c-8649-06e529fde518</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml::Primary Steps::CopySalesOrder</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>CopySalesOrder</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>916230a4-e28d-4c13-be2d-7300e74370d4post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>916230a4-e28d-4c13-be2d-7300e74370d4postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\CopySalesOrder.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>07df1a60-dd0b-4409-8b72-d0698c502857</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>IsMultiCurrencyEnabled</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>07df1a60-dd0b-4409-8b72-d0698c502857pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>07df1a60-dd0b-4409-8b72-d0698c502857primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>12e184b3-1958-4e98-8b93-8b9856086cce</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml::Primary Steps::IsMultiCurrencyEnabled</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>IsMultiCurrencyEnabled</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>07df1a60-dd0b-4409-8b72-d0698c502857post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>07df1a60-dd0b-4409-8b72-d0698c502857postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\IsMultiCurrencyEnabled.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fb821829-d3d6-4efc-9be2-7ca14bedff9f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnAccountChanged</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fb821829-d3d6-4efc-9be2-7ca14bedff9fpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fb821829-d3d6-4efc-9be2-7ca14bedff9fprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>10f14a1c-17b6-4dc3-900a-d771001ee38f</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml::Primary Steps::OnAccountChanged</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnAccountChanged</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fb821829-d3d6-4efc-9be2-7ca14bedff9fpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fb821829-d3d6-4efc-9be2-7ca14bedff9fpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAccountChanged.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>3b0e202e-b65c-4b3a-b9ef-a83d4d60c7bb</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnBillingContactChanged</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>3b0e202e-b65c-4b3a-b9ef-a83d4d60c7bbpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>3b0e202e-b65c-4b3a-b9ef-a83d4d60c7bbprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>f711f5bb-c4df-4b73-9a8b-266439168e71</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml::Primary Steps::OnBillingContactChanged</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnBillingContactChanged</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>3b0e202e-b65c-4b3a-b9ef-a83d4d60c7bbpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>3b0e202e-b65c-4b3a-b9ef-a83d4d60c7bbpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBillingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>df5f804d-ef01-4a85-a58b-5566fb224160</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnOpportunityChanged</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>df5f804d-ef01-4a85-a58b-5566fb224160pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>df5f804d-ef01-4a85-a58b-5566fb224160primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>6c527724-a768-49d4-898c-24754c8651ac</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml::Primary Steps::OnOpportunityChanged</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnOpportunityChanged</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>df5f804d-ef01-4a85-a58b-5566fb224160post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>df5f804d-ef01-4a85-a58b-5566fb224160postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnOpportunityChanged.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>8d10eee9-eab3-4c6d-8234-46eef7caf3df</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnShippingContactChanged</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8d10eee9-eab3-4c6d-8234-46eef7caf3dfpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8d10eee9-eab3-4c6d-8234-46eef7caf3dfprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>d8ec7b81-0123-4125-9911-d274dd3220b5</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml::Primary Steps::OnShippingContactChanged</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnShippingContactChanged</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8d10eee9-eab3-4c6d-8234-46eef7caf3dfpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>8d10eee9-eab3-4c6d-8234-46eef7caf3dfpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnShippingContactChanged.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f8af415c-0191-473a-824d-2fa9e76f947e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnStatusChanged</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f8af415c-0191-473a-824d-2fa9e76f947epre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f8af415c-0191-473a-824d-2fa9e76f947eprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>266a1e27-9211-4d43-8769-64ae4d75154b</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml::Primary Steps::OnStatusChange</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnStatusChange</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f8af415c-0191-473a-824d-2fa9e76f947epost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f8af415c-0191-473a-824d-2fa9e76f947epostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnStatusChanged.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>713af296-2f97-4eac-9b43-33fabc155584</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SetDiscountRate</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>713af296-2f97-4eac-9b43-33fabc155584pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>713af296-2f97-4eac-9b43-33fabc155584primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>cace2224-1bff-43a9-aeaa-2ce03e280e01</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml::Primary Steps::SetDiscountRate</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>SetDiscountRate</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>713af296-2f97-4eac-9b43-33fabc155584post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>713af296-2f97-4eac-9b43-33fabc155584postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetDiscountRate.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>0c2d206e-45b9-4ebd-bc25-a82afe368779</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SetExchangeRate</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0c2d206e-45b9-4ebd-bc25-a82afe368779pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0c2d206e-45b9-4ebd-bc25-a82afe368779primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>8ec9dbf7-4936-4548-a17e-8caeceb0abfd</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml::Primary Steps::SetExchangeRate</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>SetExchangeRate</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0c2d206e-45b9-4ebd-bc25-a82afe368779post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0c2d206e-45b9-4ebd-bc25-a82afe368779postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetExchangeRate.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>23c59897-3a2a-435c-8706-3138dec35c13</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SetSalesOrderBillingAddress</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>23c59897-3a2a-435c-8706-3138dec35c13pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>23c59897-3a2a-435c-8706-3138dec35c13primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>46a02902-297e-4d41-9bde-77a71e68d441</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml::Primary Steps::SetSalesOrderBillingAddress</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>SetSalesOrderBillingAddress</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>23c59897-3a2a-435c-8706-3138dec35c13post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>23c59897-3a2a-435c-8706-3138dec35c13postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderBillingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fd85be94-1083-4c7e-945a-4cdae0977ef2</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SetSalesOrderShippingAddress</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fd85be94-1083-4c7e-945a-4cdae0977ef2pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fd85be94-1083-4c7e-945a-4cdae0977ef2primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>13754adb-fdbf-4569-9d87-774551c2d2a8</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml::Primary Steps::SetSalesOrderShippingAddress</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>SetSalesOrderShippingAddress</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fd85be94-1083-4c7e-945a-4cdae0977ef2post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fd85be94-1083-4c7e-945a-4cdae0977ef2postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetSalesOrderShippingAddress.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>e64f7aa0-6c37-46d4-b6e7-1346a70b44e5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SetTaxAmount</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>e64f7aa0-6c37-46d4-b6e7-1346a70b44e5pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>e64f7aa0-6c37-46d4-b6e7-1346a70b44e5primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>e8aa9ccc-dedf-4aa5-ad9d-3b879446d825</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml::Primary Steps::SetTaxAmount</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>SetTaxAmount</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>e64f7aa0-6c37-46d4-b6e7-1346a70b44e5post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>e64f7aa0-6c37-46d4-b6e7-1346a70b44e5postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SetTaxAmount.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086events</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Events</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Events</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</ParentUrl>
+                            <CaptionKey>events</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2d4fdc67-7ba3-4940-b236-25db72afee6a</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnAfterDelete</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2d4fdc67-7ba3-4940-b236-25db72afee6apre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2d4fdc67-7ba3-4940-b236-25db72afee6aprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>353ef6b0-ecbd-4386-be0d-b0f3cb5c9a37</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml::Primary Steps::OnAfterDelete</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnAfterDelete</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2d4fdc67-7ba3-4940-b236-25db72afee6apost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2d4fdc67-7ba3-4940-b236-25db72afee6apostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterDelete.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>032c8b0c-64f4-4077-bb8f-15270a298d16</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnAfterInsert</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>032c8b0c-64f4-4077-bb8f-15270a298d16pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>032c8b0c-64f4-4077-bb8f-15270a298d16primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>32b0f43b-e27b-4540-afba-be0e4ab72b96</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml::Primary Steps::OnAfterInsert</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnAfterInsert</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>032c8b0c-64f4-4077-bb8f-15270a298d16post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>032c8b0c-64f4-4077-bb8f-15270a298d16postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterInsert.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>0efa8d4e-2c10-48b8-ad85-aa62483c96e5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnAfterUpdate</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0efa8d4e-2c10-48b8-ad85-aa62483c96e5pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0efa8d4e-2c10-48b8-ad85-aa62483c96e5primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>2f7da4b0-a85d-4c41-b519-b68641b1292e</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml::Primary Steps::OnAfterUpdate</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnAfterUpdate</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0efa8d4e-2c10-48b8-ad85-aa62483c96e5post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>0efa8d4e-2c10-48b8-ad85-aa62483c96e5postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnAfterUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2817ab5a-965d-49f8-a17d-d4da75cee6f1</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnBeforeDelete</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2817ab5a-965d-49f8-a17d-d4da75cee6f1pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2817ab5a-965d-49f8-a17d-d4da75cee6f1primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>7dcabfa5-0925-4e2b-9c58-cf611c872002</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml::Primary Steps::OnBeforeDelete</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnBeforeDelete</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2817ab5a-965d-49f8-a17d-d4da75cee6f1post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2817ab5a-965d-49f8-a17d-d4da75cee6f1postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeDelete.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fcac4378-0fea-49c2-a806-8560cd52b9fd</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnBeforeInsert</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fcac4378-0fea-49c2-a806-8560cd52b9fdpre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fcac4378-0fea-49c2-a806-8560cd52b9fdprimary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>148d084f-8106-4600-8a02-f552e110b8ea</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml::Primary Steps::OnBeforeInsert</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnBeforeInsert</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fcac4378-0fea-49c2-a806-8560cd52b9fdpost</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>fcac4378-0fea-49c2-a806-8560cd52b9fdpostflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeInsert.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>f0bb849e-7d3d-4b6b-95c1-e873397de940</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnBeforeUpdate</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f0bb849e-7d3d-4b6b-95c1-e873397de940pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f0bb849e-7d3d-4b6b-95c1-e873397de940primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>1e7c56bf-9522-4c70-a344-7ac9f812d622</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml::Primary Steps::OnBeforeUpdate</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnBeforeUpdate</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f0bb849e-7d3d-4b6b-95c1-e873397de940post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>f0bb849e-7d3d-4b6b-95c1-e873397de940postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnBeforeUpdate.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                              <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2060a7a0-b1de-4115-b5fe-5fb0a6358336</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OnCreate</Caption>
+                              </BusinessRuleBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2060a7a0-b1de-4115-b5fe-5fb0a6358336pre</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml::Pre Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Pre Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml</ParentUrl>
+                                    <CaptionKey>pre</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2060a7a0-b1de-4115-b5fe-5fb0a6358336primary</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml::Primary Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Primary Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml</ParentUrl>
+                                    <CaptionKey>primary</CaptionKey>
+                                  </StepsSubFolderContext>
+                                  <children>
+                                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleStepBundleItem, Sage.Platform">
+                                      <BusinessRuleStepBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                        <ItemId>07e6de28-f76c-4547-84c0-b42e575a05e4</ItemId>
+                                        <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml::Primary Steps::OnCreate</Url>
+                                        <BundleItemType>Other</BundleItemType>
+                                        <Caption>OnCreate</Caption>
+                                        <SerializationOptions>ProcessDependentUrls</SerializationOptions>
+                                        <InstallOptions>ProcessDependentUrls</InstallOptions>
+                                      </BusinessRuleStepBundleItem>
+                                    </bundleItem>
+                                  </children>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2060a7a0-b1de-4115-b5fe-5fb0a6358336post</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml::Post Execute Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Execute Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml</ParentUrl>
+                                    <CaptionKey>post</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.StepsSubFolderContext, Sage.Platform">
+                                  <StepsSubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>2060a7a0-b1de-4115-b5fe-5fb0a6358336postflush</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml::Post Flush Steps</Url>
+                                    <BundleItemType>Container</BundleItemType>
+                                    <Caption>Post Flush Steps</Caption>
+                                    <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\OnCreate.method.xml</ParentUrl>
+                                    <CaptionKey>postflush</CaptionKey>
+                                  </StepsSubFolderContext>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086filters</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Filters</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Filters</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</ParentUrl>
+                            <CaptionKey>filters</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>1a036b45-23f7-4a7e-bff6-136e1810d28d</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\Account.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>Account</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>7400677d-5fc6-4407-8d5d-3ae70f2bd030</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\AccountManager.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>AccountManager</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>81eb6f53-60fd-4013-bff4-acb55af2197e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\CommissionAverage.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>CommissionAverage</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>682a01f9-df1d-463a-ac94-a07a2e7067fc</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\DateRequested.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>DateRequested</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>fb547587-5fd5-440d-89ef-b60535d62c28</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\DiscountAverage.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>DiscountAverage</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>14ef4090-ce2c-43c0-bcf3-770484554a22</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\GrandTotal.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>GrandTotal</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>9c3b6676-ea76-4884-a9f8-ea90961f629e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\OpenSalesOrderDeliveryExpectationAverage.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>OpenSalesOrderDeliveryExpectationAverage</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>58ce315c-6214-44b3-b974-c69b3b5bd6c4</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrderCount.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SalesOrderCount</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>28b5f57c-c7e8-45a3-a84e-f542ab31cdc6</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\Status.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>Status</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.FilterBundleItem, Sage.Platform">
+                              <FilterBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>590340a5-2ea3-408b-a194-d30715e92c31</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\Type.filter.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>Type</Caption>
+                              </FilterBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>9b47425f-3b70-4f38-a4cf-574c64d46086quickforms</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml::Forms</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Forms</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\SalesOrder\SalesOrder.SALESORDER.entity.xml</ParentUrl>
+                            <CaptionKey>quickforms</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>1206da31-f0fa-4d30-90e0-f3715a75a9ea</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\BillToShipTo.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>BillToShipTo</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>09a0ae8d-7ed4-4553-b55c-f7238f4d6f90</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\EditSalesOrderDetail.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>EditSalesOrderDetail</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>b99740b2-82dc-4521-af62-0c691fd8f8a7</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\InsertSalesOrder.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>InsertSalesOrder</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>0f789e3e-c21b-40ee-86f6-2675136d037c</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\SalesOrderDetails.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SalesOrderDetails</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>73f93073-454b-493a-b3b1-e69329946616</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\SalesOrderItems.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SalesOrderItems</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>e99e94bf-b81d-409b-aa30-eb48a80f7eb2</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\SalesOrder\QuickForms\SalesOrderSummaryView.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>SalesOrderSummaryView</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+              </children>
+            </bundleItem>
+          </children>
+        </bundleItem>
+      </children>
+    </bundleItem>
+  </bundleItemHierarchy>
+  <bundleActionHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.RootBundleAction, Sage.Platform.BundleModel">
+      <RootBundleAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>\Actions</ItemId>
+        <Url>\Actions</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Bundle Actions</Caption>
+      </RootBundleAction>
+    </bundleItem>
+  </bundleActionHierarchy>
+  <itemsToDelete />
+  <globalResources />
+</BundleManifest>

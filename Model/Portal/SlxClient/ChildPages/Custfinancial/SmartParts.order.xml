@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<ModelItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item Id="5b0f049d-ab10-420c-b0a3-d2adc3c2f7ad">LiveGroupViewer.smartpart.xml</Item>
+  <Item Id="c247c528-ba15-4d36-925f-f60a9a50f400">FinancialDetails.smartpart.xml</Item>
+  <Item Id="1e4b93fb-3581-4910-9a89-7827ba557dc2">FinancialBudget.smartpart.xml</Item>
+  <Item Id="0a9b93e2-fa6b-4e3c-b0aa-a52e806a3340">FinancialEdge.smartpart.xml</Item>
+  <Item Id="65efa232-e380-462c-b91f-c668a644bb03">FinancialCommissions.smartpart.xml</Item>
+  <Item Id="a024f496-9395-4293-9ca0-f911ccd31bae">FinancialInvoices.smartpart.xml</Item>
+  <Item Id="0ece1e81-d5ee-4b64-9a4d-1f4307b4e81f">FinancialRecepits.smartpart.xml</Item>
+  <Item Id="9c7b34d2-9f29-4f25-9833-8ce856937e93">FinancialSO.smartpart.xml</Item>
+</ModelItems>

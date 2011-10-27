@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="a8f6ca99-c3fc-4351-8332-1640b36924dd" lastModifiedUtc="2011-07-15T20:55:48.0691415Z" name="GetInitialSalesRep" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="6859ac23-7d7c-46ee-9506-77c3c56c7271" lastModifiedUtc="2011-07-15T20:57:56.0376985Z" targetType="Sage.BusinessRules.CodeSnippets.CustcontractBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetInitialSalesRepStep" active="true" codeSnippetId="07382060-c5bc-4c43-a8ed-1f507a8ef9cc">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

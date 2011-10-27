@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="27ba3f47-18fd-435b-a364-7a4f0aa4f841" lastModifiedUtc="2011-06-29T21:18:43.3502098Z" name="ValidateRequiredInsert" returnType="Boolean" methodType="Rule" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="ceb1ba11-2d8c-4372-88f4-297e252892ca" lastModifiedUtc="2011-10-07T17:44:11.9566064Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="ValidateRequiredInsertStep" active="true" codeSnippetId="f3ef013b-6b28-49d6-b322-243835289990">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="e825cd51-4f11-4166-b0fa-8db87619275a">
+  <ItemId>navFinancial</ItemId>
+  <NavUrl>Custfinancial.aspx</NavUrl>
+  <LargeImageUrl>[Localization!Global_Images:financial32x32]</LargeImageUrl>
+  <SmallImageUrl>[Localization!Global_Images:financial24x24]</SmallImageUrl>
+  <ContextMenuId>contextFinancial</ContextMenuId>
+  <Target />
+  <AppliedSecurity />
+</NavigationItem>

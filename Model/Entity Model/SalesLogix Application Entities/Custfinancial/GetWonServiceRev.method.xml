@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="6bc97191-0790-4183-9a70-4d51aa8d5e3f" lastModifiedUtc="2011-08-03T20:45:34.2811968Z" name="GetWonServiceRev" returnType="System.Decimal" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="9a0a8081-03dd-43f3-a6f2-4173185274c3" lastModifiedUtc="2011-08-03T20:45:34.2912112Z" targetType="Sage.BusinessRules.CodeSnippets.CustfinancialBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetWonServiceRevStep" active="true" codeSnippetId="018c5487-6a4d-4414-860a-b224726a4a3d">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

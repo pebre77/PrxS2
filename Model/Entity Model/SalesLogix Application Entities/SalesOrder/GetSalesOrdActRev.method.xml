@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="443c00a5-cc56-4958-991d-7b245a0ab5ca" lastModifiedUtc="2011-08-19T06:14:43.3318263Z" name="GetSalesOrdActRev" returnType="System.Double" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="eb5f4510-93fe-47d5-820b-b032155ac825" lastModifiedUtc="2011-08-19T06:14:43.3474514Z" targetType="Sage.BusinessRules.CodeSnippets.SalesOrderBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetSalesOrdActRevStep" active="true" codeSnippetId="eec7addb-ab3c-41fd-90c8-44975b535c83">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

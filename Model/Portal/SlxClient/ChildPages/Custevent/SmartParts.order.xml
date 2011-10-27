@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ModelItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item Id="232b8f13-3f9c-4ee6-a023-d29025be0214">LiveGroupViewer.smartpart.xml</Item>
+  <Item Id="e9c80672-ad57-42e2-b348-0f2bd27135d1">EventsDetails.smartpart.xml</Item>
+  <Item Id="4d87013e-867a-41cb-b8c8-15fc7e5bd56a">EventTeam.smartpart.xml</Item>
+  <Item Id="d4be0955-ff92-420a-9c46-6e155f3f0a47">AddEditMember.smartpart.xml</Item>
+</ModelItems>

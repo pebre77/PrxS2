@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="9f5736a6-d8eb-4761-91fe-6054c452e2a9" lastModifiedUtc="2011-08-11T23:47:21.1376846Z" name="GetAnticOrderRev" returnType="System.Decimal" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="17396ddf-36d6-4fd0-aff2-3b50bca9f4d6" lastModifiedUtc="2011-08-12T00:10:10.0370705Z" targetType="Sage.BusinessRules.CodeSnippets.OrderSummaryDetailBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetAnticOrderRevStep" active="true" codeSnippetId="ab0750b1-e5ce-4139-851f-77a0b422cfb2">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

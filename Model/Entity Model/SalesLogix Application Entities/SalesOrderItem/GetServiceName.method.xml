@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="0c307556-3a40-4cea-9e3d-c0751ce22229" lastModifiedUtc="2011-08-18T17:15:34.2519057Z" name="GetServiceName" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="38b74ad0-c3ad-48f1-91da-9e3071ecb806" lastModifiedUtc="2011-08-18T17:15:50.2100336Z" targetType="Sage.BusinessRules.CodeSnippets.SalesOrderItemBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetServiceNameStep" active="true" codeSnippetId="6e6a9255-69e0-47e3-9342-31da4705511d">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

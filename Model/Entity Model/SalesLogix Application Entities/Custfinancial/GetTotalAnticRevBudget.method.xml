@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="b34a9bb3-287c-4884-9b6b-f278b473bc72" lastModifiedUtc="2011-08-12T00:25:38.7461392Z" name="GetTotalAnticRevBudget" returnType="System.Decimal" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="a8d3013f-59c4-44a3-a543-fb9190f548fa" lastModifiedUtc="2011-08-12T00:27:37.9656522Z" targetType="Sage.BusinessRules.CodeSnippets.CustfinancialBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetTotalAnticRepBudgetStep" active="true" codeSnippetId="c4acbacc-2243-4250-ab17-b9babe70791e">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

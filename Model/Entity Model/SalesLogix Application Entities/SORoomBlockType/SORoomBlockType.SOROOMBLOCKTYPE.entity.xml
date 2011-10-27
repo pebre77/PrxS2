@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="8aa4e627-5db2-4ff4-a27c-bb52626bcd24" lastModifiedUtc="2011-09-05T23:00:38.998228Z" manageSchema="false" tableName="SOROOMBLOCKTYPE" name="SORoomBlockType" isExtension="false" audited="false" lastUpdatedPropertyId="a7afda3e-bf16-4d01-960e-648a44967a1e" onBeforeInsertMethodId="ab014de7-2430-4436-a3cb-abb35c96b64c" onAfterInsertMethodId="3929d9d4-d064-4b0d-b05f-a9a2d2160bce" onBeforeUpdateMethodId="3c3d4046-e9b7-444b-a4b6-80f251058127" onAfterUpdateMethodId="1a04a559-1a54-428b-93f7-a695de054937" onBeforeDeleteMethodId="cd5d180c-c8d0-46b4-b145-7a8db68dbb14" onAfterDeleteMethodId="70dbda04-51cf-43ae-b99d-f548dbc63394" onCreateId="9d2dbc5b-b34c-4a04-bce9-47197c5c1ef4">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntity">
+      <extender guid="1589723d-0536-4bf3-bdd7-3f6f7fe165d0">
+        <OrmEntityMetadataExtension>
+          <IsHistoryTable>false</IsHistoryTable>
+        </OrmEntityMetadataExtension>
+      </extender>
+    </extendee>
+  </ExtendedPropertiesCollection>
+  <keyProperties>
+    <keyReference id="24765374-2c48-401a-8726-7a9a45eb849f" ordinalPosition="1" />
+  </keyProperties>
+  <properties>
+    <property xsi:type="OrmFieldProperty" id="24765374-2c48-401a-8726-7a9a45eb849f" lastModifiedUtc="2011-09-05T23:00:37.420103Z" name="Soroomblocktypeid" audited="false" isNullable="false" columnName="SOROOMBLOCKTYPEID" maxLength="12" precision="0" scale="0" ordinal="0" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="ac2f2199-ab1b-42a9-b413-23e46025bab1" lastModifiedUtc="2011-09-05T23:00:37.466978Z" name="Salesorderid" audited="false" isNullable="false" columnName="SALESORDERID" maxLength="12" precision="0" scale="0" ordinal="1" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="bc13fd9b-9bf7-4ef9-bc6e-5bec3797c1db" lastModifiedUtc="2011-09-05T23:00:37.513853Z" name="CreateUser" audited="false" columnName="CREATEUSER" maxLength="12" precision="0" scale="0" ordinal="2" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="7bb6317c-dd9c-4c15-bd2b-2221369262db" lastModifiedUtc="2011-09-05T23:00:37.513853Z" name="CreateDate" audited="false" columnName="CREATEDATE" maxLength="0" precision="0" scale="0" ordinal="3" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="7e8a41a3-1373-43e1-9231-c0eb19ce9761" lastModifiedUtc="2011-09-05T23:00:37.529478Z" name="ModifyUser" audited="false" columnName="MODIFYUSER" maxLength="12" precision="0" scale="0" ordinal="4" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="a7afda3e-bf16-4d01-960e-648a44967a1e" lastModifiedUtc="2011-09-05T23:00:37.529478Z" name="ModifyDate" audited="false" columnName="MODIFYDATE" maxLength="0" precision="0" scale="0" ordinal="5" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="aee1c079-dc39-4e68-909a-0cc897a87e26" lastModifiedUtc="2011-09-05T23:00:37.576353Z" name="RoomType" audited="false" columnName="ROOMTYPE" maxLength="32" precision="0" scale="0" ordinal="6" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="ccc0f01d-7ba5-408e-8526-a3f942354b3a">
+        <TextDataType>
+          <Length>32</Length>
+        </TextDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="bf21d0ac-7cc8-42c5-8f44-a3177e9b6881" lastModifiedUtc="2011-09-05T23:00:37.576353Z" name="RoomRate" audited="false" columnName="ROOMRATE" maxLength="0" precision="17" scale="4" ordinal="7" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="20f45f9e-bdc0-423d-b148-2f2cd9ad4d6b" lastModifiedUtc="2011-09-05T23:00:37.623228Z" name="RoomDate1" audited="false" columnName="ROOMDATE1" maxLength="0" precision="0" scale="0" ordinal="8" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="39f28be1-688d-43d2-af6c-a50b49f3be11" lastModifiedUtc="2011-09-05T23:00:37.623228Z" name="NbrRooms1" audited="false" columnName="NBRROOMS1" maxLength="0" precision="10" scale="0" ordinal="9" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="4fb7f6a4-de18-4d7f-9b8f-924e2fc06fa7" lastModifiedUtc="2011-09-05T23:00:37.670103Z" name="ActualRevenue1" audited="false" columnName="ACTUALREVENUE1" maxLength="0" precision="17" scale="4" ordinal="10" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="ec2d0090-617c-4c60-bb54-75aa00a8a9a4" lastModifiedUtc="2011-09-05T23:00:37.685728Z" name="RoomDate2" audited="false" columnName="ROOMDATE2" maxLength="0" precision="0" scale="0" ordinal="11" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="718f1324-fa6c-4a57-a3f7-59ea22c14b44" lastModifiedUtc="2011-09-05T23:00:37.685728Z" name="NbrRooms2" audited="false" columnName="NBRROOMS2" maxLength="0" precision="10" scale="0" ordinal="12" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="758efbdf-78c2-481b-be45-72ad58f9694c" lastModifiedUtc="2011-09-05T23:00:37.701353Z" name="ActualRevenue2" audited="false" columnName="ACTUALREVENUE2" maxLength="0" precision="17" scale="4" ordinal="13" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="82fbf5a5-0754-4eea-8507-03ba10cbdcdf" lastModifiedUtc="2011-09-05T23:00:37.701353Z" name="ROOMDATE3" audited="false" columnName="ROOMDATE3" maxLength="0" precision="0" scale="0" ordinal="14" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="1ec6b5b9-9c12-43ab-b1e2-d6b0b39e22fc" lastModifiedUtc="2011-09-05T23:00:37.716978Z" name="NbrRooms3" audited="false" columnName="NBRROOMS3" maxLength="0" precision="10" scale="0" ordinal="15" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="116293b4-264a-4822-a49f-f70e1cf8c61c" lastModifiedUtc="2011-09-05T23:00:37.716978Z" name="ActualRevenue3" audited="false" columnName="ACTUALREVENUE3" maxLength="0" precision="17" scale="4" ordinal="16" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="8e092ca2-44a9-464e-8e29-e805bea3f4bf" lastModifiedUtc="2011-09-05T23:00:37.732603Z" name="RoomDate4" audited="false" columnName="ROOMDATE4" maxLength="0" precision="0" scale="0" ordinal="17" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="f126e3d6-cabd-48de-83ab-7657bc18eaff" lastModifiedUtc="2011-09-05T23:00:37.732603Z" name="NbrRooms4" audited="false" columnName="NBRROOMS4" maxLength="0" precision="10" scale="0" ordinal="18" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="6efb72eb-697e-4597-b618-e21e83217d36" lastModifiedUtc="2011-09-05T23:00:37.748228Z" name="ActualRevenue4" audited="false" columnName="ACTUALREVENUE4" maxLength="0" precision="17" scale="4" ordinal="19" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="e5a5f645-3962-4d6d-aea6-d1c54f75395b" lastModifiedUtc="2011-09-05T23:00:37.748228Z" name="RoomDate5" audited="false" columnName="ROOMDATE5" maxLength="0" precision="0" scale="0" ordinal="20" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="81ef6267-3894-4f96-a6de-3e17268f8c3e" lastModifiedUtc="2011-09-05T23:00:37.763853Z" name="NbrRooms5" audited="false" columnName="NBRROOMS5" maxLength="0" precision="10" scale="0" ordinal="21" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="6306f7ff-bff5-41e6-b05d-8d10dabf83a2" lastModifiedUtc="2011-09-05T23:00:37.763853Z" name="ActualRevenue5" audited="false" columnName="ACTUALREVENUE5" maxLength="0" precision="17" scale="4" ordinal="22" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="12887a2b-a4a1-46e9-8de9-2d58dba0bc23" lastModifiedUtc="2011-09-05T23:00:37.779478Z" name="RoomDate6" audited="false" columnName="ROOMDATE6" maxLength="0" precision="0" scale="0" ordinal="23" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="efcd9eea-1d3a-4ad9-81c1-ea1a6153474e" lastModifiedUtc="2011-09-05T23:00:37.779478Z" name="NbrRooms6" audited="false" columnName="NBRROOMS6" maxLength="0" precision="10" scale="0" ordinal="24" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="0bf84465-139c-4dda-ae48-5c55e9eb9a1a" lastModifiedUtc="2011-09-05T23:00:37.795103Z" name="ActualRevenue6" audited="false" columnName="ACTUALREVENUE6" maxLength="0" precision="17" scale="4" ordinal="25" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="1d959345-9bee-4a69-b5aa-9e89ebeb0c63" lastModifiedUtc="2011-09-05T23:00:37.795103Z" name="RoomDate7" audited="false" columnName="ROOMDATE7" maxLength="0" precision="0" scale="0" ordinal="26" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="af7668ff-f3ba-4fbf-ac6a-f04809c92169" lastModifiedUtc="2011-09-05T23:00:37.810728Z" name="NbrRooms7" audited="false" columnName="NBRROOMS7" maxLength="0" precision="10" scale="0" ordinal="27" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="270078d2-3d26-416d-aae2-510cef427d48" lastModifiedUtc="2011-09-05T23:00:37.810728Z" name="ActualRevenue7" audited="false" columnName="ACTUALREVENUE7" maxLength="0" precision="17" scale="4" ordinal="28" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="7d768578-f36e-43ad-9d3f-ae0a83f80f68" lastModifiedUtc="2011-09-05T23:00:37.826353Z" name="RoomDate8" audited="false" columnName="ROOMDATE8" maxLength="0" precision="0" scale="0" ordinal="29" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="ea648839-9338-433e-88da-ab96e76d1edc" lastModifiedUtc="2011-09-05T23:00:37.826353Z" name="NbrRooms8" audited="false" columnName="NBRROOMS8" maxLength="0" precision="10" scale="0" ordinal="30" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="2b6f3abb-e475-4881-9195-7b3b6794ba38" lastModifiedUtc="2011-09-05T23:00:37.841978Z" name="ActualRevenue8" audited="false" columnName="ACTUALREVENUE8" maxLength="0" precision="17" scale="4" ordinal="31" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="c7e17ab2-debd-4f36-85b7-aaa3ac94dbc5" lastModifiedUtc="2011-09-05T23:00:37.841978Z" name="RoomDate9" audited="false" columnName="ROOMDATE9" maxLength="0" precision="0" scale="0" ordinal="32" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="0c2fd79c-8dde-4a20-ad56-d0981472f38b" lastModifiedUtc="2011-09-05T23:00:37.857603Z" name="NbrRooms9" audited="false" columnName="NBRROOMS9" maxLength="0" precision="10" scale="0" ordinal="33" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="bebdfd15-3f51-43e8-8c7b-e416af275304" lastModifiedUtc="2011-09-05T23:00:37.857603Z" name="ActualRevenue9" audited="false" columnName="ACTUALREVENUE9" maxLength="0" precision="17" scale="4" ordinal="34" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="d2a1b449-8e15-4b08-b013-042f4d404604" lastModifiedUtc="2011-09-05T23:00:37.873228Z" name="RoomDate10" audited="false" columnName="ROOMDATE10" maxLength="0" precision="0" scale="0" ordinal="35" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="2235ac4a-7f98-456b-8170-6afb49537a2e" lastModifiedUtc="2011-09-05T23:00:37.873228Z" name="NbrRooms10" audited="false" columnName="NBRROOMS10" maxLength="0" precision="10" scale="0" ordinal="36" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="d0b1a5fc-1dea-4273-8815-7995dacdd52b" lastModifiedUtc="2011-09-05T23:00:37.920103Z" name="ActualRevenue10" audited="false" columnName="ACTUALREVENUE10" maxLength="0" precision="17" scale="4" ordinal="37" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="661e2680-fd64-490d-904a-8e440f74413d" lastModifiedUtc="2011-09-05T23:00:37.935728Z" name="RoomDate11" audited="false" columnName="ROOMDATE11" maxLength="0" precision="0" scale="0" ordinal="38" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="5e3e6b1b-cfa0-431a-8846-bd82d5aa613b" lastModifiedUtc="2011-09-05T23:00:37.935728Z" name="NbrRooms11" audited="false" columnName="NBRROOMS11" maxLength="0" precision="10" scale="0" ordinal="39" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="a1eff856-383e-44ff-acc3-c055617f0b01" lastModifiedUtc="2011-09-05T23:00:37.951353Z" name="ActualRevenue11" audited="false" columnName="ACTUALREVENUE11" maxLength="0" precision="17" scale="4" ordinal="40" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="78b6e679-ea46-4c1a-a5b9-4c79f6dd7c95" lastModifiedUtc="2011-09-05T23:00:37.951353Z" name="RoomDate12" audited="false" columnName="ROOMDATE12" maxLength="0" precision="0" scale="0" ordinal="41" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="da54787a-040e-4ea4-924a-ac9bb8221aff" lastModifiedUtc="2011-09-05T23:00:37.966978Z" name="NbrRooms12" audited="false" columnName="NBRROOMS12" maxLength="0" precision="10" scale="0" ordinal="42" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="eb379751-d1d0-495a-bcd8-0b3670cb516e" lastModifiedUtc="2011-09-05T23:00:37.966978Z" name="ActualRevenue12" audited="false" columnName="ACTUALREVENUE12" maxLength="0" precision="17" scale="4" ordinal="43" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="304ba75e-d905-48f7-b780-71a27717796e" lastModifiedUtc="2011-09-05T23:00:37.982603Z" name="RoomDate13" audited="false" columnName="ROOMDATE13" maxLength="0" precision="0" scale="0" ordinal="44" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="30afac6b-073a-44c0-b54c-47ede6b4717f" lastModifiedUtc="2011-09-05T23:00:37.982603Z" name="NbrRooms13" audited="false" columnName="NBRROOMS13" maxLength="0" precision="10" scale="0" ordinal="45" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="3fa893e7-dd32-4e04-b86d-4132d8149a0c" lastModifiedUtc="2011-09-05T23:00:37.998228Z" name="ActualRevenue13" audited="false" columnName="ACTUALREVENUE13" maxLength="0" precision="17" scale="4" ordinal="46" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="7d163236-a3a5-4553-860e-1fc43e3710d8" lastModifiedUtc="2011-09-05T23:00:37.998228Z" name="RoomDate14" audited="false" columnName="ROOMDATE14" maxLength="0" precision="0" scale="0" ordinal="47" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="9fad0d57-9dda-4e02-8d5e-3069af33a42a" lastModifiedUtc="2011-09-05T23:00:38.013853Z" name="NbrRooms14" audited="false" columnName="NBRROOMS14" maxLength="0" precision="10" scale="0" ordinal="48" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="40b3b812-bb3c-437c-a869-af67e9e19a6a" lastModifiedUtc="2011-09-05T23:00:38.013853Z" name="ActualRevenue14" audited="false" columnName="ACTUALREVENUE14" maxLength="0" precision="17" scale="4" ordinal="49" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="f9a6e472-0c36-44ef-97f7-b9d34c22f2f5" lastModifiedUtc="2011-09-05T23:00:38.029478Z" name="RoomDate15" audited="false" columnName="ROOMDATE15" maxLength="0" precision="0" scale="0" ordinal="50" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="fc04cdbd-7c3d-49ee-ba42-e38fdb297444" lastModifiedUtc="2011-09-05T23:00:38.029478Z" name="NbrRooms15" audited="false" columnName="NBRROOMS15" maxLength="0" precision="10" scale="0" ordinal="51" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="c909eedd-0a42-4aca-a341-55011546f046" lastModifiedUtc="2011-09-05T23:00:38.045103Z" name="ActualRevenue15" audited="false" columnName="ACTUALREVENUE15" maxLength="0" precision="17" scale="4" ordinal="52" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="159569ff-a6fe-41c5-ae87-6a25a3877ad7" lastModifiedUtc="2011-09-05T23:00:38.045103Z" name="RoomDate16" audited="false" columnName="ROOMDATE16" maxLength="0" precision="0" scale="0" ordinal="53" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="e3ab5962-5972-4b59-ba03-b419ae6a42fd" lastModifiedUtc="2011-09-05T23:00:38.060728Z" name="NbrRooms16" audited="false" columnName="NBRROOMS16" maxLength="0" precision="10" scale="0" ordinal="54" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="e639f8e9-0f3b-41d4-a3dc-2f72527b2039" lastModifiedUtc="2011-09-05T23:00:38.076353Z" name="ActualRevenue16" audited="false" columnName="ACTUALREVENUE16" maxLength="0" precision="17" scale="4" ordinal="55" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="c9510ae5-5748-413f-ad7c-aab4c208f29f" lastModifiedUtc="2011-09-05T23:00:38.076353Z" name="RoomDate17" audited="false" columnName="ROOMDATE17" maxLength="0" precision="0" scale="0" ordinal="56" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="2161eec1-22c4-4669-9f3b-a98eaebd0dd4" lastModifiedUtc="2011-09-05T23:00:38.091978Z" name="NbrRooms17" audited="false" columnName="NBRROOMS17" maxLength="0" precision="10" scale="0" ordinal="57" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="ccdf99e9-ead1-4237-bb5b-00972e15227a" lastModifiedUtc="2011-09-05T23:00:38.091978Z" name="ActualRevenue17" audited="false" columnName="ACTUALREVENUE17" maxLength="0" precision="17" scale="4" ordinal="58" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="5d3a7e3f-36f7-4623-9b7d-3f40a0b30a5e" lastModifiedUtc="2011-09-05T23:00:38.107603Z" name="RoomDate18" audited="false" columnName="ROOMDATE18" maxLength="0" precision="0" scale="0" ordinal="59" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="295ff055-870b-4add-a5b6-1ebd08f6d810" lastModifiedUtc="2011-09-05T23:00:38.107603Z" name="NbrRooms18" audited="false" columnName="NBRROOMS18" maxLength="0" precision="10" scale="0" ordinal="60" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="06e54839-0b9b-475a-88fa-179bd20bc61e" lastModifiedUtc="2011-09-05T23:00:38.123228Z" name="ActualRevenue18" audited="false" columnName="ACTUALREVENUE18" maxLength="0" precision="17" scale="4" ordinal="61" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="55d132d4-cc1c-450a-a264-ea949836794f" lastModifiedUtc="2011-09-05T23:00:38.154478Z" name="TotalNbrRooms" audited="false" columnName="TOTALNBRROOMS" maxLength="0" precision="10" scale="0" ordinal="62" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="47f90249-e4c8-4564-9ae6-e1fa9904f8b8">
+        <IntegerDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="896e4537-d12e-4e00-a5cb-f124f8b20586" lastModifiedUtc="2011-09-05T23:00:38.170103Z" name="ActualRoomRevenue" audited="false" columnName="ACTUALROOMREVENUE" maxLength="0" precision="17" scale="4" ordinal="63" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+  </properties>
+</entity>

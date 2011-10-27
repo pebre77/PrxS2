@@ -1,0 +1,31 @@
+8/14/2011 11:01:11 PM
+INFO  2011-08-14 19:01:02,969 - Installing bundle...
+INFO  2011-08-14 19:01:03,001 - Performing pre-install.
+INFO  2011-08-14 19:01:03,063 - Installing model item: Sales Order.BillingContact M:1 Contact (\Entity Model\Relationships\Salesorder.Contact.2f69f4279cdc4ee9be2c0f2d9580a3e3.relationship.xml)
+INFO  2011-08-14 19:01:04,204 - Successfully installed Sales Order.BillingContact M:1 Contact (\Entity Model\Relationships\Salesorder.Contact.2f69f4279cdc4ee9be2c0f2d9580a3e3.relationship.xml)
+INFO  2011-08-14 19:01:04,219 - Installing model item: Sales Order.ShippingContact M:1 Contact (\Entity Model\Relationships\Salesorder.Contact.569fc7a8e5044cb6a3247ac152635c47.relationship.xml)
+INFO  2011-08-14 19:01:04,251 - Successfully installed Sales Order.ShippingContact M:1 Contact (\Entity Model\Relationships\Salesorder.Contact.569fc7a8e5044cb6a3247ac152635c47.relationship.xml)
+INFO  2011-08-14 19:01:04,251 - Installing model item: Sales Order.Owner M:1 Owner (\Entity Model\Relationships\SalesOrder.Owner.13200822be024f2492f74a229612cecf.relationship.xml)
+INFO  2011-08-14 19:01:04,266 - Successfully installed Sales Order.Owner M:1 Owner (\Entity Model\Relationships\SalesOrder.Owner.13200822be024f2492f74a229612cecf.relationship.xml)
+INFO  2011-08-14 19:01:04,282 - Installing model item: Sales Order.BillingAddress M:1 Sales Order Address (\Entity Model\Relationships\SalesOrder.SalesOrderAddress.0070c24f7693413ba46a0bf451db2c88.relationship.xml)
+INFO  2011-08-14 19:01:04,313 - Successfully installed Sales Order.BillingAddress M:1 Sales Order Address (\Entity Model\Relationships\SalesOrder.SalesOrderAddress.0070c24f7693413ba46a0bf451db2c88.relationship.xml)
+INFO  2011-08-14 19:01:04,329 - Installing model item: Sales Order.ShippingAddress M:1 Sales Order Address (\Entity Model\Relationships\SalesOrder.SalesOrderAddress.29b49d41c9e14eb0a351dfcd2af1b312.relationship.xml)
+INFO  2011-08-14 19:01:04,344 - Successfully installed Sales Order.ShippingAddress M:1 Sales Order Address (\Entity Model\Relationships\SalesOrder.SalesOrderAddress.29b49d41c9e14eb0a351dfcd2af1b312.relationship.xml)
+INFO  2011-08-14 19:01:04,376 - Installing model item: Sales Order.SalesOrderItems 1:M Sales Order Item.SalesOrder (\Entity Model\Relationships\SalesOrder.SalesOrderItem.d6aa2394bcc547a39de460f1a6134b84.relationship.xml)
+INFO  2011-08-14 19:01:04,407 - Successfully installed Sales Order.SalesOrderItems 1:M Sales Order Item.SalesOrder (\Entity Model\Relationships\SalesOrder.SalesOrderItem.d6aa2394bcc547a39de460f1a6134b84.relationship.xml)
+INFO  2011-08-14 19:01:04,438 - Installing model item: Sales Order.AccountManager M:1 User (\Entity Model\Relationships\SalesOrder.User.e52a3f367d1b4ed191e2d4f1f1a6d7d2.relationship.xml)
+INFO  2011-08-14 19:01:04,454 - Successfully installed Sales Order.AccountManager M:1 User (\Entity Model\Relationships\SalesOrder.User.e52a3f367d1b4ed191e2d4f1f1a6d7d2.relationship.xml)
+INFO  2011-08-14 19:01:04,469 - Installing model item: Sales Order Item.OpportunityProduct M:1 Opportunity Product (\Entity Model\Relationships\SalesOrderItem.OpportunityProduct.e592a97aa2ea472a8729be80dc5648d8.relationship.xml)
+INFO  2011-08-14 19:01:04,485 - Successfully installed Sales Order Item.OpportunityProduct M:1 Opportunity Product (\Entity Model\Relationships\SalesOrderItem.OpportunityProduct.e592a97aa2ea472a8729be80dc5648d8.relationship.xml)
+INFO  2011-08-14 19:01:06,563 - Installing model item: Account.SalesOrders 1:M Sales Order.Account (\Entity Model\Relationships\Account.SalesOrder.abecb883c002416e93bb2ac800d57e8a.relationship.xml)
+INFO  2011-08-14 19:01:06,579 - Successfully installed Account.SalesOrders 1:M Sales Order.Account (\Entity Model\Relationships\Account.SalesOrder.abecb883c002416e93bb2ac800d57e8a.relationship.xml)
+INFO  2011-08-14 19:01:06,594 - Installing model item: Opportunity.SalesOrders 1:M Sales Order.Opportunity (\Entity Model\Relationships\Opportunity.Salesorder.d7e817e0672e414cad4e577532dc7ea1.relationship.xml)
+INFO  2011-08-14 19:01:06,610 - Successfully installed Opportunity.SalesOrders 1:M Sales Order.Opportunity (\Entity Model\Relationships\Opportunity.Salesorder.d7e817e0672e414cad4e577532dc7ea1.relationship.xml)
+INFO  2011-08-14 19:01:06,626 - Installing model item: Contact.SalesOrders 1:M Sales Order.RequestedBy (\Entity Model\Relationships\Contact.SalesOrder.750fbda341294514862ea1d601836bed.relationship.xml)
+INFO  2011-08-14 19:01:06,641 - Successfully installed Contact.SalesOrders 1:M Sales Order.RequestedBy (\Entity Model\Relationships\Contact.SalesOrder.750fbda341294514862ea1d601836bed.relationship.xml)
+INFO  2011-08-14 19:01:06,673 - Configuring installed items.
+INFO  2011-08-14 19:01:06,688 - Performing pre-commit to target project.
+INFO  2011-08-14 19:01:10,626 - Committing items to target project...
+INFO  2011-08-14 19:01:10,657 - Committing transactions...
+INFO  2011-08-14 19:01:11,095 - Copying bundle manifest to project.
+INFO  2011-08-14 19:01:15,032 - Install complete.

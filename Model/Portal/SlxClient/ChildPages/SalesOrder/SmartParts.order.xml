@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<ModelItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item Id="dd07b656-ebf0-46d0-8318-494b8610a055">SalesOrderDetails.smartpart.xml</Item>
+  <Item Id="7dcdad23-61a8-430a-aba2-71b12b4cd916">LiveGroupViewer.smartpart.xml</Item>
+  <Item Id="66968674-3fca-4795-acf9-9d3e5168d479">EditSalesOrderItem.smartpart.xml</Item>
+  <Item Id="0e8b6b4c-0faa-4363-ac96-4503aade506e">BillToShipTo.smartpart.xml</Item>
+  <Item Id="29496ca7-8482-4eef-a2d0-e7615f2203a6">AddSalesOrderProduct.smartpart.xml</Item>
+  <Item Id="e8aeca93-cb18-45ed-968d-3415dec88d87">AttachmentList.smartpart.xml</Item>
+  <Item Id="9215bde9-2ae0-4c29-bef6-082b79dc58ff">EditSalesOrderDetail.smartpart.xml</Item>
+  <Item Id="950183f1-9a21-4b72-b863-a66c57c4c000">SalesOrderServices.smartpart.xml</Item>
+  <Item Id="d50af217-1b5b-4052-ac9b-d412c6fcac1a">EditSalesOrderServices.smartpart.xml</Item>
+  <Item Id="cb8f04f6-b850-41e8-832e-20086f12ed01">SORoomBlock.smartpart.xml</Item>
+  <Item Id="4a347d22-1c04-4018-92b4-01e77b8c4e71">AddStartDateRoomBlock.smartpart.xml</Item>
+  <Item Id="3f48c314-1d1f-4cfb-bd7d-bd071d81a009">AddEditSORoomblockType.smartpart.xml</Item>
+  <Item Id="5d6668ae-a85e-4483-af40-f699b58917bd">SalesOrderConcessions.smartpart.xml</Item>
+</ModelItems>

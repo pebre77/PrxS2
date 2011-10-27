@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="bbd73645-8094-4875-bd95-722a21a8e912" lastModifiedUtc="2011-08-15T13:43:04.5352528Z" name="GetSalesOrdActDate" returnType="System.DateTime" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="16f374d5-b7a8-4e16-8e49-0b6855574819" lastModifiedUtc="2011-08-15T13:43:04.5352528Z" targetType="Sage.BusinessRules.CodeSnippets.SalesOrderBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetSalesOrdActDateStep" active="true" codeSnippetId="4ae50ff8-07ed-4187-bc60-df16f1a5372b">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

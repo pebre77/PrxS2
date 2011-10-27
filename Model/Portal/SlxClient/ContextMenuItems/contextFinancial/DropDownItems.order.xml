@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ModelItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item Id="ac34b2ce-1105-4eb3-aa4c-28aae6fd3c1c">menuItemLookupFinancial.contextmenu.xml</Item>
+  <Item Id="36f0738a-cc56-4457-8407-78c5e2fe6cf2">FinancialItem1.contextmenu.xml</Item>
+  <Item Id="c4ac6adb-d5cd-4d97-8bc3-48da0d809fb6">menuItemCreateNewGroup.contextmenu.xml</Item>
+</ModelItems>

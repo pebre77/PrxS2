@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QFRadioGroup_item1.Text" xml:space="preserve">
+    <value>Flat Fee</value>
+  </data>
+  <data name="txtProduct.Caption" xml:space="preserve">
+    <value>Service Name:</value>
+  </data>
+  <data name="QFRadioGroup_item0.Text" xml:space="preserve">
+    <value>Commission</value>
+  </data>
+  <data name="txtCommission.Caption" xml:space="preserve">
+    <value>Commisions:  %</value>
+  </data>
+  <data name="txtFlatFee.Caption" xml:space="preserve">
+    <value>Flat Fee:</value>
+  </data>
+  <data name="txtTotRoomNights.Caption" xml:space="preserve">
+    <value>Total Room Nights:</value>
+  </data>
+  <data name="txtNoHours1.Caption" xml:space="preserve">
+    <value>No. of Hours:</value>
+  </data>
+  <data name="txtNoHours2.Caption" xml:space="preserve">
+    <value>No. of Hours:</value>
+  </data>
+  <data name="txtNoHours3.Caption" xml:space="preserve">
+    <value>No. of Hours:</value>
+  </data>
+  <data name="txtNoHours4.Caption" xml:space="preserve">
+    <value>No. of Hours:</value>
+  </data>
+  <data name="txtQuantity.Caption" xml:space="preserve">
+    <value>Quantity:</value>
+  </data>
+  <data name="txtRate.Caption" xml:space="preserve">
+    <value>Rate:</value>
+  </data>
+  <data name="txtPerFeeTotal.Caption" xml:space="preserve">
+    <value>Per Fee Total:</value>
+  </data>
+  <data name="QFLabel.Caption" xml:space="preserve">
+    <value>Revenue</value>
+  </data>
+  <data name="txtAnticRevFix.Caption" xml:space="preserve">
+    <value>Antic. Revenue:</value>
+  </data>
+  <data name="txtDropOffFix.Caption" xml:space="preserve">
+    <value>Drop Off:</value>
+  </data>
+  <data name="txtTotBefAlloc.Caption" xml:space="preserve">
+    <value>Total Before Alloc:</value>
+  </data>
+  <data name="txtAllocation.Caption" xml:space="preserve">
+    <value>Allocation:</value>
+  </data>
+  <data name="txtAdjAntRev.Caption" xml:space="preserve">
+    <value>Adj. Antic. Rev.:</value>
+  </data>
+  <data name="QFLabel3.Caption" xml:space="preserve">
+    <value>Commissions:</value>
+  </data>
+  <data name="txtCommRevFix.Caption" xml:space="preserve">
+    <value>Commissionable Rev.:</value>
+  </data>
+  <data name="txtPrimOwnComm.Caption" xml:space="preserve">
+    <value>Prim.Owner Comm.%:</value>
+  </data>
+  <data name="txtSecOwnComm.Caption" xml:space="preserve">
+    <value>Sec.Owner Comm. %:</value>
+  </data>
+  <data name="QFLabel32.Caption" xml:space="preserve">
+    <value>Notes:</value>
+  </data>
+  <data name="btnOK.Caption" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="btnCancel.Caption" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="txtAvgRoomRate.Caption" xml:space="preserve">
+    <value>Avg. Room Rate:</value>
+  </data>
+  <data name="txtCommRev.Caption" xml:space="preserve">
+    <value>Commisionable Rev.:</value>
+  </data>
+  <data name="txtDropOff.Caption" xml:space="preserve">
+    <value>Drop Off:</value>
+  </data>
+  <data name="txtRate1.Caption" xml:space="preserve">
+    <value>@ $ </value>
+  </data>
+  <data name="txtRate2.Caption" xml:space="preserve">
+    <value>@ $ </value>
+  </data>
+  <data name="txtRate3.Caption" xml:space="preserve">
+    <value>@ $ </value>
+  </data>
+  <data name="txtRate4.Caption" xml:space="preserve">
+    <value>@ $ </value>
+  </data>
+  <data name="pklItem1.Caption" xml:space="preserve">
+    <value>Item 1:</value>
+  </data>
+  <data name="pklItem2.Caption" xml:space="preserve">
+    <value>Item 2:</value>
+  </data>
+  <data name="pklItem3.Caption" xml:space="preserve">
+    <value>Item 3:</value>
+  </data>
+  <data name="pklItem4.Caption" xml:space="preserve">
+    <value>Item 4:</value>
+  </data>
+  <data name="txtServiceFee.Caption" xml:space="preserve">
+    <value>Service Fee:</value>
+  </data>
+  <data name="txtAnticRevenue.Caption" xml:space="preserve">
+    <value>Anticipated Revenue:</value>
+  </data>
+  <data name="QFLabel2.Caption" xml:space="preserve">
+    <value>Profit</value>
+  </data>
+  <data name="txtCost.Caption" xml:space="preserve">
+    <value>Cost:</value>
+  </data>
+  <data name="txtAdj.Caption" xml:space="preserve">
+    <value>Adj.:</value>
+  </data>
+  <data name="txtProfit.Caption" xml:space="preserve">
+    <value>Profit:</value>
+  </data>
+  <data name="txtfee1.Caption" xml:space="preserve">
+    <value>$ </value>
+  </data>
+  <data name="txtfee2.Caption" xml:space="preserve">
+    <value>$ </value>
+  </data>
+  <data name="txtfee4.Caption" xml:space="preserve">
+    <value>$ </value>
+  </data>
+  <data name="txtfee3.Caption" xml:space="preserve">
+    <value>$ </value>
+  </data>
+  <data name="txtItemizedTotal.Caption" xml:space="preserve">
+    <value>Itemized Total :</value>
+  </data>
+  <data name="txtTotalAntRev.Caption" xml:space="preserve">
+    <value>Total Ant. Revenue:</value>
+  </data>
+  <data name="txtTotal2.Caption" xml:space="preserve">
+    <value>= $ </value>
+  </data>
+  <data name="txtTotal3.Caption" xml:space="preserve">
+    <value>= $ </value>
+  </data>
+  <data name="txtTotal4.Caption" xml:space="preserve">
+    <value>= $ </value>
+  </data>
+  <data name="txtTotal1.Caption" xml:space="preserve">
+    <value>= $ </value>
+  </data>
+  <data name="QFDateTimePicker.Caption" xml:space="preserve">
+    <value>Date Created:</value>
+  </data>
+</root>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="357b6e30-323a-4afe-a593-ab32d4bca83b" lastModifiedUtc="2011-06-21T19:09:43.6717632Z" name="OkPrimSource_OnClick" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="OpportunityDetails">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="943b9c15-9aec-4b43-a8a7-e0444ec9acab" paramName="form" sequence="0" paramType="IOpportunityDetails" />
+    <OrmEntityMethodParam id="281dec91-be44-4f29-ba02-e65aaf3f487e" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets />
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

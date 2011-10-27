@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="315f7879-c4a4-4913-949f-802dc40af317" lastModifiedUtc="2011-06-21T00:56:29.8506224Z" name="ValidateCommission" returnType="Boolean" methodType="Rule" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="3d3293d7-a232-4c4b-82c5-ec32b183b993" lastModifiedUtc="2011-06-21T21:56:55.4198137Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="ValidateCommissionStep" active="true" codeSnippetId="2fb12515-4dda-400b-8382-43c028b43761">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="df481eb6-d830-44d1-8200-f475470e6356" lastModifiedUtc="2011-07-20T20:43:44.8788848Z" name="ConvertionButton" returnType="Boolean" methodType="Rule" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="bfa03169-46d9-47a6-b42b-f31a06fc11bd" lastModifiedUtc="2011-08-19T15:05:06.0283405Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityProductBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="ConvertionButtonStep" active="true" codeSnippetId="d956e77a-6a36-4eb7-97f5-166d87a314da">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

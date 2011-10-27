@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="fc590bb3-0299-40d3-9994-11da4ae657da" lastModifiedUtc="2011-06-28T21:30:40.5429492Z" name="GetMemberEmail" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="188b2db9-1beb-4991-9044-872a343b0b65" lastModifiedUtc="2011-06-28T21:30:37.199242Z" targetType="Sage.BusinessRules.CodeSnippets.MeetingTeamBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetMemberEmailStep" active="true" codeSnippetId="3e5c41cd-37c4-4db2-a37e-851708a3a2e4">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

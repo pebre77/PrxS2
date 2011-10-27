@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<ModelItems xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Item Id="37231541-e239-4723-a6ab-097ab3a41dc4">CContractDetails.smartpart.xml</Item>
+  <Item Id="9579f725-75c8-49ce-992b-fecbfb79cc25">LiveGroupViewer.smartpart.xml</Item>
+  <Item Id="02486d28-8942-426c-8b8b-c7f4ef9c21a7">ContractCSADetail.smartpart.xml</Item>
+</ModelItems>

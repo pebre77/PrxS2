@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Con1.Caption" xml:space="preserve">
+    <value>Con1</value>
+  </data>
+  <data name="Con10.Caption" xml:space="preserve">
+    <value>Con10</value>
+  </data>
+  <data name="Con2.Caption" xml:space="preserve">
+    <value>Con2</value>
+  </data>
+  <data name="Con3.Caption" xml:space="preserve">
+    <value>Con3</value>
+  </data>
+  <data name="Con4.Caption" xml:space="preserve">
+    <value>Con4</value>
+  </data>
+  <data name="Con5.Caption" xml:space="preserve">
+    <value>Con5</value>
+  </data>
+  <data name="Con6.Caption" xml:space="preserve">
+    <value>Con6</value>
+  </data>
+  <data name="Con7.Caption" xml:space="preserve">
+    <value>Con7</value>
+  </data>
+  <data name="Con8.Caption" xml:space="preserve">
+    <value>Con8</value>
+  </data>
+  <data name="Con9.Caption" xml:space="preserve">
+    <value>Con9</value>
+  </data>
+  <data name="Multi1.Caption" xml:space="preserve">
+    <value>Multi1</value>
+  </data>
+  <data name="Multi10.Caption" xml:space="preserve">
+    <value>Multi10</value>
+  </data>
+  <data name="Multi2.Caption" xml:space="preserve">
+    <value>Multi2</value>
+  </data>
+  <data name="Multi3.Caption" xml:space="preserve">
+    <value>Multi3</value>
+  </data>
+  <data name="Multi4.Caption" xml:space="preserve">
+    <value>Multi4</value>
+  </data>
+  <data name="Multi5.Caption" xml:space="preserve">
+    <value>Multi5</value>
+  </data>
+  <data name="Multi6.Caption" xml:space="preserve">
+    <value>Multi6</value>
+  </data>
+  <data name="Multi7.Caption" xml:space="preserve">
+    <value>Multi7</value>
+  </data>
+  <data name="Multi8.Caption" xml:space="preserve">
+    <value>Multi8</value>
+  </data>
+  <data name="Multi9.Caption" xml:space="preserve">
+    <value>Multi9</value>
+  </data>
+  <data name="Price1.Caption" xml:space="preserve">
+    <value>Price1</value>
+  </data>
+  <data name="Price10.Caption" xml:space="preserve">
+    <value>Price10</value>
+  </data>
+  <data name="Price2.Caption" xml:space="preserve">
+    <value>Price2</value>
+  </data>
+  <data name="Price3.Caption" xml:space="preserve">
+    <value>Price3</value>
+  </data>
+  <data name="Price4.Caption" xml:space="preserve">
+    <value>Price4</value>
+  </data>
+  <data name="Price5.Caption" xml:space="preserve">
+    <value>Price5</value>
+  </data>
+  <data name="Price6.Caption" xml:space="preserve">
+    <value>Price6</value>
+  </data>
+  <data name="Price7.Caption" xml:space="preserve">
+    <value>Price7</value>
+  </data>
+  <data name="Price8.Caption" xml:space="preserve">
+    <value>Price8</value>
+  </data>
+  <data name="Price9.Caption" xml:space="preserve">
+    <value>Price9</value>
+  </data>
+  <data name="Qty1.Caption" xml:space="preserve">
+    <value>Qty1</value>
+  </data>
+  <data name="Qty10.Caption" xml:space="preserve">
+    <value>Qty10</value>
+  </data>
+  <data name="Qty2.Caption" xml:space="preserve">
+    <value>Qty2</value>
+  </data>
+  <data name="Qty3.Caption" xml:space="preserve">
+    <value>Qty3</value>
+  </data>
+  <data name="Qty4.Caption" xml:space="preserve">
+    <value>Qty4</value>
+  </data>
+  <data name="Qty5.Caption" xml:space="preserve">
+    <value>Qty5</value>
+  </data>
+  <data name="Qty6.Caption" xml:space="preserve">
+    <value>Qty6</value>
+  </data>
+  <data name="Qty7.Caption" xml:space="preserve">
+    <value>Qty7</value>
+  </data>
+  <data name="Qty8.Caption" xml:space="preserve">
+    <value>Qty8</value>
+  </data>
+  <data name="Qty9.Caption" xml:space="preserve">
+    <value>Qty9</value>
+  </data>
+</root>

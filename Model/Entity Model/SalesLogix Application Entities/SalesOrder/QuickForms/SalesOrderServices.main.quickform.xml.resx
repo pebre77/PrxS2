@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="QFTextBox.Caption" xml:space="preserve">
+    <value>Total Antic:</value>
+  </data>
+  <data name="QFTextBox2.Caption" xml:space="preserve">
+    <value>Total Cost:</value>
+  </data>
+  <data name="QFSLXCurrency.Caption" xml:space="preserve">
+    <value>Profit Adj:</value>
+  </data>
+  <data name="QFTextBox3.Caption" xml:space="preserve">
+    <value>Total Profit:</value>
+  </data>
+  <data name="QFSLXCurrency2.Caption" xml:space="preserve">
+    <value>Total Comm.Rev.:</value>
+  </data>
+  <data name="QFSLXCurrency3.Caption" xml:space="preserve">
+    <value>Invoice To Date:</value>
+  </data>
+  <data name="QFSLXCurrency4.Caption" xml:space="preserve">
+    <value>Total Receipts:</value>
+  </data>
+  <data name="grdSalesorderdetails.6c558ba8-0336-43cd-a78f-a8103d2570f3.ColumnHeading" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="grdSalesorderdetails.bdbe27d2-a45d-4772-a260-df47d767ee91.ColumnHeading" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="grdSalesorderdetails.424f9b7f-824c-4c30-9232-8a7b0650420c.ColumnHeading" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="grdSalesorderdetails.f3240ed0-7306-4239-8dc4-94b4cb8ac3f2.ColumnHeading" xml:space="preserve">
+    <value>Ant./Act. Rev.</value>
+  </data>
+  <data name="grdSalesorderdetails.bfdec10c-c940-4dff-8794-9b55584f7cd0.ColumnHeading" xml:space="preserve">
+    <value>Allocation</value>
+  </data>
+  <data name="grdSalesorderdetails.3ba5507c-594b-4497-b377-76d6c3c40aa1.ColumnHeading" xml:space="preserve">
+    <value>Adjust Rev.</value>
+  </data>
+  <data name="grdSalesorderdetails.537194e9-0382-4bad-a5f1-85aa17e31da7.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="37b3ac50-dba4-4603-badd-78fb8f066e02.DialogTitleOverride" xml:space="preserve">
+    <value>Edit Sales Order Services</value>
+  </data>
+  <data name="grdSalesorderdetails.7b2f3faf-078a-4ff4-9178-7535cffb1910.Text" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="grdSalesorderdetails.7b2f3faf-078a-4ff4-9178-7535cffb1910.ConfirmationMessage" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="QFButton.ToolTip" xml:space="preserve">
+    <value>Include Service</value>
+  </data>
+  <data name="grdSalesorderdetails.7b2f3faf-078a-4ff4-9178-7535cffb1910.ColumnHeading" xml:space="preserve">
+    <value />
+  </data>
+</root>

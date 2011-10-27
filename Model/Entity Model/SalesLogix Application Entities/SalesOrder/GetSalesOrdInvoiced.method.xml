@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="16c28b1c-552e-40f7-83f5-89978a0c1517" lastModifiedUtc="2011-08-15T13:29:25.9518889Z" name="GetSalesOrdInvoiced" returnType="System.Decimal" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="e0681804-559d-47b0-88b9-80461626163b" lastModifiedUtc="2011-08-15T13:44:52.5671942Z" targetType="Sage.BusinessRules.CodeSnippets.SalesOrderBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetSalesOrdInvoicedStep" active="true" codeSnippetId="148cbeab-957d-4d02-b2af-88b2ff54ed27">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

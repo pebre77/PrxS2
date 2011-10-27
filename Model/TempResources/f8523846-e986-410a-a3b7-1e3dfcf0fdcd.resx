@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NbrRooms1.Caption" xml:space="preserve">
+    <value>NbrRooms1</value>
+  </data>
+  <data name="NbrRooms10.Caption" xml:space="preserve">
+    <value>NbrRooms10</value>
+  </data>
+  <data name="NbrRooms11.Caption" xml:space="preserve">
+    <value>NbrRooms11</value>
+  </data>
+  <data name="NbrRooms12.Caption" xml:space="preserve">
+    <value>NbrRooms12</value>
+  </data>
+  <data name="NbrRooms13.Caption" xml:space="preserve">
+    <value>NbrRooms13</value>
+  </data>
+  <data name="NbrRooms14.Caption" xml:space="preserve">
+    <value>NbrRooms14</value>
+  </data>
+  <data name="NbrRooms15.Caption" xml:space="preserve">
+    <value>NbrRooms15</value>
+  </data>
+  <data name="NbrRooms16.Caption" xml:space="preserve">
+    <value>NbrRooms16</value>
+  </data>
+  <data name="NbrRooms17.Caption" xml:space="preserve">
+    <value>NbrRooms17</value>
+  </data>
+  <data name="NbrRooms18.Caption" xml:space="preserve">
+    <value>NbrRooms18</value>
+  </data>
+  <data name="NbrRooms2.Caption" xml:space="preserve">
+    <value>NbrRooms2</value>
+  </data>
+  <data name="NbrRooms3.Caption" xml:space="preserve">
+    <value>NbrRooms3</value>
+  </data>
+  <data name="NbrRooms4.Caption" xml:space="preserve">
+    <value>NbrRooms4</value>
+  </data>
+  <data name="NbrRooms5.Caption" xml:space="preserve">
+    <value>NbrRooms5</value>
+  </data>
+  <data name="NbrRooms6.Caption" xml:space="preserve">
+    <value>NbrRooms6</value>
+  </data>
+  <data name="NbrRooms7.Caption" xml:space="preserve">
+    <value>NbrRooms7</value>
+  </data>
+  <data name="NbrRooms8.Caption" xml:space="preserve">
+    <value>NbrRooms8</value>
+  </data>
+  <data name="NbrRooms9.Caption" xml:space="preserve">
+    <value>NbrRooms9</value>
+  </data>
+  <data name="RoomRate.Caption" xml:space="preserve">
+    <value>RoomRate</value>
+  </data>
+  <data name="RoomType.Caption" xml:space="preserve">
+    <value>RoomType</value>
+  </data>
+  <data name="grdSORoomBlockTypes.d88ee2aa-0f7e-4ebc-b4a0-aec5d63bd34f.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms1</value>
+  </data>
+  <data name="grdSORoomBlockTypes.a88ec775-05aa-4e44-95a3-ba3fe3c3c951.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms10</value>
+  </data>
+  <data name="grdSORoomBlockTypes.ccb08a70-d3a9-4a4d-a210-ce9ae500bf5b.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms11</value>
+  </data>
+  <data name="grdSORoomBlockTypes.927c5d8f-4108-4d17-980c-a7605c038144.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms12</value>
+  </data>
+  <data name="grdSORoomBlockTypes.d63e834d-804b-4e75-bce5-d2866764d32d.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms13</value>
+  </data>
+  <data name="grdSORoomBlockTypes.2f26f6f9-65fd-4826-b1f4-5f5eb85b8b5d.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms14</value>
+  </data>
+  <data name="grdSORoomBlockTypes.6aa3ce27-a468-45b2-bd00-711f388a9aa4.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms15</value>
+  </data>
+  <data name="grdSORoomBlockTypes.f0490a95-dbe6-430a-a940-2d7f7eaee954.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms16</value>
+  </data>
+  <data name="grdSORoomBlockTypes.812382ff-46d8-49f2-8caa-45b536e99feb.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms17</value>
+  </data>
+  <data name="grdSORoomBlockTypes.452e4e57-872e-4579-96e9-a3417eb359e7.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms18</value>
+  </data>
+  <data name="grdSORoomBlockTypes.3872400a-fd37-4359-aa39-9f77911979a4.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms2</value>
+  </data>
+  <data name="grdSORoomBlockTypes.bc62f245-83c1-4a08-94b2-3f3eba38616e.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms3</value>
+  </data>
+  <data name="grdSORoomBlockTypes.8ae33644-ec68-4cd4-b33a-bd061695f5bb.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms4</value>
+  </data>
+  <data name="grdSORoomBlockTypes.6610fe47-b373-4c82-8483-7d8fd21882aa.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms5</value>
+  </data>
+  <data name="grdSORoomBlockTypes.28a1968a-98be-4f0c-81bb-561cedf1c90d.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms6</value>
+  </data>
+  <data name="grdSORoomBlockTypes.21ef9d9e-4567-4430-86f2-a7169a223d1f.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms7</value>
+  </data>
+  <data name="grdSORoomBlockTypes.3a48f72b-31b1-4d8c-86d6-a4b83cdb1441.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms8</value>
+  </data>
+  <data name="grdSORoomBlockTypes.452a1bba-fa6c-4963-8181-88116e8161bf.ColumnHeading" xml:space="preserve">
+    <value>NbrRooms9</value>
+  </data>
+  <data name="grdSORoomBlockTypes.42214b58-131d-4ca4-b019-c12e5a3f17e0.ColumnHeading" xml:space="preserve">
+    <value>RoomRate</value>
+  </data>
+  <data name="grdSORoomBlockTypes.aac62732-20d0-4d9f-b104-a8269ce7dbd8.ColumnHeading" xml:space="preserve">
+    <value>RoomType</value>
+  </data>
+</root>

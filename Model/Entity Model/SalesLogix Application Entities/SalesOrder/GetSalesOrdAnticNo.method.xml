@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="739f8e06-b80c-4e59-861d-df0be24009a0" lastModifiedUtc="2011-08-15T04:54:29.5532865Z" name="GetSalesOrdAnticNo" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="d61b9187-b0d9-4898-9786-e57abee4452e" lastModifiedUtc="2011-08-15T04:55:11.9751615Z" targetType="Sage.BusinessRules.CodeSnippets.SalesOrderBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetCSAnticNoStep" active="true" codeSnippetId="d6df60e5-1576-4e85-a520-65a230e0ec21">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

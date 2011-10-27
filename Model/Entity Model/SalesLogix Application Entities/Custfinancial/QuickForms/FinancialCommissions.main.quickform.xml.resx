@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="b7a80766-5345-43a7-a3d0-928201dfe2c8.Caption" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ffc2acc6-7ee7-48bb-bb8c-e3c7f30b4dd5.Caption" xml:space="preserve">
+    <value>Checkdate</value>
+  </data>
+  <data name="cd699c13-aa93-4288-be67-6fad873b08a2.Caption" xml:space="preserve">
+    <value>Checknumber</value>
+  </data>
+  <data name="28f656ed-fc02-42e4-9f7b-e281df20316f.Caption" xml:space="preserve">
+    <value>UserID</value>
+  </data>
+  <data name="dgCommissions.47aeb3a6-6b2d-4d3d-a8cf-95d2b1c1d246.ColumnHeading" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dgCommissions.58a0e815-6a65-4073-b245-d005955a892d.ColumnHeading" xml:space="preserve">
+    <value>Checkdate</value>
+  </data>
+  <data name="dgCommissions.57fd8db9-792b-45b5-a7b0-23ce711e45b4.ColumnHeading" xml:space="preserve">
+    <value>Checknumber</value>
+  </data>
+  <data name="dgCommissions.ccb36e7d-5299-4249-9a4e-270406f6fcb9.ColumnHeading" xml:space="preserve">
+    <value>UserID</value>
+  </data>
+  <data name="dgCommissions.b75337ef-16dc-45d6-ac0b-0e1ebb2ba4e0.ColumnHeading" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dgCommissions.ec318f61-c5f4-47c5-81c7-c8e235a72003.ColumnHeading" xml:space="preserve">
+    <value>SalesOrder</value>
+  </data>
+  <data name="dgCommissions.1020d37c-28fe-4ca4-91d6-f4686192ec43.ColumnHeading" xml:space="preserve">
+    <value>SalesOrder</value>
+  </data>
+  <data name="dgCommissions.f51a3f98-2eb4-4141-8d04-0400986c07f4.ColumnHeading" xml:space="preserve">
+    <value>Currency</value>
+  </data>
+  <data name="dgCommissions.5ff57743-33fd-4944-ab1c-d67c25dfb7d3.ColumnHeading" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dgCommissions.e3b2dd51-1b74-4877-b354-d3f84cafe4b4.ColumnHeading" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="dgCommissions.a607ef29-393d-416c-8c69-6a03091623d2.ColumnHeading" xml:space="preserve">
+    <value>Sales Order Number</value>
+  </data>
+  <data name="dgCommissions.5803d08d-feb9-417f-88d7-7670b64e011f.ColumnHeading" xml:space="preserve">
+    <value>Check Date</value>
+  </data>
+  <data name="dgCommissions.ba62c76e-1437-4013-9f19-430ad1c343cf.ColumnHeading" xml:space="preserve">
+    <value>Check Number</value>
+  </data>
+  <data name="dgCommissions.9cb0b562-bfbb-4b4b-94ad-c035428c7c3d.ColumnHeading" xml:space="preserve">
+    <value>Vendor Number</value>
+  </data>
+  <data name="dgCommissions.6e131ca2-49c9-41ad-bdf2-4624402a4144.ColumnHeading" xml:space="preserve">
+    <value>Sales Person</value>
+  </data>
+  <data name="dgCommissions.46ff753f-ef07-475f-8fbf-d4ce3e238787.ColumnHeading" xml:space="preserve">
+    <value>Check Date</value>
+  </data>
+  <data name="dgCommissions.5e7af19b-f7b9-4b91-8966-52eefa6a6ba2.ColumnHeading" xml:space="preserve">
+    <value>Sales Person</value>
+  </data>
+</root>

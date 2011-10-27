@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuickFormDefinition Id="7a003ee4-b0bf-43fc-be16-cd0d11123b82" name="FinancialInvoices">
+  <Properties>
+    <Property name="EntityTypeName" type="System.String">ICustfinancial</Property>
+    <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="UseEntityNameAsTitle" type="System.Boolean">True</Property>
+    <Property name="ImagePath" type="System.String"></Property>
+    <Property name="DefinitionType" type="System.String">Sage.Platform.QuickForms.QuickFormMainDetailViewDefinition, Sage.Platform.QuickForms</Property>
+    <Property name="Columns" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.ColumnStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfColumnStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnStyle><SizeType>Percent</SizeType><Width>100</Width></ColumnStyle></ArrayOfColumnStyle></Property>
+    <Property name="Rows" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.RowStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfRowStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle></ArrayOfRowStyle></Property>
+    <Property name="GeneratePrintView" type="System.Boolean">False</Property>
+    <Property name="Description" type="System.String"></Property>
+    <Property name="ActiveControl" type="System.String"></Property>
+  </Properties>
+  <LoadActions />
+  <QuickFormElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDataGrid, Sage.SalesLogix.QuickForms.QFControls"><QFDataGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFDataGrid</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><DataSource>QFHqlDataSource</DataSource><EnablePaging>false</EnablePaging><EnableSorting>false</EnableSorting><Columns><QFDataGridCol><StyleScheme /><DataField>i.InvoiceNO</DataField><ColumnId>95e0d5f1-5012-4d0b-b990-2058efe6e725</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>center</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDateTimePickerCol><StyleScheme /><DataField>i.Invoicedate</DataField><ColumnId>b1b2ff2c-cc5d-4abc-bf48-a08194d8da66</ColumnId><HorizontalAlignment>right</HorizontalAlignment><HeaderAlignment>center</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><DateOnly>true</DateOnly><Timeless>false</Timeless></QFDateTimePickerCol><QFDataGridCol><StyleScheme /><DataField>i.Amount</DataField><ColumnId>af623a9f-bb26-4666-a239-581fe7105417</ColumnId><HorizontalAlignment>right</HorizontalAlignment><HeaderAlignment>center</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>s.DocumentId</DataField><ColumnId>12dc6434-48fb-469b-8d43-a3995f6e7e9d</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>center</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>a.AccountName</DataField><ColumnId>8bb0b94a-d1a0-4288-acb6-6fa7fc6a8d06</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>ai.AccountingsystemId</DataField><ColumnId>c2d37af0-2d63-4e4c-81ec-9e5e4b42f016</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol></Columns><RenderVertical>false</RenderVertical><OnRowSelectedAction><ResourceKey>QFDataGrid</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnRowSelectedAction></QFDataGrid></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFHqlDataSource, Sage.Platform.QuickForms.QFControls"><QFHqlDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>1</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>QFHqlDataSource</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><From>SalesOrder s,Account a,Accountinginfo ai Join s.Invoices i</From><Where>s.Billtoaccount = a.Id and s.Billtoaccount = ai.Id and OpportunityId = :pOppId</Where><Columns><SelectField><DataField>i.InvoiceNO</DataField><Alias>i.InvoiceNO</Alias></SelectField><SelectField><DataField>i.Invoicedate</DataField><Alias>i.Invoicedate</Alias></SelectField><SelectField><DataField>i.Amount</DataField><Alias>i.Amount</Alias></SelectField><SelectField><DataField>s.DocumentId</DataField><Alias>s.DocumentId</Alias></SelectField><SelectField><DataField>a.AccountName</DataField><Alias>a.AccountName</Alias></SelectField><SelectField><DataField>ai.AccountingsystemId</DataField><Alias>ai.AccountingsystemId</Alias></SelectField></Columns><Parameters><HqlParameter><Name>pOppId</Name><Expression>EntityId</Expression></HqlParameter></Parameters><OrderBy /><Distinct>false</Distinct></QFHqlDataSource></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormElements>
+  <QuickFormToolElements />
+</QuickFormDefinition>

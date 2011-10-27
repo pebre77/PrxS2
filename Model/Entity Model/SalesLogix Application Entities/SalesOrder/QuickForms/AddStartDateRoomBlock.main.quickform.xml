@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuickFormDefinition Id="98c91ce9-0752-499f-b36b-ad8082346d28" name="AddStartDateRoomBlock">
+  <Properties>
+    <Property name="EntityTypeName" type="System.String">ISalesOrder</Property>
+    <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="UseEntityNameAsTitle" type="System.Boolean">True</Property>
+    <Property name="ImagePath" type="System.String"></Property>
+    <Property name="DefinitionType" type="System.String">Sage.Platform.QuickForms.QuickFormMainDetailViewDefinition, Sage.Platform.QuickForms</Property>
+    <Property name="Columns" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.ColumnStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfColumnStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnStyle><SizeType>Percent</SizeType><Width>100</Width></ColumnStyle></ArrayOfColumnStyle></Property>
+    <Property name="Rows" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.RowStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfRowStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle></ArrayOfRowStyle></Property>
+    <Property name="GeneratePrintView" type="System.Boolean">False</Property>
+    <Property name="Description" type="System.String"></Property>
+    <Property name="ActiveControl" type="System.String"></Property>
+  </Properties>
+  <LoadActions />
+  <QuickFormElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>dtNewDate</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>dtNewDate</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormElements>
+  <QuickFormToolElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>cmdok</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:check]</Image><OnClientClick /><OnClickAction><ResourceKey>cmdok</ResourceKey><RootActionName>BusinessRuleAction</RootActionName><Action><BusinessRule>Save</BusinessRule><Object>SORoomBlockType</Object><Parameters /><PassResultsToNextAction>False</PassResultsToNextAction><OnCompleteActionName>CSharpSnippetAction</OnCompleteActionName><OnComplete><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+
+if (!String.IsNullOrEmpty(dtNewDate.Text))
+{ 
+	DateTime EvalDate = saleso.SORoomBlock.MainArrivalDate.Value;
+	if (dtNewDate.DateTimeValue < EvalDate.AddDays(-4))
+	{ 
+		DateTime vAntDate = EvalDate.AddDays(-4);
+		DateTime vDate = dtNewDate.DateTimeValue.Value;
+
+		
+		//Update
+		
+		int vDays = vAntDate.Subtract(vDate).Days;
+				
+		if (vDays < 18){
+			int vAllDates = 18;
+			int vUpdateDates = 18 - vDays;
+			
+			//Move Old
+			string sql = "";
+			while (vUpdateDates > 0) {
+				
+				NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();
+				sql = "update SORoomBlockType set NBRRooms"+vAllDates.ToString()+"= NBRRooms"+vUpdateDates.ToString()+" where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				sql = "update SORoomBlockType set ActualRevenue"+vAllDates.ToString()+"= ActualRevenue"+vUpdateDates.ToString()+" where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				vAllDates --;
+				vUpdateDates--;
+			}
+			
+			int i = 1;
+			
+			//Clear News
+			while (i <=vDays){
+				NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();
+				sql = "update SORoomBlockType set NBRRooms"+i+"= 0 where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				sql = "update SORoomBlockType set ActualRevenue"+i+"= 0 where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				i++;
+			}
+			
+
+		} 
+		else{
+				int j = 1;
+				string sql = "";
+				while (j <=18){
+				NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();
+				sql = "update SORoomBlockType set NBRRooms"+j+"= 0 where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				sql = "update SORoomBlockType set ActualRevenue"+j+"= 0 where SalesOrderId='"+saleso.Id.ToString()+"'";
+				session.CreateQuery(sql)
+				.ExecuteUpdate();
+				
+				j++;
+				}	
+		}
+		
+		
+		
+		
+		//Update Totals
+		string sql2 = "";
+		NHibernate.ISession session2 = new Sage.Platform.Orm.SessionScopeWrapper();
+		sql2 = "update SORoomBlockType set TotalNBRRooms = isnull(NBRRooms1,0) + isnull(NBRRooms2,0) + isnull(NBRRooms3,0) + isnull(NBRRooms4,0) + isnull(NBRRooms5,0) + isnull(NBRRooms6,0) + isnull(NBRRooms7,0) + isnull(NBRRooms8,0) + isnull(NBRRooms9,0) + isnull(NBRRooms10,0) + isnull(NBRRooms11,0) + isnull(NBRRooms12,0) + isnull(NBRRooms13,0) + isnull(NBRRooms14,0) + isnull(NBRRooms15,0)+ isnull(NBRRooms16,0) + isnull(NBRRooms17,0) + isnull(NBRRooms18,0) where SalesOrderId='"+saleso.Id.ToString()+"'";
+		session2.CreateQuery(sql2)
+		.ExecuteUpdate();
+		
+		sql2 = "update SORoomBlockType set ActualRoomRevenue = ActualRevenue1 + ActualRevenue2 + ActualRevenue3 + ActualRevenue4 + ActualRevenue5 + ActualRevenue6 + ActualRevenue7 + ActualRevenue8 + ActualRevenue9 + ActualRevenue10 + ActualRevenue11 + ActualRevenue12 + ActualRevenue13 + ActualRevenue14 + ActualRevenue15 + ActualRevenue16 + ActualRevenue17 + ActualRevenue18 where SalesOrderId='"+saleso.Id.ToString()+"'";
+		session2.CreateQuery(sql2)
+		.ExecuteUpdate();
+		
+		//Confirm
+		saleso.SORoomBlock.MainArrivalDate = vDate.AddDays(4);
+		saleso.Save();
+		
+		Response.Redirect("SalesOrder.aspx?entityId=" + saleso.Id.ToString());
+	}
+	else
+	{
+		throw new Sage.Platform.Application.ValidationException("New Date must be earlier to the first date of entries of the Roomblock Type");	
+	}
+} 
+else {
+	throw new Sage.Platform.Application.ValidationException("Please Insert a New Date");	
+}]]></CSharpCodeSnippet></OnComplete></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>DialogOK</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>cmdCancel</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:cancel]</Image><OnClientClick /><OnClickAction><ResourceKey>cmdCancel</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+Response.Redirect("SalesOrder.aspx?entityId=" + saleso.Id.ToString());]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>DialogCancel</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormToolElements>
+</QuickFormDefinition>

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="DocumentId.Caption" xml:space="preserve">
+    <value>Document Id</value>
+  </data>
+  <data name="grdSalesOrders.ec6aa2bd-4ee8-489f-bb6d-ea8ed2d7e610.ColumnHeading" xml:space="preserve">
+    <value>Document Id</value>
+  </data>
+  <data name="QFDataGrid.03f0e1be-6d74-4f90-9b8e-926a5643e571.ColumnHeading" xml:space="preserve">
+    <value>Act.Date</value>
+  </data>
+  <data name="grdSalesOrders.50b59ff5-4c23-407f-bcf9-2ab6d1ead1b2.ColumnHeading" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="QFDataGrid.2f78a1cd-fa86-4561-9d92-60201fd2c899.ColumnHeading" xml:space="preserve">
+    <value>Antic.Date.</value>
+  </data>
+  <data name="grdSalesOrders.26185021-aa94-4dad-b80c-f30e5a076224.ColumnHeading" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="QFDataGrid.10a583d9-3dfb-433e-99be-5a4b4dddde11.ColumnHeading" xml:space="preserve">
+    <value>Antic.No.</value>
+  </data>
+  <data name="QFDataGrid.e733e15d-27dd-47c5-828a-1d05d55f1458.ColumnHeading" xml:space="preserve">
+    <value>Act.No.</value>
+  </data>
+  <data name="grdSalesOrders.0308d330-65b7-487e-94ce-5794f2448e27.ColumnHeading" xml:space="preserve">
+    <value>Antic. No.</value>
+  </data>
+  <data name="grdSalesOrders.c1cc3cd4-97c6-43a8-82bf-8ae82a75e061.ColumnHeading" xml:space="preserve">
+    <value>Antic.No.</value>
+  </data>
+  <data name="grdSalesOrders.2e04c2d7-bb2f-49e2-8c0d-9967416e137a.ColumnHeading" xml:space="preserve">
+    <value>Antic.No.</value>
+  </data>
+  <data name="grdSalesOrders.5a01e71c-53b6-40f4-a1a5-b2b0e9047276.ColumnHeading" xml:space="preserve">
+    <value>Antic.Date</value>
+  </data>
+  <data name="grdSalesOrders.cef04294-c458-446e-83a1-441383c6695b.ColumnHeading" xml:space="preserve">
+    <value>Antic.Rev.</value>
+  </data>
+  <data name="QFDataGrid.0801ce2d-a5a8-49f6-9e08-ea5716717f8d.ColumnHeading" xml:space="preserve">
+    <value>Domain</value>
+  </data>
+  <data name="QFDataGrid.12b41309-75e7-4489-ad59-a6986a22899a.ColumnHeading" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="QFDataGrid.46f97eac-e7b4-4d39-84fa-37007f0fc347.ColumnHeading" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="7b065519-cca9-4855-9385-9c8741ad63d1.Caption" xml:space="preserve">
+    <value>Document Id</value>
+  </data>
+  <data name="4afc8c1a-9f5e-4be0-bc79-87ae5ef47412.Caption" xml:space="preserve">
+    <value>Document Id</value>
+  </data>
+  <data name="QFDataGrid.6e7a1443-5c41-4bbc-be21-550796403c04.ColumnHeading" xml:space="preserve">
+    <value>Antic.Rev.</value>
+  </data>
+  <data name="QFDataGrid.b116368e-a1b6-456d-ad31-874a60121947.ColumnHeading" xml:space="preserve">
+    <value>Ord. Owner</value>
+  </data>
+  <data name="QFDataGrid.7e338e56-1fa7-4ffd-8522-2e06c8bb7540.ColumnHeading" xml:space="preserve">
+    <value>Act.Rev.</value>
+  </data>
+  <data name="QFDataGrid.36d5b295-c551-4e26-b1ef-4c10a354fd5c.ColumnHeading" xml:space="preserve">
+    <value>Invoiced</value>
+  </data>
+  <data name="QFDataGrid.28aa68ee-dd7f-43b7-be2e-90bb39e772d8.ColumnHeading" xml:space="preserve">
+    <value>Receipts</value>
+  </data>
+  <data name="QFDataGrid.80b6c4a7-4e21-4be2-9b8a-4c23fb592713.ColumnHeading" xml:space="preserve">
+    <value>Antic.No.</value>
+  </data>
+  <data name="QFDataGrid.77ffed10-18e0-4bc9-a2ba-9a939e5e4035.ColumnHeading" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="QFDataGrid.b5e09eee-8cda-4d95-ba34-941721fa554d.ColumnHeading" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="QFDataGrid.a44038a0-94fa-45cb-a169-7f1124663935.ColumnHeading" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="QFDataGrid.694103e5-163b-47a6-8e06-dca6c067f75f.Text" xml:space="preserve">
+    <value>Select</value>
+  </data>
+  <data name="QFDataGrid.d5dba2aa-51fe-4fe1-9041-8b2e8d64b6b4.Text" xml:space="preserve">
+    <value>Convert to Actual</value>
+  </data>
+  <data name="QFDataGrid.d5dba2aa-51fe-4fe1-9041-8b2e8d64b6b4.ConfirmationMessage" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="QFDataGrid.c1053c18-ed6d-4464-a3ce-a28992e31bb7.ConfirmationMessage" xml:space="preserve">
+    <value>Are you sure?</value>
+  </data>
+  <data name="QFDataGrid.c1053c18-ed6d-4464-a3ce-a28992e31bb7.Text" xml:space="preserve">
+    <value>Convert to Actual</value>
+  </data>
+  <data name="QFDataGrid.4da7990b-3879-4d42-bebd-baf03669270d.Text" xml:space="preserve">
+    <value>Select to Convert</value>
+  </data>
+  <data name="QFDataGrid.61990a15-f5dd-40b5-b082-81247801c438.Text" xml:space="preserve">
+    <value>to Actual</value>
+  </data>
+  <data name="QFDataGrid.8017209d-f51e-491a-8fc2-b4045a159eda.ColumnHeading" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="QFDataGrid.4c45dd68-59d7-4fc9-9f8d-52b4714abfb6.ColumnHeading" xml:space="preserve">
+    <value>Bill To Acct.</value>
+  </data>
+  <data name="QFDataGrid.f8b3f55e-9cc2-4cf3-b154-c3bbda19bde5.ColumnHeading" xml:space="preserve">
+    <value>Event Name</value>
+  </data>
+  <data name="QFDataGrid.bafcdda7-3516-4829-ba7c-5567c71256fb.Text" xml:space="preserve">
+    <value>test</value>
+  </data>
+  <data name="QFDataGrid.d420e303-e925-4c76-8faf-7f997cb171cf.Text" xml:space="preserve">
+    <value>Convert</value>
+  </data>
+  <data name="QFDataGrid.b0fff019-ee12-4604-8fd9-dc2a6df97a96.ColumnHeading" xml:space="preserve">
+    <value>Act.No.</value>
+  </data>
+</root>

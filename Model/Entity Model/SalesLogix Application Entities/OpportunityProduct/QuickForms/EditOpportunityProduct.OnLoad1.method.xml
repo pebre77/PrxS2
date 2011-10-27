@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="5445579a-1ec4-4645-9f51-3e4a34f1d5fb" lastModifiedUtc="2011-07-19T21:58:39.0015407Z" name="OnLoad1" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="EditOpportunityProduct">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="0f7cbd2d-f465-48d6-9d7c-6cbdb5a21c43" paramName="form" sequence="0" paramType="IEditOpportunityProduct" />
+    <OrmEntityMethodParam id="a4878e7f-cdfc-4baa-a1b0-90ecc81dd826" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets />
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

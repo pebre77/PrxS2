@@ -1,0 +1,2901 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuickFormDefinition Id="cab0ea49-c045-4dc1-82d9-ae3b569c3ca7" name="EditOpportunityProduct">
+  <Properties>
+    <Property name="EntityTypeName" type="System.String">IOpportunityProduct</Property>
+    <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="UseEntityNameAsTitle" type="System.Boolean">True</Property>
+    <Property name="ImagePath" type="System.String"></Property>
+    <Property name="DefinitionType" type="System.String">Sage.Platform.QuickForms.QuickFormMainDetailViewDefinition, Sage.Platform.QuickForms</Property>
+    <Property name="Columns" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.ColumnStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfColumnStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnStyle><SizeType>Percent</SizeType><Width>33.3333321</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>33.3333321</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>33.3333321</Width></ColumnStyle></ArrayOfColumnStyle></Property>
+    <Property name="Rows" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.RowStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfRowStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle></ArrayOfRowStyle></Property>
+    <Property name="GeneratePrintView" type="System.Boolean">False</Property>
+    <Property name="Description" type="System.String">Edit Opportunity Product</Property>
+    <Property name="ActiveControl" type="System.String"></Property>
+  </Properties>
+  <LoadActions>
+    <ActionDefinition>
+      <ResourceKey>9a53104c-1223-4b78-9317-0db9e950b932</ResourceKey>
+      <RootActionName>CSharpSnippetAction</RootActionName>
+      <Action>
+        <CSharpCodeSnippet><![CDATA[/*
+Sage.SalesLogix.SystemInformation si = Sage.SalesLogix.SystemInformationRules.GetSystemInfo();
+Sage.SalesLogix.Orm.Utility.DelphiStreamReader stream = new Sage.SalesLogix.Orm.Utility.DelphiStreamReader(si.Data);
+Sage.SalesLogix.Orm.Utility.TValueType type;
+if (stream.FindProperty("MultiCurrency", out type))
+{
+    if (type.Equals(Sage.SalesLogix.Orm.Utility.TValueType.vaTrue))
+    {
+        curMCCalcPrice.Visible = true;
+        curMCCalcPrice_lbl.Visible = true;
+        Sage.Entity.Interfaces.IOpportunityProduct oppProduct = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+        if (oppProduct != null)
+        {
+            curMCCalcPrice.ExchangeRate = oppProduct.Opportunity.ExchangeRate.GetValueOrDefault(1);
+            curMCCalcPrice.CurrentCode = oppProduct.Opportunity.ExchangeRateCode;
+			curMCCalcPrice.Text = oppProduct.CalculatedPrice.ToString();
+        }
+    }
+    else
+    {
+        curMCCalcPrice.Visible = false;
+        curMCCalcPrice_lbl.Visible = false;
+    }
+}*/
+
+if (chkWon.Checked==true||chkLost.Checked==true){
+	pklReason.Enabled=true;
+	lkpCompetitorReplaced.Enabled=true;
+}
+else{
+	pklReason.Enabled=false;
+	lkpCompetitorReplaced.Enabled=false;
+	
+}
+try {	
+Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+
+	//Hotel
+QFRadioGroup.Visible=false;
+txtCommission.Visible=false;
+txtFlatFee.Visible=false;
+txtRoomNights.Visible=false;
+txtAvgRoomRate.Visible=false;
+txtDropOff.Visible=false;
+txtCommission_lbl.Visible=false;
+txtFlatFee_lbl.Visible=false;
+txtRoomNights_lbl.Visible=false;
+txtAvgRoomRate_lbl.Visible=false;
+txtDropOff_lbl.Visible=false;
+//Itemized
+pklFees1Desc.Visible = false;
+pklFees1Desc_lbl.Visible = false;
+txtFee1.Visible = false;
+txtFee1_lbl.Visible = false;
+pklFees2Desc.Visible = false;
+pklFees2Desc_lbl.Visible = false;
+txtFee2.Visible = false;
+txtFee2_lbl.Visible = false;
+pklFees3Desc.Visible = false;
+pklFees3Desc_lbl.Visible = false;
+txtFee3.Visible = false;
+txtFee3_lbl.Visible = false;
+pklFees4Desc.Visible = false;
+pklFees4Desc_lbl.Visible = false;
+txtFee4.Visible = false;
+txtFee4_lbl.Visible=false;
+//Simple
+txtQuantity.Visible=false;
+txtQuantity_lbl.Visible=false;
+txtServiceFee.Visible = false;
+txtServiceFee_lbl.Visible = false;
+//Per Fee-Itemized
+txtQuantity.Visible=false;
+txtQuantity_lbl.Visible=false;
+txtRate.Visible=false;
+txtRate_lbl.Visible = false;
+txtPerFeeTotal.Visible=false;
+txtPerFeeTotal_lbl.Visible = false;
+//Hourly
+txtNum1.Visible=false;
+txtNum1_lbl.Visible = false;
+txtNum2.Visible=false;
+txtNum2_lbl.Visible=false;
+txtNum3.Visible=false;
+txtNum3_lbl.Visible=false;
+txtNum4.Visible=false;
+txtNum4_lbl.Visible=false;
+txtRate1.Visible=false;
+txtRate2.Visible=false;
+txtRate3.Visible=false;
+txtRate4.Visible=false;
+txtRate1_lbl.Visible=false;
+txtRate2_lbl.Visible=false;
+txtRate3_lbl.Visible=false;
+txtRate4_lbl.Visible=false;
+pklActivity1.Visible=false;
+pklActivity2.Visible=false;
+pklActivity3.Visible=false;
+pklActivity4.Visible=false;
+pklActivity1_lbl.Visible=false;
+pklActivity2_lbl.Visible=false;
+pklActivity3_lbl.Visible=false;
+pklActivity4_lbl.Visible=false;
+txtItemizedTotal.Visible 	=false;
+txtItemizedTotal_lbl.Visible=false;	
+	
+
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			pklFees1Desc.Visible 		= true;
+			pklFees1Desc_lbl.Visible 	= true;
+			txtFee1.Visible 			= true;
+			txtFee1_lbl.Visible 		= true;
+			pklFees2Desc.Visible 		= true;
+			pklFees2Desc_lbl.Visible 	= true;
+			txtFee2.Visible 			= true;
+			txtFee2_lbl.Visible 		= true;
+			pklFees3Desc.Visible 		= true;
+			pklFees3Desc_lbl.Visible 	= true;
+			txtFee3.Visible 			= true;
+			txtFee3_lbl.Visible 		= true;
+			pklFees4Desc.Visible 		= true;
+			pklFees4Desc_lbl.Visible 	= true;
+			txtFee4.Visible 			= true;
+			txtFee4_lbl.Visible			= true;
+			
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+				} 
+
+			
+			break;
+			
+		case "SIMPLE":		
+			// SSI JKL 09/19/2011
+			// Add Qty security...
+			//txtQuantity.Visible			= true;
+			//txtQuantity_lbl.Visible		= true;
+			//txtQuantity.ReadOnly 		= true; 			
+			if (Convert.ToString(oppprod.Product.Name).Trim().ToUpper() == "EOL") {
+				txtQuantity.Visible = true;
+				txtQuantity_lbl.Visible	= true;
+				txtQuantity.ReadOnly = false; 
+			}
+			else {
+				txtQuantity.Visible = false;
+				txtQuantity_lbl.Visible	= false;
+				txtQuantity.ReadOnly = true; 
+			}
+			
+			txtServiceFee.Visible 	= true;
+			txtServiceFee_lbl.Visible = true;
+			
+			
+			if (!string.IsNullOrEmpty(txtServiceFee.Text)){
+			double vsimplefee = double.Parse(txtServiceFee.Text);
+			txtPotRev.Text = vsimplefee.ToString();
+			}
+	
+			
+				//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			
+			break;
+		case "HOTEL":
+			txtCommission.Visible		= true;
+			txtFlatFee.Visible			= true;
+			txtRoomNights.Visible		= true;
+			txtAvgRoomRate.Visible		= true;
+			txtDropOff.Visible			= true;
+			txtCommission_lbl.Visible	= true;
+			txtFlatFee_lbl.Visible		= true;
+			txtRoomNights_lbl.Visible	= true;
+			txtAvgRoomRate_lbl.Visible	= true;
+			txtDropOff_lbl.Visible		= true;
+			txtAvgRoomRate_lbl.Text		= "Avg. Room Rate:";
+			QFRadioGroup.Visible		= true;
+			//QFRadioGroup.SelectedIndex	= 0;
+			//txtCommission.ReadOnly		= false;
+			//txtFlatFee.ReadOnly			= true;
+
+				
+			//Default Value
+			if (string.IsNullOrEmpty(txtDropOff.Text)){
+			txtDropOff.Text = "0.15";
+			}
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			break;
+		case "SUPPLIER":
+			txtCommission.Visible		= true;
+			txtFlatFee.Visible			= true;
+			txtAvgRoomRate.Visible		= true;
+			txtDropOff.Visible			= true;
+			txtCommission_lbl.Visible	= true;
+			txtFlatFee_lbl.Visible		= true;
+			txtAvgRoomRate_lbl.Visible	= true;
+			txtDropOff_lbl.Visible		= true;
+			txtAvgRoomRate_lbl.Text		= "Commissionable Revenue:";
+			QFRadioGroup.Visible		= true;
+
+			
+			//Default Value
+			if (string.IsNullOrEmpty(txtDropOff.Text)){
+			txtDropOff.Text = "0.15";
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOURLY":
+			txtNum1.Visible				= true;
+			txtNum1_lbl.Visible 		= true;
+			txtNum2.Visible				= true;
+			txtNum2_lbl.Visible			= true;
+			txtNum3.Visible				= true;
+			txtNum3_lbl.Visible			= true;
+			txtNum4.Visible				= true;
+			txtNum4_lbl.Visible			= true;
+			txtRate1.Visible			= true;
+			txtRate2.Visible			= true;
+			txtRate3.Visible			= true;
+			txtRate4.Visible			= true;
+			txtRate1_lbl.Visible		= true;
+			txtRate2_lbl.Visible		= true;
+			txtRate3_lbl.Visible		= true;
+			txtRate4_lbl.Visible		= true;
+			pklActivity1.Visible		= true;
+			pklActivity2.Visible		= true;
+			pklActivity3.Visible		= true;
+			pklActivity4.Visible		= true;
+			pklActivity1_lbl.Visible	= true;
+			pklActivity2_lbl.Visible	= true;
+			pklActivity3_lbl.Visible	= true;
+			pklActivity4_lbl.Visible	= true;
+			
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			}
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	
+			
+			break;
+			
+		// SSI JKL 09/19/2011
+		// Fixed Praxi error...			
+		//case "PER FEE/ITEMIZED":
+		case "PER FEE-ITEMIZED":
+				
+			pklFees1Desc.Visible 		= true;
+			pklFees1Desc_lbl.Visible 	= true;
+			txtFee1.Visible 			= true;
+			txtFee1_lbl.Visible 		= true;
+			pklFees2Desc.Visible 		= true;
+			pklFees2Desc_lbl.Visible 	= true;
+			txtFee2.Visible 			= true;
+			txtFee2_lbl.Visible 		= true;
+			pklFees3Desc.Visible 		= true;
+			pklFees3Desc_lbl.Visible 	= true;
+			txtFee3.Visible 			= true;
+			txtFee3_lbl.Visible 		= true;
+			pklFees4Desc.Visible 		= true;
+			pklFees4Desc_lbl.Visible 	= true;
+			txtFee4.Visible 			= true;
+			txtFee4_lbl.Visible			= true;
+			txtQuantity.Visible			= true;
+			txtQuantity_lbl.Visible		= true;
+			txtRate.Visible				= true;
+			txtRate_lbl.Visible 		= true;
+			txtPerFeeTotal.Visible		= true;
+			txtPerFeeTotal_lbl.Visible 	= true;		
+			txtItemizedTotal.Visible 	=true;
+			txtItemizedTotal_lbl.Visible=true;				
+			txtQuantity.ReadOnly 		=false; 
+			//Load Values
+			double vperfeetotal = 0;
+			txtPerFeeTotal.Text = vperfeetotal.ToString();
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				 vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				 txtPerFeeTotal.Text = vperfeetotal.ToString();
+			}
+			
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+	}
+}
+
+} //End Try
+catch
+    {
+          
+    }]]></CSharpCodeSnippet>
+      </Action>
+      <IsDialogCloseAction>False</IsDialogCloseAction>
+      <RunOnEveryRePaint>True</RunOnEveryRePaint>
+      <DialogActionResult>NoResult</DialogActionResult>
+      <PerformsUpdate>False</PerformsUpdate>
+      <AppliedSecurity />
+    </ActionDefinition>
+    <ActionDefinition>
+      <ResourceKey>75fccd99-47b1-450c-8b92-f02e0dff9b19</ResourceKey>
+      <RootActionName>ValidationAction</RootActionName>
+      <Action>
+        <ValidationMethod>ConvertionButton</ValidationMethod>
+        <OnFailActionName>UIAction</OnFailActionName>
+        <OnFail>
+          <PropertySettings>
+            <PropertySetting>
+              <TargetControlID>cmdConvert</TargetControlID>
+              <Property>Visible</Property>
+              <Value>false</Value>
+            </PropertySetting>
+          </PropertySettings>
+        </OnFail>
+        <OnSuccessActionName>UIAction</OnSuccessActionName>
+        <OnSuccess>
+          <PropertySettings>
+            <PropertySetting>
+              <TargetControlID>cmdConvert</TargetControlID>
+              <Property>Visible</Property>
+              <Value>true</Value>
+            </PropertySetting>
+          </PropertySettings>
+        </OnSuccess>
+      </Action>
+      <IsDialogCloseAction>False</IsDialogCloseAction>
+      <RunOnEveryRePaint>False</RunOnEveryRePaint>
+      <DialogActionResult>NoResult</DialogActionResult>
+      <PerformsUpdate>False</PerformsUpdate>
+      <AppliedSecurity />
+    </ActionDefinition>
+  </LoadActions>
+  <QuickFormElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>dtpDateCreated</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>CreateDate</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>dtpDateCreated</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">Property</Property>
+        <Property name="EntityTypeName" type="System.String">IProduct</Property>
+        <Property name="EntityNamespace" type="System.String"></Property>
+        <Property name="EntityAssemblyName" type="System.String"></Property>
+        <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+        <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+        <Property name="EntityReferenceName" type="System.String">Product</Property>
+        <Property name="ValueMember" type="System.String">Name</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>1</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtServiceName</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Product.Name</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtServiceName</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFRadioGroup, Sage.Platform.QuickForms.QFControls"><QFRadioGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>2</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFRadioGroup</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><SelectedIndex>0</SelectedIndex><Items><Item><Key>QFRadioGroup_item0.Value</Key><Value>Commission</Value></Item><Item><Key>QFRadioGroup_item1.Value</Key><Value>FlatFee</Value></Item></Items><OnChangeAction><ResourceKey>QFRadioGroup</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct  oppprod = this.BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+if (QFRadioGroup.SelectedIndex==0)
+{
+	txtFlatFee.ReadOnly		= true;
+	txtCommission.ReadOnly	= false;
+	txtAvgRoomRate.ReadOnly	= false;
+	//Default Value
+	oppprod.OpportunityProductCI.Commission = float.Parse("0.1");
+	oppprod.OpportunityProductCI.Discount = 0.15;
+	oppprod.OpportunityProductCI.Other_fees = 0;
+}
+else
+{
+	txtFlatFee.ReadOnly		= false;
+	txtCommission.ReadOnly	= true;
+	txtAvgRoomRate.ReadOnly	= true;
+	
+	oppprod.OpportunityProductCI.Discount = 0.15;
+	oppprod.OpportunityProductCI.Commission = float.Parse("0");	
+}
+		
+			
+]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DataSource /><TextField /><ValueField /></QFRadioGroup></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>3</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtCommission</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Commission</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtCommission</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "SUPPLIER":
+
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+				txtAvgRoomRate.ReadOnly 		= true;
+				txtAvgRoomRate.Text 			= "";
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;
+				
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;				
+			}
+			
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOTEL":
+			
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+			
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+			}
+				
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>4</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtFlatFee</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Other_fees</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtFlatFee</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "SUPPLIER":
+
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+				txtAvgRoomRate.ReadOnly 		= true;
+				txtAvgRoomRate.Text 			= "";
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;
+				
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;				
+			}
+			
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOTEL":
+			
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+			
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+			}
+				
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>5</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>curMCCalcPrice</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>curMCCalcPrice</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>7</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtNum1</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtNum1</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>8</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtNum2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num2</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtNum2</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>9</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtNum3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num3</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtNum3</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtNum4</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num4</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtNum4</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>11</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtQuantity</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtQuantity</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>12</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>13</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtPerFeeTotal</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtPerFeeTotal</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>14</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFees1Desc</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees1Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFees1Desc</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>15</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFees2Desc</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees2Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFees2Desc</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>16</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFees3Desc</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees3Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFees3Desc</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>17</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFees4Desc</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees4Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFees4Desc</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFHorizontalSeparator, Sage.Platform.QuickForms.QFControls"><QFHorizontalSeparator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>20</Row><IsReadOnly>false</IsReadOnly><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>hseparator</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><DisplayAsTitleBar>false</DisplayAsTitleBar></QFHorizontalSeparator></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>21</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox9</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.PotentialCompetitor1</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox9</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>String</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>false</Required><DropDownDisplayProperty /><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>Competitor</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.ICompetitor, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>CompetitorName</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>CompetitorName (Competitor Name)</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters /></QFSLXLookup></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>22</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox10</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.PotentialCompetitor2</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox10</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>String</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>false</Required><DropDownDisplayProperty /><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>Competitor</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.ICompetitor, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>CompetitorName</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>CompetitorName (Competitor Name)</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters /></QFSLXLookup></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>23</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkWon</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Won</DataItemName><ControlItemName>Checked</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkWon</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppProd = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;	
+
+
+if (chkWon.Checked==true){
+	pklReason.Enabled=true;
+	lkpCompetitorReplaced.Enabled=true;	
+	pklStatus.PickListValue = "Apprehension";		
+	oppProd.Status = "Apprehension";		
+}
+else{
+		pklReason.Enabled=false;
+		lkpCompetitorReplaced.Enabled=false;}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>24</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkLost</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Lost</DataItemName><ControlItemName>Checked</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkLost</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[if (chkLost.Checked==true){
+	pklReason.Enabled=true;
+	lkpCompetitorReplaced.Enabled=true;	
+}
+else{
+		pklReason.Enabled=false;
+		lkpCompetitorReplaced.Enabled=false;}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>25</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklStatus</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Status</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklStatus</ResourceKey><RootActionName>CodeSnippetAction</RootActionName><Action><CodeSnippetAction methodId="e8cd1ff0-1903-40b8-be64-4d9b4150feab" /></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Opportunity Product Status</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>26</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFDateTimePicker</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>EstimatedClose</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFDateTimePicker</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>27</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFDateTimePicker2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>ActualClose</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFDateTimePicker2</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>28</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklReason</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Reason</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklReason</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Opportunity WonLost Reason</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowSpan>2</RowSpan><Column>0</Column><Row>29</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtNotes</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Notes</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>slxtext</StyleScheme><MaxLength>128</MaxLength><Lines>3</Lines><OnChangeAction><ResourceKey>txtNotes</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFControlsList, Sage.Platform.QuickForms.QFControls"><QFControlsList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>31</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFControlsList</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>qfActionContainer</StyleScheme><Caption /><Controls><ControlsCollection><Control TypeName="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>btnOK</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>slxbutton</StyleScheme><ButtonType>StandardButton</ButtonType><Image /><OnClientClick /><OnClickAction><ResourceKey>btnOK</ResourceKey><RootActionName>ValidationAction</RootActionName><Action><ValidationMethod>ValidateRequired</ValidationMethod><OnFailActionName>MessageAction</OnFailActionName><OnFail><ResourceKey>5288d326-dabe-4bd7-aa31-55bc06654953</ResourceKey></OnFail><OnSuccessActionName>BusinessRuleAction</OnSuccessActionName><OnSuccess><BusinessRule>Save</BusinessRule><Object>OpportunityProduct</Object><Parameters /><PassResultsToNextAction>False</PassResultsToNextAction><OnCompleteActionName>RefreshAction</OnCompleteActionName><OnComplete /></OnSuccess></Action><IsDialogCloseAction>True</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Control><Control TypeName="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>btnCancel</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>slxbutton</StyleScheme><ButtonType>StandardButton</ButtonType><Image /><OnClientClick /><OnClickAction><ResourceKey>btnCancel</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>True</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>DialogCancel</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Control></ControlsCollection></Controls></QFControlsList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>4</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRoomNights</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Num</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRoomNights</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "SUPPLIER":
+
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+				txtAvgRoomRate.ReadOnly 		= true;
+				txtAvgRoomRate.Text 			= "";
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;
+				
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;				
+			}
+			
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOTEL":
+			
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+			
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+			}
+				
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>5</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtAvgRoomRate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtAvgRoomRate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "SUPPLIER":
+
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+				txtAvgRoomRate.ReadOnly 		= true;
+				txtAvgRoomRate.Text 			= "";
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;
+				
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;				
+			}
+			
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOTEL":
+			
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+			
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+			}
+				
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>6</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtDropOff</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Discount</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtDropOff</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "SUPPLIER":
+
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+				txtAvgRoomRate.ReadOnly 		= true;
+				txtAvgRoomRate.Text 			= "";
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;
+				
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+				txtAvgRoomRate.ReadOnly			= false;				
+			}
+			
+			
+			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
+			{
+				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)))
+			{
+				double vres1 = double.Parse(txtFlatFee.Text) - (double.Parse(txtFlatFee.Text)*(double.Parse(txtDropOff.Text)));
+				txtPotRev.Text = vres1.ToString();
+			}
+			
+		
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			}
+			break;
+		case "HOTEL":
+			
+			if ((string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 1;
+				txtCommission.ReadOnly		= true;
+				txtFlatFee.ReadOnly			= false;
+			
+			}
+			else if ((!string.IsNullOrEmpty(txtCommission.Text)) && (string.IsNullOrEmpty(txtFlatFee.Text))) {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+			  	txtFlatFee.ReadOnly			= true;
+			
+			}
+			else {
+				QFRadioGroup.SelectedIndex	= 0;
+				txtCommission.ReadOnly		= false;
+				txtFlatFee.ReadOnly			= true;
+			}
+				
+			
+			//Charge Values
+			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+			if ((QFRadioGroup.SelectedIndex==1)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtFlatFee.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
+			{
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtFlatFee.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult = vresult1 - vresult2;
+			txtPotRev.Text = vresult.ToString();
+			}
+			
+		
+			
+			//Assign Revenue
+			if (!string.IsNullOrEmpty(txtPotRev.Text)){
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			}
+			
+			
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>7</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRate1</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRate1</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>8</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRate2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate2</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRate2</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>9</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRate3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate3</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRate3</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRate4</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate4</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtRate4</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+			//Load Values
+			double vresulttotal = 0;
+			
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) && (!string.IsNullOrEmpty(txtRate1.Text))){
+				double vresult1 = double.Parse(txtNum1.Text)* double.Parse(txtRate1.Text);
+				//txtTotal1.Text = vresult1.ToString();
+				vresulttotal = vresulttotal + vresult1;
+			}
+						
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) && (!string.IsNullOrEmpty(txtRate2.Text))){
+				double vresult2 = double.Parse(txtNum2.Text)* double.Parse(txtRate2.Text);
+				//txtTotal2.Text = vresult2.ToString();
+				vresulttotal = vresulttotal + vresult2;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) && (!string.IsNullOrEmpty(txtRate3.Text))){
+				double vresult3 = double.Parse(txtNum3.Text)* double.Parse(txtRate3.Text);
+				//txtTotal3.Text = vresult3.ToString();
+				vresulttotal = vresulttotal + vresult3;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum4.Text)) && (!string.IsNullOrEmpty(txtRate4.Text))){
+				double vresult4 = double.Parse(txtNum4.Text)* double.Parse(txtRate4.Text);
+				//txtTotal4.Text = vresult4.ToString();
+				vresulttotal = vresulttotal + vresult4;
+			}			
+			
+			 		
+			txtPotRev.Text = vresulttotal.ToString();
+				
+			
+			//Assign Revenue
+			oppprod.Price = decimal.Parse(vresulttotal.ToString());			
+			oppprod.ExtendedPrice = decimal.Parse(vresulttotal.ToString());
+			oppprod.CalculatedPrice  = decimal.Parse(vresulttotal.ToString());
+			
+
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>13</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtServiceFee</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Rate</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtServiceFee</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+
+if (!string.IsNullOrEmpty(txtServiceFee.Text)){
+double vsimplefee = double.Parse(txtServiceFee.Text);
+txtPotRev.Text = vsimplefee.ToString();
+}
+
+
+	//Assign Revenue
+	oppprod.Price = decimal.Parse(txtPotRev.Text);
+	oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+	oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>14</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtFee1</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees1</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtFee1</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>15</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtFee2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees2</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtFee2</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>16</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtFee3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees3</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtFee3</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>17</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtFee4</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees4</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtFee4</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IOpportunityProduct oppprod = BindingSource.Current as Sage.Entity.Interfaces.IOpportunityProduct;
+string screent = (string) oppprod.Product.ProductCI.ScreenType;
+if (!string.IsNullOrEmpty(screent)){
+	
+	switch (screent.Trim().ToUpper()){
+		case "ITEMIZED":
+			//Load Values
+			
+				double vtotalanticrev = 0;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalanticrev = vtotalanticrev + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalanticrev = vtotalanticrev + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalanticrev = vtotalanticrev + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalanticrev = vtotalanticrev + vfee4;
+				}		
+				
+				txtPotRev.Text = vtotalanticrev.ToString();
+				
+							
+				//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);		
+			break;
+		case "PER FEE/ITEMIZED":
+			//Load Values
+			if ((!string.IsNullOrEmpty(txtQuantity.Text)) && (!string.IsNullOrEmpty(txtRate.Text)))
+			{
+				double vperfeetotal = double.Parse(txtQuantity.Text) * double.Parse(txtRate.Text);
+				txtPerFeeTotal.Text = vperfeetotal.ToString();
+				
+				double vtotalitemized = 0;
+				double vtotalanticrev1 = vperfeetotal;
+				
+				if (!string.IsNullOrEmpty(txtFee1.Text))
+				{
+					double vfee1 = double.Parse(txtFee1.Text);
+					vtotalitemized = vtotalitemized + vfee1;
+					vtotalanticrev1 = vtotalanticrev1 + vfee1;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee2.Text))
+				{
+					double vfee2 = double.Parse(txtFee2.Text);
+					vtotalitemized = vtotalitemized + vfee2;
+					vtotalanticrev1 = vtotalanticrev1 + vfee2;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee3.Text))
+				{
+					double vfee3 = double.Parse(txtFee3.Text);
+					vtotalitemized = vtotalitemized + vfee3;
+					vtotalanticrev1 = vtotalanticrev1 + vfee3;
+				}
+				
+				if (!string.IsNullOrEmpty(txtFee4.Text))
+				{
+					double vfee4 = double.Parse(txtFee4.Text);
+					vtotalitemized = vtotalitemized + vfee4;
+					vtotalanticrev1 = vtotalanticrev1 + vfee4;
+				}		
+				
+				txtItemizedTotal.Text = vtotalitemized.ToString();
+				txtPotRev.Text = vtotalanticrev1.ToString();
+				
+			}
+		
+			
+			//Assign Revenue
+				oppprod.Price = decimal.Parse(txtPotRev.Text);
+				oppprod.ExtendedPrice = decimal.Parse(txtPotRev.Text);
+				oppprod.CalculatedPrice  = decimal.Parse(txtPotRev.Text);
+			break;
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>18</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtItemizedTotal</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtItemizedTotal</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>19</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtPotRev</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Price</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>prxlabel</StyleScheme><OnChangeAction><ResourceKey>txtPotRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>21</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFCheckBox</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.FirstTime</DataItemName><ControlItemName>Checked</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>QFCheckBox</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>22</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox4</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox4</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>23</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox5</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Allocation</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox5</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>24</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox6</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.AdjPotentialRev</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox6</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>25</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFTextBox7</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>QFTextBox7</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>26</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lkpCompetitorReplaced</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.CompetitorReplaced</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>lkpCompetitorReplaced</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>String</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>false</Required><DropDownDisplayProperty /><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>Competitor</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.ICompetitor, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>CompetitorName</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>Competitor Name</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters /></QFSLXLookup></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>27</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>cmdConvert</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>slxbutton</StyleScheme><ButtonType>StandardButton</ButtonType><Image /><OnClientClick /><OnClickAction><ResourceKey>cmdConvert</ResourceKey><RootActionName>ValidationAction</RootActionName><Action><ValidationMethod>ValidateSalesOrder</ValidationMethod><OnFailActionName>BusinessRuleAction</OnFailActionName><OnFail><BusinessRule>CreateSalesOrder</BusinessRule><Object>OpportunityProduct</Object><Parameters /><PassResultsToNextAction>False</PassResultsToNextAction><OnCompleteActionName>MessageAction</OnCompleteActionName><OnComplete><ResourceKey>0475bdd6-28fc-4ee6-8bb8-2b6093e792e7</ResourceKey></OnComplete></OnFail><OnSuccessActionName>CSharpSnippetAction</OnSuccessActionName><OnSuccess><CSharpCodeSnippet><![CDATA[StringBuilder script = new StringBuilder();
+script.Append("if (confirm ('An anticipated order already exists for this type of service.  Do you wish to continue?')) {"+
+		"var btn=document.getElementById('ctl00_DialogWorkspace_EditOpportunityProduct_cmdOkConverter'); btn.click();}"+
+		"else{"+
+		"var btn=document.getElementById('ctl00_DialogWorkspace_EditOpportunityProduct_cmdCancelConverter'); btn.click();"+
+		"}");
+ScriptManager.RegisterClientScriptBlock(this, GetType(), "InitScript", script.ToString(), true);]]></CSharpCodeSnippet></OnSuccess></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">Property</Property>
+        <Property name="EntityTypeName" type="System.String">IOpportunityProduct</Property>
+        <Property name="EntityNamespace" type="System.String"></Property>
+        <Property name="EntityAssemblyName" type="System.String"></Property>
+        <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+        <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+        <Property name="EntityReferenceName" type="System.String"></Property>
+        <Property name="ValueMember" type="System.String">Sort</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>29</Row><IsReadOnly>true</IsReadOnly><Visible>false</Visible><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtSort</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Sort</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtSort</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFControlsList, Sage.Platform.QuickForms.QFControls"><QFControlsList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>30</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFControlsList3</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Caption /><Controls><ControlsCollection><Control TypeName="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>cmdOkConverter</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:1px]</Image><OnClientClick /><OnClickAction><ResourceKey>cmdOkConverter</ResourceKey><RootActionName>BusinessRuleAction</RootActionName><Action><BusinessRule>CreateSalesOrder</BusinessRule><Object>OpportunityProduct</Object><Parameters /><PassResultsToNextAction>False</PassResultsToNextAction><OnCompleteActionName>MessageAction</OnCompleteActionName><OnComplete><ResourceKey>e32f6604-186f-401e-96dd-c05c9419e1cd</ResourceKey></OnComplete></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Control><Control TypeName="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>cmdCancelConverter</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:1px]</Image><OnClientClick /><OnClickAction><ResourceKey>cmdCancelConverter</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>DialogCancel</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Control></ControlsCollection></Controls></QFControlsList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>2</Column><Row>7</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklActivity1</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees1Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklActivity1</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>2</Column><Row>8</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklActivity2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees2Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklActivity2</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>2</Column><Row>9</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklActivity3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees3Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklActivity3</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>2</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklActivity4</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityProductCI.Fees4Desc</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklActivity4</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+			if ((!string.IsNullOrEmpty(txtNum1.Text)) & (!string.IsNullOrEmpty(txtRate1.Text))& (!string.IsNullOrEmpty(pklActivity1.PickListValue.ToString())) )
+			{
+				txtNum2.Enabled = true;
+				txtRate2.Enabled = true;
+				pklActivity2.Enabled = true;
+			} else {
+				txtNum2.Enabled = false;
+				txtRate2.Enabled = false;
+				pklActivity2.Enabled = false;
+			}
+			
+			if ((!string.IsNullOrEmpty(txtNum2.Text)) & (!string.IsNullOrEmpty(txtRate2.Text))& (!string.IsNullOrEmpty(pklActivity2.PickListValue.ToString())) )
+			{
+				txtNum3.Enabled = true;
+				txtRate3.Enabled = true;
+				pklActivity3.Enabled = true;
+			} else {
+				txtNum3.Enabled = false;
+				txtRate3.Enabled = false;
+				pklActivity3.Enabled = false;
+			}			
+			
+			if ((!string.IsNullOrEmpty(txtNum3.Text)) & (!string.IsNullOrEmpty(txtRate3.Text))& (!string.IsNullOrEmpty(pklActivity3.PickListValue.ToString())) )
+			{
+				txtNum4.Enabled = true;
+				txtRate4.Enabled = true;
+				pklActivity4.Enabled = true;
+			} else {
+				txtNum4.Enabled = false;
+				txtRate4.Enabled = false;
+				pklActivity4.Enabled = false;
+			}	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Service Fees Description</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormElements>
+  <QuickFormToolElements />
+</QuickFormDefinition>

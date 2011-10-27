@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="e0dae89d-2130-466d-9564-2d3ce96c5a3c" lastModifiedUtc="2011-08-03T06:18:57.7030208Z" name="GetPrimaryContactAddress" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="a04c0c74-b367-4dd6-a825-50d56cc353e7" lastModifiedUtc="2011-08-03T06:12:41.9326896Z" targetType="Sage.BusinessRules.CodeSnippets.CusteventBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetPrimaryContactAddressStep" active="true" codeSnippetId="4aef644b-2575-4265-a4d4-9e4aa92ed8d4">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

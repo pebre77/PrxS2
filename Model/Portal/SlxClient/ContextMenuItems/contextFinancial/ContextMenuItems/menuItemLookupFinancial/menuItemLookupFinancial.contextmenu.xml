@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<MenuDropDownItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="ac34b2ce-1105-4eb3-aa4c-28aae6fd3c1c">
+  <ItemId>menuItemLookupFinancial</ItemId>
+  <NavUrl>Custfinancial.aspx?modeid=list</NavUrl>
+  <LargeImageUrl />
+  <SmallImageUrl />
+  <ContextMenuId />
+  <Target />
+  <AppliedSecurity />
+</MenuDropDownItem>

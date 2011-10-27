@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<relationship xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="854062dd-0c4f-4b11-910f-6d33a1338310" lastModifiedUtc="2011-08-19T04:55:25.8081193Z" parentEntityId="3172551b-f476-45ea-98de-2bb04ddba687" childEntityId="e7a70408-03cb-4667-890b-39de33fb739b">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmRelationship" />
+  </ExtendedPropertiesCollection>
+  <parentProperty id="db12da8e-927b-48ab-bc6f-5beed5538738" lastModifiedUtc="2011-08-19T04:55:14.0428708Z" name="Tickets" audited="false">
+    <ExtendedPropertiesCollection>
+      <extendee type="Sage.Platform.Orm.Entities.OrmRelationProperty" />
+    </ExtendedPropertiesCollection>
+    <SystemDataType guid="2f770d03-c93c-4605-8ae8-7cdae04830d7">
+      <RelationshipDataType />
+    </SystemDataType>
+  </parentProperty>
+  <childProperty id="7b3a1742-c7b1-41c2-a8b3-e5f363582f9a" lastModifiedUtc="2011-08-19T04:55:14.0428708Z" name="Opportunity" audited="false">
+    <ExtendedPropertiesCollection>
+      <extendee type="Sage.Platform.Orm.Entities.OrmRelationProperty" />
+    </ExtendedPropertiesCollection>
+    <SystemDataType guid="2f770d03-c93c-4605-8ae8-7cdae04830d7">
+      <RelationshipDataType />
+    </SystemDataType>
+  </childProperty>
+  <column>
+    <OrmRelationshipColumn id="7ac09011-6691-4525-8b10-b026f173a470" parentPropertyId="3e3db591-f7de-435b-a421-ef2c5e72aa2b" childPropertyId="1b863c37-b127-47f1-ad04-d743bd6a35cc" ordinal="0" />
+  </column>
+</relationship>

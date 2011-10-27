@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="NbrRooms1.Caption" xml:space="preserve">
+    <value>NbrRooms1</value>
+  </data>
+  <data name="NbrRooms10.Caption" xml:space="preserve">
+    <value>NbrRooms10</value>
+  </data>
+  <data name="NbrRooms11.Caption" xml:space="preserve">
+    <value>NbrRooms11</value>
+  </data>
+  <data name="NbrRooms12.Caption" xml:space="preserve">
+    <value>NbrRooms12</value>
+  </data>
+  <data name="NbrRooms13.Caption" xml:space="preserve">
+    <value>NbrRooms13</value>
+  </data>
+  <data name="NbrRooms14.Caption" xml:space="preserve">
+    <value>NbrRooms14</value>
+  </data>
+  <data name="NbrRooms15.Caption" xml:space="preserve">
+    <value>NbrRooms15</value>
+  </data>
+  <data name="NbrRooms16.Caption" xml:space="preserve">
+    <value>NbrRooms16</value>
+  </data>
+  <data name="NbrRooms17.Caption" xml:space="preserve">
+    <value>NbrRooms17</value>
+  </data>
+  <data name="NbrRooms18.Caption" xml:space="preserve">
+    <value>NbrRooms18</value>
+  </data>
+  <data name="NbrRooms2.Caption" xml:space="preserve">
+    <value>NbrRooms2</value>
+  </data>
+  <data name="NbrRooms3.Caption" xml:space="preserve">
+    <value>NbrRooms3</value>
+  </data>
+  <data name="NbrRooms4.Caption" xml:space="preserve">
+    <value>NbrRooms4</value>
+  </data>
+  <data name="NbrRooms5.Caption" xml:space="preserve">
+    <value>NbrRooms5</value>
+  </data>
+  <data name="NbrRooms6.Caption" xml:space="preserve">
+    <value>NbrRooms6</value>
+  </data>
+  <data name="NbrRooms7.Caption" xml:space="preserve">
+    <value>NbrRooms7</value>
+  </data>
+  <data name="NbrRooms8.Caption" xml:space="preserve">
+    <value>NbrRooms8</value>
+  </data>
+  <data name="NbrRooms9.Caption" xml:space="preserve">
+    <value>NbrRooms9</value>
+  </data>
+  <data name="RoomRate.Caption" xml:space="preserve">
+    <value>RoomRate</value>
+  </data>
+  <data name="RoomType.Caption" xml:space="preserve">
+    <value>RoomType</value>
+  </data>
+  <data name="dddcd8a9-6d3d-43fa-9976-ea28bec02c19.Caption" xml:space="preserve">
+    <value>ActualRevenue6</value>
+  </data>
+  <data name="aa75535a-fbc5-4f9e-9f88-d79af0af76ef.Caption" xml:space="preserve">
+    <value>ActualRevenue14</value>
+  </data>
+  <data name="8e983824-3f61-4c5f-9dc7-2a8b3b5add97.Caption" xml:space="preserve">
+    <value>ActualRevenue13</value>
+  </data>
+  <data name="f8a68682-cb71-4392-86c7-9e6fa2930f50.Caption" xml:space="preserve">
+    <value>ActualRevenue12</value>
+  </data>
+  <data name="14adb168-9094-4a65-8af5-a3c704e5a8c5.Caption" xml:space="preserve">
+    <value>ActualRevenue11</value>
+  </data>
+  <data name="ccd8f259-2393-4905-a4e7-a071560a6f66.Caption" xml:space="preserve">
+    <value>ActualRevenue10</value>
+  </data>
+  <data name="9b5dc81c-f9e6-4520-96d2-b4e04f29a44d.Caption" xml:space="preserve">
+    <value>ActualRevenue1</value>
+  </data>
+  <data name="grdSORoomBlockTypes.9adf5872-c69c-4c93-99ee-fd431901d81b.ColumnHeading" xml:space="preserve">
+    <value>Rooms</value>
+  </data>
+  <data name="grdSORoomBlockTypes.e38b8c45-3cb3-4d0c-b31e-a386ab94e492.ColumnHeading" xml:space="preserve">
+    <value>Room Rate</value>
+  </data>
+  <data name="grdSORoomBlockTypes.42eccf95-9106-4fbb-a596-a918bac693b9.ColumnHeading" xml:space="preserve">
+    <value>Room Type</value>
+  </data>
+  <data name="bdb7f91a-687e-4a56-9d3e-780f67dea018.Caption" xml:space="preserve">
+    <value>ActualRevenue5</value>
+  </data>
+  <data name="88fad3eb-a45b-4ff2-9445-1f28a534024a.Caption" xml:space="preserve">
+    <value>ActualRevenue4</value>
+  </data>
+  <data name="60f7ab4c-dfc6-4a0c-b14e-5bc0405ee310.Caption" xml:space="preserve">
+    <value>ActualRevenue3</value>
+  </data>
+  <data name="fdc69299-3b96-4c42-b17c-1a5042306fa8.Caption" xml:space="preserve">
+    <value>ActualRevenue2</value>
+  </data>
+  <data name="f92530c8-b0b0-41c8-998d-107cb2e67731.Caption" xml:space="preserve">
+    <value>ActualRevenue18</value>
+  </data>
+  <data name="c16d1115-e3de-485f-9c89-70b41f90f6a7.Caption" xml:space="preserve">
+    <value>ActualRevenue17</value>
+  </data>
+  <data name="5258d123-707e-4e10-945d-27d941d2c0bf.Caption" xml:space="preserve">
+    <value>ActualRevenue16</value>
+  </data>
+  <data name="e5a2920b-f80c-460e-bb46-20132752f056.Caption" xml:space="preserve">
+    <value>ActualRevenue15</value>
+  </data>
+  <data name="grdSORoomBlockTypes2.ea5cf8ff-c832-4d75-bbec-850f66f19f07.ColumnHeading" xml:space="preserve">
+    <value>RoomRate</value>
+  </data>
+  <data name="c88aeaa7-cd81-4209-ab24-1dccab9ce464.Caption" xml:space="preserve">
+    <value>ActualRevenue9</value>
+  </data>
+  <data name="dtMainArrivDate.Caption" xml:space="preserve">
+    <value>Main.Arr.Date:</value>
+  </data>
+  <data name="edb8790f-5a6d-4b15-9040-90a706e8c711.Caption" xml:space="preserve">
+    <value>ActualRevenue8</value>
+  </data>
+  <data name="baf375be-ee8c-4b7a-86a1-4ce98ed433d1.Caption" xml:space="preserve">
+    <value>ActualRevenue7</value>
+  </data>
+  <data name="txtHotel.Caption" xml:space="preserve">
+    <value>Hotel:</value>
+  </data>
+  <data name="txtEventId.Caption" xml:space="preserve">
+    <value>Event ID:</value>
+  </data>
+  <data name="21ec2382-1258-4445-8690-80a0bda20f03.DialogTitleOverride" xml:space="preserve">
+    <value>Edit Room Block</value>
+  </data>
+  <data name="grdSORoomBlockTypes.c28d8c02-8024-4bcb-864d-78e00123431c.Text" xml:space="preserve">
+    <value>Edit</value>
+  </data>
+  <data name="aa4a6d37-c087-4ee8-acb7-ea5f5fb56f7f.DialogTitleOverride" xml:space="preserve">
+    <value>Add Roomblock Type</value>
+  </data>
+  <data name="lnkRoomBlock.Caption" xml:space="preserve">
+    <value>View Anticipated Room Block</value>
+  </data>
+  <data name="txtTotRev3.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QFLabel.Text" xml:space="preserve">
+    <value>Total Rooms:</value>
+  </data>
+  <data name="txtTotRev2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="de2dc919-8253-462d-90e4-4c480de8dabb.DialogTitleOverride" xml:space="preserve">
+    <value>Insert New Date</value>
+  </data>
+  <data name="QFButton.Caption" xml:space="preserve">
+    <value>Insert Dates</value>
+  </data>
+  <data name="1c24c9bc-6e68-43d5-9ffa-95bb4e8bb883.DialogTitleOverride" xml:space="preserve">
+    <value>Add Room Block Type</value>
+  </data>
+  <data name="txtTotRev4.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev5.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev6.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev7.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev8.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev9.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev10.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev11.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev12.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev13.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev14.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev15.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev16.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev17.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev18.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalAdj.Caption" xml:space="preserve">
+    <value>Total Adj.:</value>
+  </data>
+  <data name="txtTotalAdj.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalRoomRev.Caption" xml:space="preserve">
+    <value>Actual Room Rev:</value>
+  </data>
+  <data name="txtTotalRoomRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtHotelRev.Caption" xml:space="preserve">
+    <value>Hotel Revenue</value>
+  </data>
+  <data name="txtHotelRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtROBRoomRev.Caption" xml:space="preserve">
+    <value>ROB Room Rev.:</value>
+  </data>
+  <data name="txtROBRoomRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAdjActualRev.Caption" xml:space="preserve">
+    <value>Adj. Actual Rev.:</value>
+  </data>
+  <data name="txtAdjActualRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtAverageRate.Caption" xml:space="preserve">
+    <value>Average Rate</value>
+  </data>
+  <data name="txtAverageRate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtRebateAdj.Caption" xml:space="preserve">
+    <value>Rebate Adj.:</value>
+  </data>
+  <data name="txtRebateAdj.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="chkCalcFutureRate.Caption" xml:space="preserve">
+    <value>Calc. Future Rate</value>
+  </data>
+  <data name="chkRateConfirmed.Caption" xml:space="preserve">
+    <value>Rate Confirmed</value>
+  </data>
+  <data name="dtCompDate.Caption" xml:space="preserve">
+    <value>Comparison Date:</value>
+  </data>
+  <data name="dtFutureDate.Caption" xml:space="preserve">
+    <value>Future Date:</value>
+  </data>
+  <data name="txtRebate.Caption" xml:space="preserve">
+    <value>Rebate</value>
+  </data>
+  <data name="txtRebate.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtOtherAdj.Caption" xml:space="preserve">
+    <value>Other Adj.:</value>
+  </data>
+  <data name="txtOtherAdj.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalAdj2.Caption" xml:space="preserve">
+    <value>Total Adj.:</value>
+  </data>
+  <data name="txtTotalAdj2.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtActualRev.Caption" xml:space="preserve">
+    <value>Total Actual Rev.:</value>
+  </data>
+  <data name="txtActualRev.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtVariance.Caption" xml:space="preserve">
+    <value>Variance</value>
+  </data>
+  <data name="txtVariance.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTest3.Caption" xml:space="preserve">
+    <value>3% Test:</value>
+  </data>
+  <data name="txtTest3.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtCompAdj.Caption" xml:space="preserve">
+    <value>Comp. Adj:</value>
+  </data>
+  <data name="txtCompAdj.Text" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom2.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom3.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom4.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom5.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom6.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom7.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom8.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom9.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom10.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom11.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom12.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom13.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom14.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom15.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom16.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom17.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotRoom18.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtTotalRooms.Caption" xml:space="preserve">
+    <value />
+  </data>
+  <data name="QFButton2.ToolTip" xml:space="preserve">
+    <value>Add Room Block</value>
+  </data>
+</root>

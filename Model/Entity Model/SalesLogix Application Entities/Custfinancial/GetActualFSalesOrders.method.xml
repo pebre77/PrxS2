@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="0d618369-e8e5-4474-9fa4-50572b387752" lastModifiedUtc="2011-08-15T14:24:15.3010656Z" name="GetActualFSalesOrders" returnType="object" methodType="Rule" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="8d10b51b-5fd2-493f-8384-6452b58033cb" lastModifiedUtc="2011-08-15T15:20:42.2426969Z" targetType="Sage.BusinessRules.CodeSnippets.CustfinancialBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetActualFSalesOrdersStep" active="true" codeSnippetId="4576903e-61a8-4d17-a257-1612cee5c6a0">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

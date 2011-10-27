@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuickFormDefinition Id="e08932d1-d181-4b71-a75a-1cc6ccacd148" name="FinancialSO">
+  <Properties>
+    <Property name="EntityTypeName" type="System.String">ICustfinancial</Property>
+    <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="UseEntityNameAsTitle" type="System.Boolean">True</Property>
+    <Property name="ImagePath" type="System.String"></Property>
+    <Property name="DefinitionType" type="System.String">Sage.Platform.QuickForms.QuickFormMainDetailViewDefinition, Sage.Platform.QuickForms</Property>
+    <Property name="Columns" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.ColumnStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfColumnStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnStyle><SizeType>Percent</SizeType><Width>100</Width></ColumnStyle></ArrayOfColumnStyle></Property>
+    <Property name="Rows" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.RowStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfRowStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle></ArrayOfRowStyle></Property>
+    <Property name="GeneratePrintView" type="System.Boolean">False</Property>
+    <Property name="Description" type="System.String"></Property>
+    <Property name="ActiveControl" type="System.String"></Property>
+  </Properties>
+  <LoadActions />
+  <QuickFormElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDataGrid, Sage.SalesLogix.QuickForms.QFControls"><QFDataGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFDataGrid</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><DataSource>QFDataSource</DataSource><EnablePaging>false</EnablePaging><EnableSorting>true</EnableSorting><Columns><QFRowSelectionCol><StyleScheme /><DataField /><ColumnId>d420e303-e925-4c76-8faf-7f997cb171cf</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><Image /></QFRowSelectionCol><QFDateTimePickerCol><StyleScheme /><DataField>Custfinancial.Main_departure_Date</DataField><ColumnId>12b41309-75e7-4489-ad59-a6986a22899a</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField /><MultiCurrencyDependent>false</MultiCurrencyDependent><DateOnly>true</DateOnly><Timeless>false</Timeless></QFDateTimePickerCol><QFCustomFormatCol><StyleScheme /><DataField>Custfinancial.Id</DataField><ColumnId>f8b3f55e-9cc2-4cf3-b154-c3bbda19bde5</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><FormattingMethodName>OpportunityLink</FormattingMethodName><FormattingCode>protected string OpportunityLink(object name)
+{
+	string acid = string.Format("{0}",name);
+	
+	NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();	
+	string sql = "Select Description From Opportunity Where Opportunityid = '"+acid+"'";
+	string fswon = session.CreateSQLQuery(sql).UniqueResult&lt;string&gt;();
+	string result = fswon;
+	
+	
+	
+    return string.Format("&lt;a href=\"./Opportunity.aspx?Entityid={0}\"&gt;"+result+"&lt;/a&gt;", name);
+}</FormattingCode></QFCustomFormatCol><QFSLXOwnerCol><StyleScheme /><DataField>SecCodeId</DataField><ColumnId>0801ce2d-a5a8-49f6-9e08-ea5716717f8d</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFSLXOwnerCol><QFCustomFormatCol><StyleScheme /><DataField>Account.Id</DataField><ColumnId>8017209d-f51e-491a-8fc2-b4045a159eda</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><FormattingMethodName>AccountLink</FormattingMethodName><FormattingCode>protected string AccountLink(object name)
+{
+	string acid = string.Format("{0}",name);
+	
+	NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();	
+	string sql = "Select Account From Account Where Accountid = '"+acid+"'";
+	string fswon = session.CreateSQLQuery(sql).UniqueResult&lt;string&gt;();
+	string result = fswon;
+	
+	
+	
+    return string.Format("&lt;a href=\"./Account.aspx?Entityid={0}\"&gt;"+result+"&lt;/a&gt;", name);
+}</FormattingCode></QFCustomFormatCol><QFCustomFormatCol><StyleScheme /><DataField>Billtoaccount</DataField><ColumnId>4c45dd68-59d7-4fc9-9f8d-52b4714abfb6</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><FormattingMethodName>AccountLink2</FormattingMethodName><FormattingCode>protected string AccountLink2(object name)
+{
+	string acid = string.Format("{0}",name);
+	
+	NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();	
+	string sql = "Select Account From Account Where Accountid = '"+acid+"'";
+	string fswon = session.CreateSQLQuery(sql).UniqueResult&lt;string&gt;();
+	string result = fswon;
+	
+	
+	
+    return string.Format("&lt;a href=\"./Account.aspx?Entityid={0}\"&gt;"+result+"&lt;/a&gt;", name);
+}</FormattingCode></QFCustomFormatCol><QFSLXUserCol><StyleScheme /><DataField>UserId</DataField><ColumnId>b116368e-a1b6-456d-ad31-874a60121947</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFSLXUserCol><QFLinkCol><StyleScheme /><DataField>DocumentId</DataField><ColumnId>80b6c4a7-4e21-4be2-9b8a-4c23fb592713</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><Destination /><Image /><EntityIdField>Id</EntityIdField><EntityTypeName>SalesOrder</EntityTypeName><Target /><AppliedSecurity /></QFLinkCol><QFDateTimePickerCol><StyleScheme /><DataField>OrderDate</DataField><ColumnId>2f78a1cd-fa86-4561-9d92-60201fd2c899</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><DateOnly>true</DateOnly><Timeless>false</Timeless></QFDateTimePickerCol><QFSLXCurrencyCol><StyleScheme /><DataField>OrderTotal</DataField><ColumnId>6e7a1443-5c41-4bbc-be21-550796403c04</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType><ExchangeRate /></QFSLXCurrencyCol><QFCustomFormatCol><StyleScheme /><DataField>SalesOrdActNo</DataField><ColumnId>b0fff019-ee12-4604-8fd9-dc2a6df97a96</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><FormattingMethodName>ActNoLink</FormattingMethodName><FormattingCode>protected string ActNoLink(object name)
+{
+	string documentid = string.Format("{0}",name);
+	
+	NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper();	
+	string sql = "Select Top 1 SalesOrderId From SalesOrder Where DocumentId = '"+documentid+"'";
+	string fswon = session.CreateSQLQuery(sql).UniqueResult&lt;string&gt;();
+	string result = fswon;
+	
+	
+	
+    return string.Format("&lt;a href=\"./SalesOrder.aspx?Entityid={0}\"&gt;"+name+"&lt;/a&gt;", result);
+}</FormattingCode></QFCustomFormatCol><QFDateTimePickerCol><StyleScheme /><DataField>SalesOrdActDate</DataField><ColumnId>03f0e1be-6d74-4f90-9b8e-926a5643e571</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><DateOnly>true</DateOnly><Timeless>false</Timeless></QFDateTimePickerCol><QFSLXCurrencyCol><StyleScheme /><DataField>SalesOrdActRev</DataField><ColumnId>7e338e56-1fa7-4ffd-8522-2e06c8bb7540</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType><ExchangeRate /></QFSLXCurrencyCol><QFSLXCurrencyCol><StyleScheme /><DataField>SalesOrdInvoiced</DataField><ColumnId>36d5b295-c551-4e26-b1ef-4c10a354fd5c</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType><ExchangeRate /></QFSLXCurrencyCol><QFSLXCurrencyCol><StyleScheme /><DataField>SalesOrdReceipts</DataField><ColumnId>28aa68ee-dd7f-43b7-be2e-90bb39e772d8</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType><ExchangeRate /></QFSLXCurrencyCol></Columns><RenderVertical>false</RenderVertical><OnRowSelectedAction><ResourceKey>QFDataGrid</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[//Praxi Solutions,Inc.
+//Convert Anticipated Sales Order to Actual Sales Order
+// Last Update 10/12/2011 - 
+
+
+using (NHibernate.ISession _session = new Sage.Platform.Orm.SessionScopeWrapper()){
+
+
+	
+	string salesordid = this.QFDataGrid.DataKeys[QFDataGrid.SelectedIndex].Values["Id"].ToString();
+	Sage.Entity.Interfaces.ISalesOrder currentso = Sage.Platform.EntityFactory.GetRepository<Sage.Entity.Interfaces.ISalesOrder>().FindFirstByProperty("Id", salesordid);
+	
+	//Eval If Actual Sales Order Exists
+	string strSQLVal = "select Count(*) from salesorder where actual = 'T' and anticipatedid ='"+currentso.Id.ToString()+"'";
+	int evalCount = _session.CreateSQLQuery(strSQLVal).UniqueResult<int>();
+	
+	if (evalCount > 0 ){
+		
+		throw new Sage.Platform.Application.ValidationException("An Actual Sales Order Exists, the process cannot continue.");
+		
+	}
+	else {
+			Sage.Entity.Interfaces.ISalesorderdetail currentsodet = Sage.Platform.EntityFactory.GetRepository<Sage.Entity.Interfaces.ISalesorderdetail>().FindFirstByProperty("SalesorderId", salesordid);
+			Sage.Entity.Interfaces.ISalesOrder saleso = Sage.Platform.EntityFactory.Create<Sage.Entity.Interfaces.ISalesOrder>();	
+			Sage.Entity.Interfaces.ISalesorderdetail sodetail = Sage.Platform.EntityFactory.Create<Sage.Entity.Interfaces.ISalesorderdetail>();
+			try{	
+			
+			string strSQL = "select max(documentid)+1 from salesorder where len(documentid)>5";
+			int docid = _session.CreateSQLQuery(strSQL).UniqueResult<int>();
+		
+					
+				if (currentso.Account!=null) saleso.Account = currentso.Account;
+				if (currentso.Opportunity!=null) saleso.Opportunity = currentso.Opportunity;	
+				saleso.OrderType = currentso.OrderType.ToString();
+				saleso.Status = currentso.Status.ToString();
+				saleso.UserId = currentso.UserId.ToString();
+				saleso.DocumentId = docid.ToString();
+				saleso.Owner = currentso.Owner;
+				saleso.Actual=true;
+				saleso.Anticipatedid = currentso.Id.ToString();
+				saleso.OrderDate = DateTime.Now;
+		
+				if (currentso.Billtoaccount != null) saleso.Billtoaccount = currentso.Billtoaccount;
+				if (currentso.Billtocontact != null) saleso.Billtocontact = currentso.Billtocontact;
+				
+				
+			
+				if (currentsodet != null)
+				{
+					
+						sodetail.SalesOrder = saleso;
+						
+						if (currentsodet.ProductId!=null){
+						sodetail.ProductId = currentsodet.ProductId.ToString();
+						} 
+						
+						if (currentsodet.Calcprice!=null){
+						sodetail.Calcprice = currentsodet.Calcprice;
+						} 
+						if (currentsodet.Extendedprice!=null){
+						sodetail.Extendedprice = currentsodet.Extendedprice;
+						}
+						if (currentsodet.Price!=null){
+						sodetail.Price = currentsodet.Price;
+						}
+						if (currentsodet.Commission!=null){
+						sodetail.Commission = currentsodet.Commission;
+						}
+						if (currentsodet.Discount!=null){
+						sodetail.Discount = currentsodet.Discount;
+						}
+						if (currentsodet.Onsite_fees!=null){
+						sodetail.Onsite_fees = currentsodet.Onsite_fees;
+						}
+						if (currentsodet.Other_fees!=null){
+						sodetail.Other_fees = currentsodet.Other_fees;
+						}
+						if (currentsodet.Num!=null){
+						sodetail.Num = currentsodet.Num;
+						}
+						
+						saleso.Salesorderdetails.Add(sodetail);
+			
+				}
+					
+					
+					saleso.Save();
+					DialogService.ShowMessage("Sales Order Conversion process was completed successfully.");
+			
+				}catch{throw new Sage.Platform.Application.ValidationException("Conversion Process not completed.");}
+	}
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnRowSelectedAction></QFDataGrid></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFDataSource, Sage.Platform.QuickForms.QFControls"><QFDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>1</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>QFDataSource</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><EntityTypeName>SalesOrder</EntityTypeName><GetByMethod>GetActualFSalesOrders</GetByMethod><GetByProperty /><UseSmartSelection>false</UseSmartSelection><DataOptional>false</DataOptional></QFDataSource></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormElements>
+  <QuickFormToolElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormToolElements>
+</QuickFormDefinition>

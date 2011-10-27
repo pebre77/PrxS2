@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="650d6636-e8b3-488d-8652-5be1b911a443" lastModifiedUtc="2011-06-28T21:27:25.404822Z" name="GetMemberPhone" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="d0c12844-5ec2-43ab-bcad-c443bb79aeec" lastModifiedUtc="2011-06-28T21:28:19.9041244Z" targetType="Sage.BusinessRules.CodeSnippets.MeetingTeamBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetMemberPhoneStep" active="true" codeSnippetId="f079173c-44c3-44ad-988a-162546948e85">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

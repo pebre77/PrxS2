@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="4b1b7592-50ec-4c23-859f-84e69d6df59b" lastModifiedUtc="2011-06-27T17:29:16.0918829Z" name="dtpArrivalDate_OnChange" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="OpportunityDetails">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="0ecfc508-6523-4c7b-aa84-ede8e50e1123" paramName="form" sequence="0" paramType="IOpportunityDetails" />
+    <OrmEntityMethodParam id="03e9d15a-0fd7-487e-a20d-59270a67138a" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="0b13ec9f-ca2b-4fcd-ac30-68aa6477c00b" lastModifiedUtc="2011-06-27T16:57:42.8973661Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityDetailsEventHandlers, Sage.SnippetLibrary.CSharp" targetMethod="dtpArrivalDate_OnChangeStep" active="true" codeSnippetId="36b0a1c1-810c-49a1-9437-9dd228fd5a6d">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

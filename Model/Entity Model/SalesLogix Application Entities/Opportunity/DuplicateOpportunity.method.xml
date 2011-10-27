@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="189586d4-a2e9-4f26-9427-da1228bf8393" lastModifiedUtc="2011-06-16T21:39:10.2735214Z" name="DuplicateOpportunity" methodType="Rule" actionType="None" returnMode="None">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="057d86bc-a0d7-4d2b-83ef-c77a2420d707" lastModifiedUtc="2011-06-17T20:32:05.7613388Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="DuplicateOpportunityStep" active="true" codeSnippetId="f879929c-2935-4f35-9c00-c38b7f546281">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

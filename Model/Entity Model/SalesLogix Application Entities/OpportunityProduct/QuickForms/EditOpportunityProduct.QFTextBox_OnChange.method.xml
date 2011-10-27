@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="e8cd1ff0-1903-40b8-be64-4d9b4150feab" lastModifiedUtc="2011-10-07T17:55:47.7771472Z" name="QFTextBox_OnChange" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="EditOpportunityProduct">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="773e92fb-9794-43f8-a9b0-ee010f88790b" paramName="form" sequence="0" paramType="IEditOpportunityProduct" />
+    <OrmEntityMethodParam id="1adf9932-2b8a-4bab-a04d-10b15e1acf30" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="88d9259c-a9f4-4fc1-aa09-a216730afe85" lastModifiedUtc="2011-10-07T17:55:45.443792Z" targetType="Sage.BusinessRules.CodeSnippets.EditOpportunityProductEventHandlers, Sage.SnippetLibrary.CSharp" targetMethod="QFTextBox_OnChangeStep" active="true" codeSnippetId="f18b1167-51ae-4f42-bdbd-24cc2ba3df48">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

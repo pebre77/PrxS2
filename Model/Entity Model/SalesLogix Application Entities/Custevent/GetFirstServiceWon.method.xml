@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="34a730eb-14d0-4fbf-af65-13c59e513c03" lastModifiedUtc="2011-07-13T15:44:44.5133208Z" name="GetFirstServiceWon" returnType="System.DateTime" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="c6a36369-64c7-4e2d-b573-a9e2c130a473" lastModifiedUtc="2011-07-13T15:44:33.9822056Z" targetType="Sage.BusinessRules.CodeSnippets.CusteventBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetFirstServiceWonStep" active="true" codeSnippetId="fa70ae80-2c83-4dc1-b14c-eabca6a85714">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

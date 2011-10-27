@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmPropertyMethod" id="5330d8bc-4dfd-4e30-aff0-484df0fcec39" lastModifiedUtc="2011-08-19T14:07:19.2717784Z" name="GetBusDevRep" returnType="System.String" methodType="PropertyAccessor" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmPropertyMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="97b2de44-fb99-4acb-b6fc-a9ac14183075" lastModifiedUtc="2011-08-19T14:07:06.9748247Z" targetType="Sage.BusinessRules.CodeSnippets.CustfinancialBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="GetBusDevRepStep" active="true" codeSnippetId="114241c6-5039-47d9-8cad-c47a77a5e6ee">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

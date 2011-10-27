@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<entity xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="147cc0e8-b17b-4952-b586-bf1caa9efc7b" lastModifiedUtc="2011-07-12T17:05:19.3726532Z" manageSchema="false" tableName="PAIDCOMMISSIONS" name="PaidCommissions" isExtension="false" audited="false" lastUpdatedPropertyId="215a6749-e896-4bb4-8931-6f1c992e68ea" onBeforeInsertMethodId="714fb4d8-fd4e-4c70-952a-2cf11172d05c" onAfterInsertMethodId="7eb28672-b358-4546-94da-56f7d768ad48" onBeforeUpdateMethodId="6bf0997f-60e9-458c-af3a-e9ab7efc9fa6" onAfterUpdateMethodId="c4a3b839-98c9-4a40-931b-7f4f1d03f917" onBeforeDeleteMethodId="72402af3-7bed-4ca2-b803-dd5bbccedb5a" onAfterDeleteMethodId="6b8b9d77-d521-42b0-be11-2b38e319ac27" onCreateId="60345b60-90d8-49ab-b3cf-3233dcdae502">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntity">
+      <extender guid="1589723d-0536-4bf3-bdd7-3f6f7fe165d0">
+        <OrmEntityMetadataExtension>
+          <IsHistoryTable>false</IsHistoryTable>
+        </OrmEntityMetadataExtension>
+      </extender>
+    </extendee>
+  </ExtendedPropertiesCollection>
+  <keyProperties>
+    <keyReference id="a9c41cbc-4f5c-4087-923d-92b66547bfb8" ordinalPosition="1" />
+  </keyProperties>
+  <properties>
+    <property xsi:type="OrmFieldProperty" id="a9c41cbc-4f5c-4087-923d-92b66547bfb8" lastModifiedUtc="2011-07-12T17:05:18.3726724Z" name="Paidcommissionsid" audited="false" isNullable="false" columnName="PAIDCOMMISSIONSID" maxLength="12" precision="0" scale="0" ordinal="0" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="82140bc0-b887-4e1d-b48b-531c6044c4fa" lastModifiedUtc="2011-07-12T17:05:18.4195465Z" name="Salesorderid" audited="false" isNullable="false" columnName="SALESORDERID" maxLength="12" precision="0" scale="0" ordinal="1" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="509a09b5-d4c8-4b06-837d-c4cca9ee9395" lastModifiedUtc="2011-07-12T17:05:18.4664206Z" name="CreateUser" audited="false" columnName="CREATEUSER" maxLength="12" precision="0" scale="0" ordinal="2" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="b4e6902a-ea27-40e1-a488-6b14f28fdccd" lastModifiedUtc="2011-07-12T17:05:18.4664206Z" name="CreateDate" audited="false" columnName="CREATEDATE" maxLength="0" precision="0" scale="0" ordinal="3" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="aa48ab7f-5132-4c36-8cf1-1493cafee134" lastModifiedUtc="2011-07-12T17:05:18.4820453Z" name="ModifyUser" audited="false" columnName="MODIFYUSER" maxLength="12" precision="0" scale="0" ordinal="4" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="215a6749-e896-4bb4-8931-6f1c992e68ea" lastModifiedUtc="2011-07-12T17:05:18.4820453Z" name="ModifyDate" audited="false" columnName="MODIFYDATE" maxLength="0" precision="0" scale="0" ordinal="5" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="9787d8ca-7d55-4bb9-bd46-f12cb86dfd47" lastModifiedUtc="2011-07-12T17:05:18.5289194Z" name="UserID" audited="false" columnName="USERID" maxLength="12" precision="0" scale="0" ordinal="6" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="30053f5a-8d40-4db1-b185-1e4128eb26cc">
+        <StandardIdDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="8ee89d0e-bd8e-45a1-ad40-4de2d9c74e45" lastModifiedUtc="2011-07-12T17:05:18.5757935Z" name="Checkdate" audited="false" columnName="CHECKDATE" maxLength="0" precision="0" scale="0" ordinal="7" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="1f08f2eb-87c8-443b-a7c2-a51f590923f5">
+        <DateTimeDataType />
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="b4a9b18c-300d-466b-9261-161244c22c01" lastModifiedUtc="2011-07-12T17:05:18.5757935Z" name="Amount" audited="false" columnName="AMOUNT" maxLength="0" precision="15" scale="2" ordinal="8" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>15</Precision>
+          <Scale>2</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="8fb09818-8c38-410f-92de-77b2402755f6" lastModifiedUtc="2011-07-12T17:05:18.6226676Z" name="Checknumber" audited="false" columnName="CHECKNUMBER" maxLength="16" precision="0" scale="0" ordinal="9" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="ccc0f01d-7ba5-408e-8526-a3f942354b3a">
+        <TextDataType>
+          <Length>16</Length>
+        </TextDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="75be6209-1a62-4f77-ac95-4f4caaff8b07" lastModifiedUtc="2011-07-12T17:05:18.653917Z" name="PaymentNumber" audited="false" columnName="PAYMENTNUMBER" maxLength="20" precision="0" scale="0" ordinal="10" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="ccc0f01d-7ba5-408e-8526-a3f942354b3a">
+        <TextDataType>
+          <Length>20</Length>
+        </TextDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="d4805e52-12eb-4fcb-87ce-1aaf8128837f" lastModifiedUtc="2011-07-15T16:22:31.5842363Z" name="EmpNum" audited="false" columnName="EmpNum" maxLength="4000" precision="255" scale="255" ordinal="0" isReadOnly="true">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="ccc0f01d-7ba5-408e-8526-a3f942354b3a">
+        <TextDataType>
+          <Length>4000</Length>
+        </TextDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="eef9b39b-e743-44ed-89e5-8d376cbdd54a" lastModifiedUtc="2011-07-15T16:22:31.5842363Z" name="SalesPerson" audited="false" columnName="SalesPerson" maxLength="4000" precision="255" scale="255" ordinal="0" isReadOnly="true">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="ccc0f01d-7ba5-408e-8526-a3f942354b3a">
+        <TextDataType>
+          <Length>4000</Length>
+        </TextDataType>
+      </SystemDataType>
+    </property>
+  </properties>
+</entity>

@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="c53b98de-4b50-4e8b-9edb-b2bb3a2b2c1f" lastModifiedUtc="2011-07-05T13:21:28.9087441Z" name="ValidateSalesOrder" returnType="Boolean" methodType="Rule" actionType="None" returnMode="Object">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmEntityMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter />
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="35de7c82-e7f2-4430-9445-6aed52d184b0" lastModifiedUtc="2011-10-05T19:15:41.6479917Z" targetType="Sage.BusinessRules.CodeSnippets.OpportunityProductBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="ValidateSalesOrderStep" active="true" codeSnippetId="9b3c8ef4-411f-432d-bc04-83edf5772f76">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

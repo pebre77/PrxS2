@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<BundleManifest id="0f6ac608-29c6-4885-b689-028a34d800f0">
+  <bundleProperties>
+    <name>Sales Order Relationships 7.5.3</name>
+    <description><![CDATA[]]></description>
+    <address><![CDATA[]]></address>
+    <company />
+    <copyright><![CDATA[]]></copyright>
+    <majorVersion>0</majorVersion>
+    <minorVersion>0</minorVersion>
+    <revision>0</revision>
+    <build>2</build>
+    <autoIncrement>false</autoIncrement>
+    <installDate>2011-08-14T23:01:11.110645Z</installDate>
+    <installPassword />
+  </bundleProperties>
+  <bundleItemHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.BundleManifestItem, Sage.Platform.BundleModel">
+      <BundleManifestItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>0f6ac608-29c6-4885-b689-028a34d800f0</ItemId>
+        <Url>\</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Sales Order Relationships 7.5.3</Caption>
+      </BundleManifestItem>
+      <children>
+        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityModelContext, Sage.Platform">
+          <EntityModelContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <ItemId>entitymodel</ItemId>
+            <Url>\::Entity Model</Url>
+            <BundleItemType>Container</BundleItemType>
+            <Caption>Entity Model</Caption>
+          </EntityModelContext>
+          <children>
+            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipsContext, Sage.Platform">
+              <RelationshipsContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>entitymodel\relationships</ItemId>
+                <Url>\::Entity Model::Relationships</Url>
+                <BundleItemType>Container</BundleItemType>
+                <Caption>Relationships</Caption>
+              </RelationshipsContext>
+              <children>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>2f69f427-9cdc-4ee9-be2c-0f2d9580a3e3</ItemId>
+                    <Url>\Entity Model\Relationships\Salesorder.Contact.2f69f4279cdc4ee9be2c0f2d9580a3e3.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.BillingContact M:1 Contact</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>569fc7a8-e504-4cb6-a324-7ac152635c47</ItemId>
+                    <Url>\Entity Model\Relationships\Salesorder.Contact.569fc7a8e5044cb6a3247ac152635c47.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.ShippingContact M:1 Contact</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>13200822-be02-4f24-92f7-4a229612cecf</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrder.Owner.13200822be024f2492f74a229612cecf.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.Owner M:1 Owner</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>0070c24f-7693-413b-a46a-0bf451db2c88</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrder.SalesOrderAddress.0070c24f7693413ba46a0bf451db2c88.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.BillingAddress M:1 Sales Order Address</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>29b49d41-c9e1-4eb0-a351-dfcd2af1b312</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrder.SalesOrderAddress.29b49d41c9e14eb0a351dfcd2af1b312.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.ShippingAddress M:1 Sales Order Address</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>d6aa2394-bcc5-47a3-9de4-60f1a6134b84</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrder.SalesOrderItem.d6aa2394bcc547a39de460f1a6134b84.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.SalesOrderItems 1:M Sales Order Item.SalesOrder</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>e52a3f36-7d1b-4ed1-91e2-d4f1f1a6d7d2</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrder.User.e52a3f367d1b4ed191e2d4f1f1a6d7d2.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order.AccountManager M:1 User</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>e592a97a-a2ea-472a-8729-be80dc5648d8</ItemId>
+                    <Url>\Entity Model\Relationships\SalesOrderItem.OpportunityProduct.e592a97aa2ea472a8729be80dc5648d8.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Sales Order Item.OpportunityProduct M:1 Opportunity Product</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>abecb883-c002-416e-93bb-2ac800d57e8a</ItemId>
+                    <Url>\Entity Model\Relationships\Account.SalesOrder.abecb883c002416e93bb2ac800d57e8a.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Account.SalesOrders 1:M Sales Order.Account</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>d7e817e0-672e-414c-ad4e-577532dc7ea1</ItemId>
+                    <Url>\Entity Model\Relationships\Opportunity.Salesorder.d7e817e0672e414cad4e577532dc7ea1.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Opportunity.SalesOrders 1:M Sales Order.Opportunity</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.RelationshipBundleItem, Sage.Platform">
+                  <RelationshipBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>750fbda3-4129-4514-862e-a1d601836bed</ItemId>
+                    <Url>\Entity Model\Relationships\Contact.SalesOrder.750fbda341294514862ea1d601836bed.relationship.xml</Url>
+                    <BundleItemType>ModelItem</BundleItemType>
+                    <Caption>Contact.SalesOrders 1:M Sales Order.RequestedBy</Caption>
+                  </RelationshipBundleItem>
+                </bundleItem>
+              </children>
+            </bundleItem>
+          </children>
+        </bundleItem>
+      </children>
+    </bundleItem>
+  </bundleItemHierarchy>
+  <bundleActionHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.RootBundleAction, Sage.Platform.BundleModel">
+      <RootBundleAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>\Actions</ItemId>
+        <Url>\Actions</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Bundle Actions</Caption>
+      </RootBundleAction>
+    </bundleItem>
+  </bundleActionHierarchy>
+  <itemsToDelete />
+  <globalResources />
+</BundleManifest>

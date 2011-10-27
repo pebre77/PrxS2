@@ -1,0 +1,315 @@
+<?xml version="1.0"?>
+<BundleManifest id="87faf92c-9242-43a5-8d38-d012018bff46">
+  <bundleProperties>
+    <name>Praxi SalesLogix v7.5.3 Web Customizations v.1.0.2</name>
+    <description><![CDATA[Financial All Group
+Financial TAB:Edge
+Financial TAB:Budget]]></description>
+    <address><![CDATA[]]></address>
+    <company>Praxi Solutions</company>
+    <copyright><![CDATA[]]></copyright>
+    <majorVersion>0</majorVersion>
+    <minorVersion>0</minorVersion>
+    <revision>0</revision>
+    <build>2</build>
+    <autoIncrement>false</autoIncrement>
+    <installDate>0001-01-01T00:00:00</installDate>
+    <installPassword />
+  </bundleProperties>
+  <bundleItemHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.BundleManifestItem, Sage.Platform.BundleModel">
+      <BundleManifestItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>87faf92c-9242-43a5-8d38-d012018bff46</ItemId>
+        <Url>\</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Praxi SalesLogix v7.5.3 Web Customizations v.1.0.2</Caption>
+      </BundleManifestItem>
+      <children>
+        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityModelContext, Sage.Platform">
+          <EntityModelContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+            <ItemId>entitymodel</ItemId>
+            <Url>\::Entity Model</Url>
+            <BundleItemType>Container</BundleItemType>
+            <Caption>Entity Model</Caption>
+          </EntityModelContext>
+          <children>
+            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackagesContext, Sage.Platform">
+              <PackagesContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                <ItemId>entitymodel\packages</ItemId>
+                <Url>\::Entity Model::Packages</Url>
+                <BundleItemType>Container</BundleItemType>
+                <Caption>Packages</Caption>
+              </PackagesContext>
+              <children>
+                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PackageBundleItem, Sage.Platform">
+                  <PackageBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                    <ItemId>7ddc7cbe-e71d-483a-8599-6c5c483ee050</ItemId>
+                    <Url>\Entity Model\SalesLogix Application Entities\SalesLogix Application Entities.T.package.xml</Url>
+                    <BundleItemType>Context</BundleItemType>
+                    <Caption>SalesLogix Application Entities</Caption>
+                  </PackageBundleItem>
+                  <children>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>5e013402-6974-4382-af5d-4b8905fc96f2</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>Custfinancial</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>5e013402-6974-4382-af5d-4b8905fc96f2properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>90eae699-0579-40dd-a3a1-93f088ef0adc</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties::TotalAnticRevBudget</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TotalAnticRevBudget</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                                  <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>b34a9bb3-287c-4884-9b6b-f278b473bc72</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\GetTotalAnticRevBudget.method.xml</Url>
+                                    <BundleItemType>ModelItem</BundleItemType>
+                                    <Caption>GetTotalAnticRevBudget</Caption>
+                                  </BusinessRuleBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>a9e691f1-831f-47f7-a889-1d10d0ed0cea</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties::TotalActualRevBudget</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>TotalActualRevBudget</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                                  <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>eb489010-fb68-4f01-81cb-17743e765abe</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\GetTotalActualRevBudget.method.xml</Url>
+                                    <BundleItemType>ModelItem</BundleItemType>
+                                    <Caption>GetTotalActualRevBudget</Caption>
+                                  </BusinessRuleBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>e4dcef69-4b91-48ac-ba82-fedc71f0b303</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties::Priceexpiration</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Priceexpiration</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>90921c32-8e22-45dd-9fda-ca72cfcc401e</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties::Edgeapproval</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Edgeapproval</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c91623de-ce24-4f9d-9c12-10cad988f3c8</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Properties::Edgeversion</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>Edgeversion</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>5e013402-6974-4382-af5d-4b8905fc96f2quickforms</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml::Forms</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Forms</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\Custfinancial\Custfinancial.CUSTFINANCIAL.entity.xml</ParentUrl>
+                            <CaptionKey>quickforms</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c10b29bb-4410-477b-9b4f-b3d79ee098aa</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\QuickForms\FinancialBudget.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>FinancialBudget</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>d5392a46-039a-4954-a3aa-f60136db6632</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\QuickForms\FinancialCommissions.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>FinancialCommissions</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="b2741b79-02a2-4f4c-81cd-c204f82cf41c" itemTypeName="Sage.Platform.QuickForms.BundleSupport.QuickFormBundleItem, Sage.Platform.QuickForms">
+                              <QuickFormBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>22d0c400-afad-4637-bdf5-63bcb4c4da8d</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\Custfinancial\QuickForms\FinancialEdge.main.quickform.xml</Url>
+                                <BundleItemType>ModelItem</BundleItemType>
+                                <Caption>FinancialEdge</Caption>
+                              </QuickFormBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>4097658c-a4f9-4945-87fc-7c785d5e35e4</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>OpportunityCIUDF</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>4097658c-a4f9-4945-87fc-7c785d5e35e4properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>a7f62a4e-979a-4bab-911d-a4b70903c21f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml::Properties::EdgeApproval</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>EdgeApproval</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>2353efbc-8993-455e-8e66-e2730ebf4b7f</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml::Properties::EdgeVersion</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>EdgeVersion</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>c1c466c4-6c40-4c53-aeb3-593c25782f5b</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\OpportunityCIUDF\OpportunityCIUDF.Opportunity.OPPORTUNITY_CI_UDF.entity.xml::Properties::PriceExpiration</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>PriceExpiration</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                    <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntityBundleItem, Sage.Platform">
+                      <EntityBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                        <ItemId>76404dcf-a840-4013-9f53-78bfd1add255</ItemId>
+                        <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\OrderSummaryDetail.ORDER_SUMMARY_DETAIL.entity.xml</Url>
+                        <BundleItemType>Context</BundleItemType>
+                        <Caption>OrderSummaryDetail</Caption>
+                      </EntityBundleItem>
+                      <children>
+                        <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.EntitySubFolderContext, Sage.Platform">
+                          <EntitySubFolderContext xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                            <ItemId>76404dcf-a840-4013-9f53-78bfd1add255properties</ItemId>
+                            <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\OrderSummaryDetail.ORDER_SUMMARY_DETAIL.entity.xml::Properties</Url>
+                            <BundleItemType>Container</BundleItemType>
+                            <Caption>Properties</Caption>
+                            <ParentUrl>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\OrderSummaryDetail.ORDER_SUMMARY_DETAIL.entity.xml</ParentUrl>
+                            <CaptionKey>properties</CaptionKey>
+                          </EntitySubFolderContext>
+                          <children>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>16c15586-5582-41f8-8f2f-ede7a33b2fc5</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\OrderSummaryDetail.ORDER_SUMMARY_DETAIL.entity.xml::Properties::AnticOrderRev</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>AnticOrderRev</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                                  <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>9f5736a6-d8eb-4761-91fe-6054c452e2a9</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\GetAnticOrderRev.method.xml</Url>
+                                    <BundleItemType>ModelItem</BundleItemType>
+                                    <Caption>GetAnticOrderRev</Caption>
+                                  </BusinessRuleBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                            <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.PropertyBundleItem, Sage.Platform">
+                              <PropertyBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                <ItemId>256865c0-d8fd-4bac-8b0d-784a6b46479d</ItemId>
+                                <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\OrderSummaryDetail.ORDER_SUMMARY_DETAIL.entity.xml::Properties::ActualOrderRev</Url>
+                                <BundleItemType>Other</BundleItemType>
+                                <Caption>ActualOrderRev</Caption>
+                                <SerializationOptions>RecurseChildren</SerializationOptions>
+                                <InstallOptions>RecurseChildren</InstallOptions>
+                              </PropertyBundleItem>
+                              <children>
+                                <bundleItem modelId="a7bdd2d9-93b0-499d-9fd4-c3f7a5f94e28" itemTypeName="Sage.Platform.Orm.Entities.BundleSupport.BusinessRuleBundleItem, Sage.Platform">
+                                  <BusinessRuleBundleItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+                                    <ItemId>9ae38d63-4273-48cb-84da-15f08baf41b2</ItemId>
+                                    <Url>\Entity Model\SalesLogix Application Entities\OrderSummaryDetail\GetActualOrderRev.method.xml</Url>
+                                    <BundleItemType>ModelItem</BundleItemType>
+                                    <Caption>GetActualOrderRev</Caption>
+                                  </BusinessRuleBundleItem>
+                                </bundleItem>
+                              </children>
+                            </bundleItem>
+                          </children>
+                        </bundleItem>
+                      </children>
+                    </bundleItem>
+                  </children>
+                </bundleItem>
+              </children>
+            </bundleItem>
+          </children>
+        </bundleItem>
+      </children>
+    </bundleItem>
+  </bundleItemHierarchy>
+  <bundleActionHierarchy>
+    <bundleItem modelId="af988c91-97c8-4527-b072-e021c9e2cb1a" itemTypeName="Sage.Platform.BundleModel.RootBundleAction, Sage.Platform.BundleModel">
+      <RootBundleAction xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <ItemId>\Actions</ItemId>
+        <Url>\Actions</Url>
+        <BundleItemType>Container</BundleItemType>
+        <Caption>Bundle Actions</Caption>
+      </RootBundleAction>
+    </bundleItem>
+  </bundleActionHierarchy>
+  <itemsToDelete />
+  <globalResources />
+</BundleManifest>

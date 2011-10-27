@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<MenuDropDownItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="2b7365ef-2d05-4231-8528-9d935e604cf0">
+  <ItemId>UpdtSalesOrder</ItemId>
+  <NavUrl>UpdateSalesOrder.aspx</NavUrl>
+  <LargeImageUrl>[Localization!Global_Images:Tools_24x24]</LargeImageUrl>
+  <SmallImageUrl>[Localization!Global_Images:Tools_16x16]</SmallImageUrl>
+  <ContextMenuId />
+  <Target />
+  <AppliedSecurity>Administration/View</AppliedSecurity>
+</MenuDropDownItem>

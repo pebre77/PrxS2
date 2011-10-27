@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<WebModule xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="dffe6519-35d8-42ec-97c9-557992cc2c67">
+  <InstanceId>033edd31815e4dcabf33375cd72451fe</InstanceId>
+  <ModuleTypeName>Sage.SalesLogix.Client.GroupBuilder.Modules.GroupViewerModule, Sage.SalesLogix.Client.GroupBuilder.Modules</ModuleTypeName>
+  <RunInMode />
+  <AllowRoles />
+  <Scope>Page</Scope>
+</WebModule>

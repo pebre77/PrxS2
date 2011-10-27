@@ -1,0 +1,2690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<QuickFormDefinition Id="8e059592-6886-4c72-a93b-8cbd1bfbc855" name="SORoomBlock">
+  <Properties>
+    <Property name="EntityTypeName" type="System.String">ISalesOrder</Property>
+    <Property name="DefaultNamespace" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="AssemblyName" type="System.String">Sage.Entity.Interfaces</Property>
+    <Property name="UseEntityNameAsTitle" type="System.Boolean">True</Property>
+    <Property name="ImagePath" type="System.String"></Property>
+    <Property name="DefinitionType" type="System.String">Sage.Platform.QuickForms.QuickFormMainDetailViewDefinition, Sage.Platform.QuickForms</Property>
+    <Property name="Columns" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.ColumnStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfColumnStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnStyle><SizeType>Percent</SizeType><Width>4.545</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>4.545</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>4.545</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>4.545</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle><ColumnStyle><SizeType>Percent</SizeType><Width>10</Width></ColumnStyle></ArrayOfColumnStyle></Property>
+    <Property name="Rows" type="System.ComponentModel.BindingList`1[[System.Windows.Forms.RowStyle, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"><ArrayOfRowStyle xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle><RowStyle><SizeType>Absolute</SizeType><Height>35</Height></RowStyle></ArrayOfRowStyle></Property>
+    <Property name="GeneratePrintView" type="System.Boolean">False</Property>
+    <Property name="Description" type="System.String"></Property>
+    <Property name="ActiveControl" type="System.String"></Property>
+  </Properties>
+  <LoadActions>
+    <ActionDefinition>
+      <ResourceKey>0776a703-af16-4fed-94c3-0ad9ba350b08</ResourceKey>
+      <RootActionName>CSharpSnippetAction</RootActionName>
+      <Action>
+        <CSharpCodeSnippet><![CDATA[
+
+Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper(); 
+
+bool vtypeso =saleso.Actual.Value;
+
+//Hotel
+
+
+string sql = "Select Account From Account Where AccountID = '"+saleso.Billtoaccount.ToString()+"'";
+string fswon = session.CreateSQLQuery(sql).UniqueResult<string>();
+string result = fswon;
+
+if (!string.IsNullOrEmpty(result)){
+	txtHotel.Text = result;
+}
+
+// Event ID
+string sql2 = "Select MEETING_ID From OPPORTUNITY_CI_UDF Where OPPORTUNITYID = '"+saleso.Opportunity.Id.ToString()+"'";
+string fswon2 = session.CreateSQLQuery(sql2).UniqueResult<string>();
+string result2 = fswon2;
+
+if (!string.IsNullOrEmpty(result2)){
+	txtEventId.Text = result2;
+}
+
+
+
+//Main Arrival Date Init
+if (String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	//DialogService.ShowMessage(saleso.Opportunity.OpportunityCIUDF.Main_arrival_Date.ToString());
+	saleso.SORoomBlock.MainArrivalDate = saleso.Opportunity.OpportunityCIUDF.Main_arrival_Date;
+	dtMainArrivDate.DateTimeValue = saleso.Opportunity.OpportunityCIUDF.Main_arrival_Date;
+	saleso.Save();
+	
+}
+
+
+//Calculated Fixed Values
+
+//HOTEL REVENUE
+	decimal vHotelRev = 0;
+	decimal vhr1 = 0;
+	string sqlhr1 = "Select Sum(totalNBRRooms * RoomRate) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal sumhr1 = session.CreateSQLQuery(sqlhr1).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(sumhr1.ToString())){
+		vhr1 = sumhr1;
+	} else {
+		vhr1 = 0;
+	}
+	
+	int vhr2 = 0;
+	string sqlhr2 = "Select Sum(totalNBRRooms) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int sumhr2 = session.CreateSQLQuery(sqlhr2).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(sumhr2.ToString())){
+		vhr2 = sumhr2;
+	} else {
+		vhr2 = 0;
+	}
+	
+	if (!string.IsNullOrEmpty(txtRebate.Text)){
+		vHotelRev = vhr1 - (vhr2*decimal.Parse(txtRebate.Text));
+	} else {
+		vHotelRev = vhr1 - (vhr2*0); // Only For Control
+	}
+	
+	//AverageRate
+	decimal vAverageRate = 0;
+	if (vhr2 > 0){
+		 vAverageRate = vhr1 / vhr2;
+	}
+		
+	saleso.SORoomBlock.AverageRoomRate = vAverageRate;
+	txtAverageRate.Text = vAverageRate.ToString();
+		
+	saleso.SORoomBlock.HotelRevenue = vHotelRev;
+	txtHotelRev.Text = vHotelRev.ToString();
+	
+
+//Change Label - Permanent Fields - Total Revenues
+if (vtypeso == true){
+	lnkRoomBlock.Visible = true;
+	lnkRoomBlock_lbl.Text =  "Room Block - Actual ";	
+	lnkRoomBlock.Text  = "View Anticipated Roomblock";
+	string sql0 = "Select AnticipatedID From SalesOrder Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	string fswon0 = session.CreateSQLQuery(sql0).UniqueResult<string>();
+	string result0 = fswon0;
+	
+	if (!string.IsNullOrEmpty(result0)){
+		lnkRoomBlock.EntityId = result0;
+	} else {
+		lnkRoomBlock.EntityId = "";
+	}
+	
+	//Total Revenues
+	
+	txtTotRev.Visible =  true;
+	txtTotRev2.Visible =  true;
+	txtTotRev3.Visible =  true;
+	txtTotRev4.Visible =  true;
+	txtTotRev5.Visible =  true;
+	txtTotRev6.Visible =  true;
+	txtTotRev7.Visible =  true;
+	txtTotRev8.Visible =  true;
+	txtTotRev9.Visible =  true;
+	txtTotRev10.Visible =  true;
+	txtTotRev11.Visible =  true;
+	txtTotRev12.Visible =  true;
+	txtTotRev13.Visible =  true;
+	txtTotRev14.Visible =  true;
+	txtTotRev15.Visible =  true;
+	txtTotRev16.Visible =  true;
+	txtTotRev17.Visible =  true;
+	txtTotRev18.Visible =  true;
+	
+	txtTotalRoomRev.Visible = true;
+	txtTotalRoomRev_lbl.Visible = true;
+	txtROBRoomRev.Visible = true;
+	txtROBRoomRev_lbl.Visible = true;
+	txtAdjActualRev.Visible = true;
+	txtAdjActualRev_lbl.Visible = true;
+	txtTotalAdj.Visible = true;
+	txtTotalAdj_lbl.Visible = true;
+	
+	txtCompAdj.Visible = true;
+	txtCompAdj_lbl.Visible = true;
+	txtRebateAdj.Visible = true;
+	txtRebateAdj_lbl.Visible = true;
+	txtOtherAdj.Visible = true;
+	txtOtherAdj_lbl.Visible = true;
+	txtTotalAdj2.Visible = true;
+	txtTotalAdj2_lbl.Visible = true;
+	txtActualRev.Visible = true;
+	txtActualRev_lbl.Visible = true;
+	txtVariance.Visible = true;
+	txtVariance_lbl.Visible = true;
+	txtTest3.Visible = true;
+	txtTest3_lbl.Visible = true;
+	
+	chkRateConfirmed.Visible = false;
+	chkCalcFutureRate.Visible = false;
+	dtCompDate.Visible = false;
+	dtFutureDate.Visible = false;
+	dtCompDate_lbl.Visible = false;
+	dtFutureDate_lbl.Visible = false;	
+	
+	
+	
+	
+	//Rev1 
+	string sqltrv1 = "Select Sum(ActualRevenue1) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv1 = session.CreateSQLQuery(sqltrv1).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv1.ToString())){
+		txtTotRev.Text = String.Format("{0:0.00}",totrv1);
+	} else {
+		txtTotRev.Text = String.Format("{0:0.00}",0);
+	}
+	
+	//Rev2
+	string sqltrv2 = "Select Sum(ActualRevenue2) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv2 = session.CreateSQLQuery(sqltrv2).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv2.ToString())){
+		txtTotRev2.Text = String.Format("{0:0.00}",totrv2);
+	} else {
+		txtTotRev2.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev3
+	string sqltrv3 = "Select Sum(ActualRevenue3) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv3 = session.CreateSQLQuery(sqltrv3).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv3.ToString())){
+		txtTotRev3.Text = String.Format("{0:0.00}",totrv3);
+	} else {
+		txtTotRev3.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev4
+	string sqltrv4 = "Select Sum(ActualRevenue4) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv4 = session.CreateSQLQuery(sqltrv4).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv4.ToString())){
+		txtTotRev4.Text = String.Format("{0:0.00}",totrv4);
+	} else {
+		txtTotRev4.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev5
+	string sqltrv5 = "Select Sum(ActualRevenue5) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv5 = session.CreateSQLQuery(sqltrv5).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv5.ToString())){
+		txtTotRev5.Text = String.Format("{0:0.00}",totrv5);
+	} else {
+		txtTotRev5.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev6
+	string sqltrv6 = "Select Sum(ActualRevenue6) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv6 = session.CreateSQLQuery(sqltrv6).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv6.ToString())){
+		txtTotRev6.Text = String.Format("{0:0.00}",totrv6);
+	} else {
+		txtTotRev6.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev7
+	string sqltrv7 = "Select Sum(ActualRevenue7) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv7 = session.CreateSQLQuery(sqltrv7).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv7.ToString())){
+		txtTotRev7.Text = String.Format("{0:0.00}",totrv7);
+	} else {
+		txtTotRev7.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev8
+	string sqltrv8 = "Select Sum(ActualRevenue8) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv8 = session.CreateSQLQuery(sqltrv8).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv8.ToString())){
+		txtTotRev8.Text = String.Format("{0:0.00}",totrv8);
+	} else {
+		txtTotRev8.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev9
+	string sqltrv9 = "Select Sum(ActualRevenue9) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv9 = session.CreateSQLQuery(sqltrv9).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv9.ToString())){
+		txtTotRev9.Text = String.Format("{0:0.00}",totrv9);
+	} else {
+		txtTotRev9.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev10
+	string sqltrv10 = "Select Sum(ActualRevenue10) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv10 = session.CreateSQLQuery(sqltrv10).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv10.ToString())){
+		txtTotRev10.Text = String.Format("{0:0.00}",totrv10);
+	} else {
+		txtTotRev10.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev11
+	string sqltrv11 = "Select Sum(ActualRevenue11) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv11 = session.CreateSQLQuery(sqltrv11).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv11.ToString())){
+		txtTotRev11.Text = String.Format("{0:0.00}",totrv11);
+	} else {
+		txtTotRev11.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev12
+	string sqltrv12 = "Select Sum(ActualRevenue12) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv12 = session.CreateSQLQuery(sqltrv12).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv12.ToString())){
+		txtTotRev12.Text = String.Format("{0:0.00}",totrv12);
+	} else {
+		txtTotRev12.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev13
+	string sqltrv13 = "Select Sum(ActualRevenue13) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv13 = session.CreateSQLQuery(sqltrv13).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv13.ToString())){
+		txtTotRev13.Text = String.Format("{0:0.00}",totrv13);
+	} else {
+		txtTotRev13.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev14
+	string sqltrv14 = "Select Sum(ActualRevenue14) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv14 = session.CreateSQLQuery(sqltrv14).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv14.ToString())){
+		txtTotRev14.Text =String.Format("{0:0.00}",totrv14);
+	} else {
+		txtTotRev14.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev15
+	string sqltrv15 = "Select Sum(ActualRevenue15) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv15 = session.CreateSQLQuery(sqltrv15).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv15.ToString())){
+		txtTotRev15.Text = String.Format("{0:0.00}",totrv15);
+	} else {
+		txtTotRev15.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev16
+	string sqltrv16 = "Select Sum(ActualRevenue16) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv16 = session.CreateSQLQuery(sqltrv16).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv16.ToString())){
+		txtTotRev16.Text = String.Format("{0:0.00}",totrv16);
+	} else {
+		txtTotRev16.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev17
+	string sqltrv17 = "Select Sum(ActualRevenue17) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv17 = session.CreateSQLQuery(sqltrv17).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv17.ToString())){
+		txtTotRev17.Text = String.Format("{0:0.00}",totrv17);
+	} else {
+		txtTotRev17.Text = String.Format("{0:0.00}",0);
+	}
+	//Rev18
+	string sqltrv18 = "Select Sum(ActualRevenue18) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal totrv18 = session.CreateSQLQuery(sqltrv18).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(totrv18.ToString())){
+		txtTotRev18.Text = String.Format("{0:0.00}",totrv18);
+	} else {
+		txtTotRev18.Text = String.Format("{0:0.00}",0);
+	}
+	
+	decimal totalRoomRev = decimal.Parse(txtTotRev.Text) + decimal.Parse(txtTotRev2.Text) + decimal.Parse(txtTotRev3.Text) + decimal.Parse(txtTotRev4.Text) + decimal.Parse(txtTotRev5.Text) + decimal.Parse(txtTotRev6.Text) + decimal.Parse(txtTotRev7.Text) + decimal.Parse(txtTotRev8.Text) + decimal.Parse(txtTotRev9.Text) + decimal.Parse(txtTotRev10.Text) + decimal.Parse(txtTotRev11.Text) + decimal.Parse(txtTotRev12.Text) + decimal.Parse(txtTotRev13.Text) + decimal.Parse(txtTotRev14.Text) + decimal.Parse(txtTotRev15.Text) + decimal.Parse(txtTotRev16.Text) + decimal.Parse(txtTotRev17.Text) + decimal.Parse(txtTotRev18.Text);
+	txtTotalRoomRev.Text = totalRoomRev.ToString();
+	
+	
+	
+	//Calculated Fields
+	
+	//Total Aadj2;
+	decimal vTotalAdj2 = 0;
+	if (!string.IsNullOrEmpty(txtCompAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtCompAdj.Text);
+	}
+	if (!string.IsNullOrEmpty(txtRebateAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtRebateAdj.Text);
+	}	
+	if (!string.IsNullOrEmpty(txtOtherAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtOtherAdj.Text);
+	}	
+	
+	txtTotalAdj2.Text  = vTotalAdj2.ToString();
+	saleso.SORoomBlock.TotalAdjustedRevenue = vTotalAdj2;
+	txtTotalAdj.Text   = vTotalAdj2.ToString();
+	
+	//Adj Actual Revenue
+	
+	decimal vAdjActualRev = 0;
+	if (!string.IsNullOrEmpty(txtTotalRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtROBRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtROBRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtTotalAdj.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalAdj.Text);
+	}
+	
+	txtAdjActualRev.Text  = vAdjActualRev.ToString();
+	saleso.SORoomBlock.AdjustedActualRevenue = vAdjActualRev;
+	
+	//Total Actual Revenue
+	
+	txtActualRev.Text = txtAdjActualRev.Text;
+	saleso.SORoomBlock.TotalActualRevenue = vAdjActualRev;
+	
+	
+	
+	//Variance
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	
+	// 3% test
+	decimal test3 = 0;
+	if (vAdjActualRev > 0) {
+		 test3 = ((1/vVariance)/decimal.Parse(txtActualRev.Text))*100;
+	}
+	txtTest3.Text = test3.ToString();	
+	saleso.SORoomBlock.VariancePercentage = double.Parse(test3.ToString());
+	
+	
+	
+} else if (vtypeso == false)
+{
+	lnkRoomBlock.Visible = true;
+	lnkRoomBlock_lbl.Text =  "Room Block - Anticipated ";	
+	lnkRoomBlock.Text = "View Actual Roomblock";
+	string sqlf = "Select SalesOrderId From SalesOrder Where Actual = 'T' and AnticipatedID = '"+saleso.Id.ToString()+"'";
+	string fswonf= session.CreateSQLQuery(sqlf).UniqueResult<string>();
+	string resultf = fswonf;
+	
+		
+	if (!string.IsNullOrEmpty(resultf)){
+		lnkRoomBlock.EntityId = resultf;
+	} else {
+		lnkRoomBlock.EntityId = "";
+		lnkRoomBlock.Visible = false;
+	}
+
+	txtTotRev.Visible =  false;
+	txtTotRev2.Visible =  false;
+	txtTotRev3.Visible =  false;
+	txtTotRev4.Visible =  false;
+	txtTotRev5.Visible =  false;
+	txtTotRev6.Visible =  false;
+	txtTotRev7.Visible =  false;
+	txtTotRev8.Visible =  false;
+	txtTotRev9.Visible =  false;
+	txtTotRev10.Visible =  false;
+	txtTotRev11.Visible =  false;
+	txtTotRev12.Visible =  false;
+	txtTotRev13.Visible =  false;
+	txtTotRev14.Visible =  false;
+	txtTotRev15.Visible =  false;
+	txtTotRev16.Visible =  false;
+	txtTotRev17.Visible =  false;
+	txtTotRev18.Visible =  false;
+
+	
+	
+	txtTotalRoomRev.Visible = false;
+	txtTotalRoomRev_lbl.Visible = false;
+	txtROBRoomRev.Visible = false;
+	txtROBRoomRev_lbl.Visible = false;
+	txtAdjActualRev.Visible = false;
+	txtAdjActualRev_lbl.Visible = false;
+	txtTotalAdj.Visible = false;
+	txtTotalAdj_lbl.Visible = false;
+	
+	txtCompAdj.Visible = false;
+	txtCompAdj_lbl.Visible = false;
+	txtRebateAdj.Visible = false;
+	txtRebateAdj_lbl.Visible = false;
+	txtOtherAdj.Visible = false;
+	txtOtherAdj_lbl.Visible = false;
+	txtTotalAdj2.Visible = false;
+	txtTotalAdj2_lbl.Visible = false;
+	txtActualRev.Visible = false;
+	txtActualRev_lbl.Visible = false;
+	txtVariance.Visible = false;
+	txtVariance_lbl.Visible = false;
+	txtTest3.Visible = false;
+	txtTest3_lbl.Visible = false;
+	
+	
+	chkRateConfirmed.Visible = true;
+	chkCalcFutureRate.Visible = true;
+	dtCompDate.Visible = true;
+	dtFutureDate.Visible = true;
+	dtCompDate_lbl.Visible = true;
+	dtFutureDate_lbl.Visible = true;	
+	
+	chkCalcFutureRate.Checked = false;
+
+	saleso.SORoomBlock.ComparisonDate = DateTime.Now;
+	dtCompDate.Text = DateTime.Now.ToString();
+	saleso.SORoomBlock.FutureDate = saleso.SORoomBlock.MainArrivalDate.Value;
+	dtFutureDate.Text = saleso.SORoomBlock.MainArrivalDate.ToString();
+
+	
+	
+	
+	
+}
+else
+{
+	lnkRoomBlock_lbl.Text =  "No Room Block ";
+	lnkRoomBlock.Text = "No Link";
+	lnkRoomBlock.EntityId = "";
+	
+}
+
+
+
+if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}
+
+//Total Rooms Row
+	//Column 1
+	string sqltr1 = "Select Sum(NBRROOMS1) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr1 = session.CreateSQLQuery(sqltr1).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr1.ToString())){
+		txtTotRoom.Text = String.Format("{0:0}",totr1); 
+	} else {
+		txtTotRoom.Text = String.Format("{0:0}",0); 
+	}
+	//Column 2
+	string sqltr2 = "Select Sum(NBRROOMS2) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr2 = session.CreateSQLQuery(sqltr2).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr2.ToString())){
+		txtTotRoom2.Text = String.Format("{0:0}",totr2);
+	} else {
+		txtTotRoom2.Text = String.Format("{0:0}",0);
+	}
+	//Column 3
+	string sqltr3 = "Select Sum(NBRROOMS3) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr3 = session.CreateSQLQuery(sqltr3).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr3.ToString())){
+		txtTotRoom3.Text = String.Format("{0:0}",totr3);
+	} else {
+		txtTotRoom3.Text = String.Format("{0:0}",0);
+	}
+	//Column 4
+	string sqltr4 = "Select Sum(NBRROOMS4) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr4 = session.CreateSQLQuery(sqltr4).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr4.ToString())){
+		txtTotRoom4.Text = String.Format("{0:0}",totr4);
+	} else {
+		txtTotRoom4.Text = String.Format("{0:0}",0);
+	}
+	//Column 5
+	string sqltr5 = "Select Sum(NBRROOMS5) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr5 = session.CreateSQLQuery(sqltr5).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr5.ToString())){
+		txtTotRoom5.Text = String.Format("{0:0}",totr5);
+	} else {
+		txtTotRoom5.Text = String.Format("{0:0}",0);
+	}
+	//Column 6
+	string sqltr6 = "Select Sum(NBRROOMS6) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr6 = session.CreateSQLQuery(sqltr6).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr6.ToString())){
+		txtTotRoom6.Text = String.Format("{0:0}",totr6);
+	} else {
+		txtTotRoom6.Text = String.Format("{0:0}",0);
+	}
+	//Column 7
+	string sqltr7 = "Select Sum(NBRROOMS7) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr7 = session.CreateSQLQuery(sqltr7).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr7.ToString())){
+		txtTotRoom7.Text = String.Format("{0:0}",totr7);
+	} else {
+		txtTotRoom7.Text = String.Format("{0:0}",0);
+	}
+	//Column 8
+	string sqltr8 = "Select Sum(NBRROOMS8) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr8 = session.CreateSQLQuery(sqltr8).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr8.ToString())){
+		txtTotRoom8.Text = String.Format("{0:0}",totr8);
+	} else {
+		txtTotRoom8.Text = String.Format("{0:0}",0);
+	}
+	//Column 9
+	string sqltr9 = "Select Sum(NBRROOMS9) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr9 = session.CreateSQLQuery(sqltr9).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr9.ToString())){
+		txtTotRoom9.Text = String.Format("{0:0}",totr9);
+	} else {
+		txtTotRoom9.Text = String.Format("{0:0}",0);
+	}
+	//Column 10
+	string sqltr10 = "Select Sum(NBRROOMS10) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr10 = session.CreateSQLQuery(sqltr10).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr10.ToString())){
+		txtTotRoom10.Text = String.Format("{0:0}",totr10);
+	} else {
+		txtTotRoom10.Text = String.Format("{0:0}",0);
+	}
+	//Column 11
+	string sqltr11 = "Select Sum(NBRROOMS11) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr11 = session.CreateSQLQuery(sqltr11).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr11.ToString())){
+		txtTotRoom11.Text = String.Format("{0:0}",totr11);
+	} else {
+		txtTotRoom11.Text = String.Format("{0:0}",0);
+	}
+	//Column 12
+	string sqltr12 = "Select Sum(NBRROOMS12) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr12 = session.CreateSQLQuery(sqltr12).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr12.ToString())){
+		txtTotRoom12.Text = String.Format("{0:0}",totr12);
+	} else {
+		txtTotRoom12.Text = String.Format("{0:0}",0);
+	}
+	//Column 13
+	string sqltr13 = "Select Sum(NBRROOMS13) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr13 = session.CreateSQLQuery(sqltr13).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr13.ToString())){
+		txtTotRoom13.Text = String.Format("{0:0}",totr13);
+	} else {
+		txtTotRoom13.Text = String.Format("{0:0}",0);
+	}
+	//Column 14
+	string sqltr14 = "Select Sum(NBRROOMS14) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr14 = session.CreateSQLQuery(sqltr14).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr14.ToString())){
+		txtTotRoom14.Text = String.Format("{0:0}",totr14);
+	} else {
+		txtTotRoom14.Text = String.Format("{0:0}",0);
+	}
+	//Column 15
+	string sqltr15 = "Select Sum(NBRROOMS15) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr15 = session.CreateSQLQuery(sqltr15).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr15.ToString())){
+		txtTotRoom15.Text = String.Format("{0:0}",totr15);
+	} else {
+		txtTotRoom15.Text = String.Format("{0:0}",0);
+	}
+	//Column 16
+	string sqltr16 = "Select Sum(NBRROOMS16) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr16 = session.CreateSQLQuery(sqltr16).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr16.ToString())){
+		txtTotRoom16.Text = String.Format("{0:0}",totr16);
+	} else {
+		txtTotRoom16.Text = String.Format("{0:0}",0);
+	}
+	//Column 17
+	string sqltr17 = "Select Sum(NBRROOMS17) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr17 = session.CreateSQLQuery(sqltr17).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr17.ToString())){
+		txtTotRoom17.Text = String.Format("{0:0}",totr17);
+	} else {
+		txtTotRoom17.Text = String.Format("{0:0}",0);
+	}
+
+	//Column 18
+	string sqltr18 = "Select Sum(NBRROOMS18) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totr18 = session.CreateSQLQuery(sqltr18).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totr18.ToString())){
+		txtTotRoom18.Text = String.Format("{0:0}",totr18);
+	} else {
+		txtTotRoom18.Text = String.Format("{0:0}",0);
+	}
+	
+	//Total Rooms
+	string sqltrt = "Select Sum(TOTALNBRROOMS) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int totrt = session.CreateSQLQuery(sqltrt).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(totrt.ToString())){
+		txtTotalRooms.Text = String.Format("{0:0}",totrt);
+	} else {
+		txtTotalRooms.Text = String.Format("{0:0}",0);
+	}
+	
+	
+	
+]]></CSharpCodeSnippet>
+      </Action>
+      <IsDialogCloseAction>False</IsDialogCloseAction>
+      <RunOnEveryRePaint>False</RunOnEveryRePaint>
+      <DialogActionResult>NoResult</DialogActionResult>
+      <PerformsUpdate>False</PerformsUpdate>
+      <AppliedSecurity />
+    </ActionDefinition>
+  </LoadActions>
+  <QuickFormElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFLink, Sage.Platform.QuickForms.QFControls"><QFLink xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>22</ColumnSpan><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lnkRoomBlock</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Destination /><Image /><EntityId /><EntityTypeName>SalesOrder</EntityTypeName><PageName /><Target /><DisplayMode>Normal</DisplayMode></QFLink></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>5</ColumnSpan><Column>0</Column><Row>1</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtHotel</ControlId><DataBindings /><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtHotel</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>5</ColumnSpan><Column>0</Column><Row>2</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>dtMainArrivDate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.MainArrivalDate</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>dtMainArrivDate</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDataGrid, Sage.SalesLogix.QuickForms.QFControls"><QFDataGrid xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>22</ColumnSpan><Column>0</Column><Row>3</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>grdSORoomBlockTypes</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><DataSource>dsSORoomBlockTypes</DataSource><EnablePaging>false</EnablePaging><EnableSorting>false</EnableSorting><Columns><QFEditCol><StyleScheme /><DataField /><ColumnId>c28d8c02-8024-4bcb-864d-78e00123431c</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><DialogSpecs><SmartPart>AddEditSORoomblockType</SmartPart><Height>600</Height><Width>600</Width><Top>0</Top><Left>0</Left><EntityType>SORoomBlockType</EntityType><ResourceKey>21ec2382-1258-4445-8690-80a0bda20f03</ResourceKey><CenterDialog>True</CenterDialog></DialogSpecs><AppliedSecurity /></QFEditCol><QFDataGridCol><StyleScheme>slxlabel</StyleScheme><DataField>RoomType</DataField><ColumnId>42eccf95-9106-4fbb-a596-a918bac693b9</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>RoomType</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFSLXCurrencyCol><StyleScheme /><DataField>RoomRate</DataField><ColumnId>e38b8c45-3cb3-4d0c-b31e-a386ab94e492</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType><ExchangeRate /></QFSLXCurrencyCol><QFDataGridCol><StyleScheme /><DataField>TotalNbrRooms</DataField><ColumnId>9adf5872-c69c-4c93-99ee-fd431901d81b</ColumnId><HorizontalAlignment>left</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms1</DataField><ColumnId>4408340c-9dea-4108-b447-96b56a76c7ac</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms1</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms2</DataField><ColumnId>d2912e9a-fb97-45f3-bea7-1539fbc67e4c</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms2</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms3</DataField><ColumnId>825f0df9-d541-4d11-b14a-5e3fa9f044bf</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms3</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms4</DataField><ColumnId>7c19136b-cbb2-4feb-8202-4bec941d040b</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms4</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms5</DataField><ColumnId>0e715efc-7500-40ef-a3ae-b14659ac1604</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms5</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms6</DataField><ColumnId>7c994860-3be2-44fc-aabc-c0b46798fdf0</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms6</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms7</DataField><ColumnId>c183ed5d-2a34-46cf-9e5e-1e1bd5d14aea</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms7</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms8</DataField><ColumnId>22b49043-433c-417c-ba6e-ba9f477c5205</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms8</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms9</DataField><ColumnId>940c9f56-ae60-4d00-bb76-b45de1c2169e</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms9</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms10</DataField><ColumnId>82d6e8e5-fce1-4fbd-a9ac-16fd853cd205</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms10</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms11</DataField><ColumnId>7a4ed0f8-b2de-4e04-8863-9bfd7fc67223</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms11</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms12</DataField><ColumnId>12df90cd-2bd3-46a8-be56-091a17158ffc</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms12</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms13</DataField><ColumnId>14afedb6-c7c2-416e-a767-eb9061c2fccd</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms13</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms14</DataField><ColumnId>cc6e140a-901d-4deb-8d49-7bc24df9f682</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms14</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms15</DataField><ColumnId>bb01938b-87b1-4d4d-9c73-e747e1e6f79c</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms15</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms16</DataField><ColumnId>21f129d2-aed7-4090-b3b3-d8e2d564a343</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms16</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms17</DataField><ColumnId>587a5220-30fb-450e-815a-3e468dd0430a</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms17</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol><QFDataGridCol><StyleScheme /><DataField>NbrRooms18</DataField><ColumnId>5215e431-4355-413f-bd8e-fe7a4b690f5a</ColumnId><HorizontalAlignment>center</HorizontalAlignment><HeaderAlignment>left</HeaderAlignment><IsSortable>false</IsSortable><SortField>NbrRooms18</SortField><MultiCurrencyDependent>false</MultiCurrencyDependent></QFDataGridCol></Columns><RenderVertical>false</RenderVertical><OnRowSelectedAction><ResourceKey>grdSORoomBlockTypes</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnRowSelectedAction></QFDataGrid></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>4</Row><IsReadOnly>false</IsReadOnly><Enabled>false</Enabled><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalRooms3</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtTotalRooms3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalRoomRev</ControlId><DataBindings /><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotalRoomRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><CurrentCode /><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>6</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtROBRoomRev</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.RobRoomRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtROBRoomRev</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+
+//Adj Actual Revenue
+	
+	decimal vAdjActualRev = 0;
+	if (!string.IsNullOrEmpty(txtTotalRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtROBRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtROBRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtTotalAdj.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalAdj.Text);
+	}
+	
+	txtAdjActualRev.Text  = vAdjActualRev.ToString();
+	saleso.SORoomBlock.AdjustedActualRevenue = vAdjActualRev;
+	
+	//Total Actual Revenue
+	
+	txtActualRev.Text = txtAdjActualRev.Text;
+	saleso.SORoomBlock.TotalActualRevenue = vAdjActualRev;
+	
+	
+	
+	//Variance
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	
+	
+	// 3% test
+	decimal test3 = 0;
+	if (vAdjActualRev > 0) {
+		 test3 = ((1/vVariance)/decimal.Parse(txtActualRev.Text))*100;
+	}
+	txtTest3.Text = test3.ToString();	
+	saleso.SORoomBlock.VariancePercentage = double.Parse(test3.ToString());
+	
+	
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}
+	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>7</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalAdj</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.TotalAdjustedRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotalAdj</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>8</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtAdjActualRev</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.AdjustedActualRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtAdjActualRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>9</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtAverageRate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.AverageRoomRate</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtAverageRate</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRebate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.RebateAmount</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtRebate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+NHibernate.ISession session = new Sage.Platform.Orm.SessionScopeWrapper(); 
+
+//HOTEL REVENUE
+	decimal vHotelRev = 0;
+	decimal vhr1 = 0;
+	string sqlhr1 = "Select Sum(totalNBRRooms * RoomRate) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	decimal sumhr1 = session.CreateSQLQuery(sqlhr1).UniqueResult<decimal>();
+	
+	if (!string.IsNullOrEmpty(sumhr1.ToString())){
+		vhr1 = sumhr1;
+	} else {
+		vhr1 = 0;
+	}
+	
+	int vhr2 = 0;
+	string sqlhr2 = "Select Sum(totalNBRRooms) From SORoomblockType Where SalesOrderID = '"+saleso.Id.ToString()+"'";
+	int sumhr2 = session.CreateSQLQuery(sqlhr2).UniqueResult<int>();
+	
+	if (!string.IsNullOrEmpty(sumhr2.ToString())){
+		vhr2 = sumhr2;
+	} else {
+		vhr2 = 0;
+	}
+	
+	if (!string.IsNullOrEmpty(txtRebate.Text)){
+		vHotelRev = vhr1 - (vhr2*decimal.Parse(txtRebate.Text));
+	} else {
+		vHotelRev = vhr1 - (vhr2*0); // Only For Control
+	}
+	
+	//AverageRate
+	decimal vAverageRate = 0;
+	if (vhr2 > 0){
+		 vAverageRate = vhr1 / vhr2;
+	}
+		
+	saleso.SORoomBlock.AverageRoomRate = vAverageRate;
+	txtAverageRate.Text = vAverageRate.ToString();
+		
+	saleso.SORoomBlock.HotelRevenue = vHotelRev;
+	txtHotelRev.Text = vHotelRev.ToString();
+	
+	
+	
+	//Variance
+	bool vActual = saleso.Actual.Value;
+	
+	if (vActual == true) {
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	}
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>0</Column><Row>11</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtHotelRev</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.HotelRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtHotelRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>1</Column><Row>4</Row><IsReadOnly>false</IsReadOnly><Enabled>false</Enabled><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalRooms2</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtTotalRooms2</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFLabel, Sage.Platform.QuickForms.QFControls"><QFLabel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>2</Column><Row>4</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFLabel</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><AssociatedControlID /></QFLabel></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>3</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalRooms</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotalRooms</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>3</Column><Row>9</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkRateConfirmed</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.RateConfirmed</DataItemName><ControlItemName>Checked</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkRateConfirmed</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>3</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkCalcFutureRate</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkCalcFutureRate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;	
+
+if (chkCalcFutureRate.Checked == true) {
+	
+		
+	saleso.SORoomBlock.ComparisonDate = dtCompDate.DateTimeValue.Value;
+	dtCompDate.Text = dtCompDate.DateTimeValue.ToString();
+	saleso.SORoomBlock.FutureDate = dtFutureDate.DateTimeValue.Value;
+	dtFutureDate.Text = dtFutureDate.DateTimeValue.ToString();
+	
+	DateTime Date1 = saleso.SORoomBlock.FutureDate.Value;
+	DateTime Date2 = saleso.SORoomBlock.ComparisonDate.Value;
+	
+	if (Date1.Year > Date2.Year){
+	
+		double vAdjust = 1.03 * (Date1.Year - Date2.Year);
+				
+		decimal vAverageRate = saleso.SORoomBlock.AverageRoomRate.Value;
+		decimal	vHotelRev = saleso.SORoomBlock.HotelRevenue.Value;
+		
+		vAverageRate = vAverageRate * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.AverageRoomRate = vAverageRate;
+		txtAverageRate.Text = vAverageRate.ToString();
+		
+		vHotelRev = vHotelRev * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.HotelRevenue = vHotelRev;
+		txtHotelRev.Text = vHotelRev.ToString();
+	}
+	else
+	{
+		throw new Sage.Platform.Application.ValidationException("Future Date (Year) must be greater than Comparison Date (Year)");
+	}
+	//saleso.Save();
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+	{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+	}	
+}
+else
+{
+	Response.Redirect("SalesOrder.aspx?entityId=" + saleso.Id.ToString());
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>3</Column><Row>11</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>dtCompDate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.ComparisonDate</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>dtCompDate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;	
+
+if (chkCalcFutureRate.Checked == true) {
+	
+	
+		
+	saleso.SORoomBlock.ComparisonDate = dtCompDate.DateTimeValue.Value;
+	dtCompDate.Text = dtCompDate.DateTimeValue.ToString();
+	saleso.SORoomBlock.FutureDate = dtFutureDate.DateTimeValue.Value;
+	dtFutureDate.Text = dtFutureDate.DateTimeValue.ToString();
+	
+	DateTime Date1 = saleso.SORoomBlock.FutureDate.Value;
+	DateTime Date2 = saleso.SORoomBlock.ComparisonDate.Value;
+	
+	
+		
+	if (Date1.Year > Date2.Year){
+	
+		double vAdjust = 1.03 * (Date1.Year - Date2.Year);
+				
+		decimal vAverageRate = saleso.SORoomBlock.AverageRoomRate.Value;
+		decimal	vHotelRev = saleso.SORoomBlock.HotelRevenue.Value;
+		
+		vAverageRate = vAverageRate * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.AverageRoomRate = vAverageRate;
+		txtAverageRate.Text = vAverageRate.ToString();
+		
+		vHotelRev = vHotelRev * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.HotelRevenue = vHotelRev;
+		txtHotelRev.Text = vHotelRev.ToString();
+	}
+	else
+	{
+		throw new Sage.Platform.Application.ValidationException("Future Date (Year) must be greater than Comparison Date (Year)");
+	}
+	
+	//saleso.Save();
+	
+	
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFDateTimePicker, Sage.SalesLogix.QuickForms.QFControls"><QFDateTimePicker xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>3</Column><Row>12</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>dtFutureDate</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.FutureDate</DataItemName><ControlItemName>DateTimeValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>dtFutureDate</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;	
+
+if (chkCalcFutureRate.Checked == true) {
+	
+	
+		
+	saleso.SORoomBlock.ComparisonDate = dtCompDate.DateTimeValue.Value;
+	dtCompDate.Text = dtCompDate.DateTimeValue.ToString();
+	saleso.SORoomBlock.FutureDate = dtFutureDate.DateTimeValue.Value;
+	dtFutureDate.Text = dtFutureDate.DateTimeValue.ToString();
+	
+	DateTime Date1 = saleso.SORoomBlock.FutureDate.Value;
+	DateTime Date2 = saleso.SORoomBlock.ComparisonDate.Value;
+	
+	
+		
+	if (Date1.Year > Date2.Year){
+	
+		double vAdjust = 1.03 * (Date1.Year - Date2.Year);
+				
+		decimal vAverageRate = saleso.SORoomBlock.AverageRoomRate.Value;
+		decimal	vHotelRev = saleso.SORoomBlock.HotelRevenue.Value;
+		
+		vAverageRate = vAverageRate * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.AverageRoomRate = vAverageRate;
+		txtAverageRate.Text = vAverageRate.ToString();
+		
+		vHotelRev = vHotelRev * Decimal.Parse(vAdjust.ToString());
+		saleso.SORoomBlock.HotelRevenue = vHotelRev;
+		txtHotelRev.Text = vHotelRev.ToString();
+	}
+	else
+	{
+		throw new Sage.Platform.Application.ValidationException("Future Date (Year) must be greater than Comparison Date (Year)");
+	}
+	
+	//saleso.Save();
+	
+	
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DateTimeValue xsi:nil="true" /><SelectedDateTime>0001-01-01T00:00:00</SelectedDateTime><DateOnly>true</DateOnly><DisplayTime>false</DisplayTime><AutoPostBack>false</AutoPostBack><Timeless>false</Timeless></QFDateTimePicker></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>4</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>4</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>5</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom2</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom2</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>5</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev2</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev2</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>5</ColumnSpan><Column>6</Column><Row>1</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFButton</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>slxbutton</StyleScheme><ButtonType>StandardButton</ButtonType><Image /><OnClientClick /><OnClickAction><ResourceKey>QFButton</ResourceKey><RootActionName>DialogAction</RootActionName><Action><SmartPart>AddStartDateRoomBlock</SmartPart><Height>130</Height><Width>400</Width><Top>0</Top><Left>0</Left><EntityType>SalesOrder</EntityType><ResourceKey>de2dc919-8253-462d-90e4-4c480de8dabb</ResourceKey><CenterDialog>True</CenterDialog></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFTextBox, Sage.Platform.QuickForms"><QFTextBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>5</ColumnSpan><Column>6</Column><Row>2</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtEventId</ControlId><DataBindings /><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtEventId</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFTextBox></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>6</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom3</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>6</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev3</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>7</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom4</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom4</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>7</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev4</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev4</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>7</Column><Row>9</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtCompAdj</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.ComplementaryAdjustedRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtCompAdj</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+
+//Total Aadj2;
+	decimal vTotalAdj2 = 0;
+	if (!string.IsNullOrEmpty(txtCompAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtCompAdj.Text);
+	}
+	if (!string.IsNullOrEmpty(txtRebateAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtRebateAdj.Text);
+	}	
+	if (!string.IsNullOrEmpty(txtOtherAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtOtherAdj.Text);
+	}	
+	
+	txtTotalAdj2.Text  = vTotalAdj2.ToString();
+	saleso.SORoomBlock.TotalAdjustedRevenue = vTotalAdj2;
+	txtTotalAdj.Text   = vTotalAdj2.ToString();
+	
+	//Adj Actual Revenue
+	
+	decimal vAdjActualRev = 0;
+	if (!string.IsNullOrEmpty(txtTotalRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtROBRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtROBRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtTotalAdj.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalAdj.Text);
+	}
+	
+	txtAdjActualRev.Text  = vAdjActualRev.ToString();
+	saleso.SORoomBlock.AdjustedActualRevenue = vAdjActualRev;
+	
+	//Total Actual Revenue
+	
+	txtActualRev.Text = txtAdjActualRev.Text;
+	saleso.SORoomBlock.TotalActualRevenue = vAdjActualRev;
+	
+	
+		
+	//Variance
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	
+	
+	// 3% test
+	decimal test3 = 0;
+	if (vAdjActualRev > 0) {
+		 test3 = ((1/vVariance)/decimal.Parse(txtActualRev.Text))*100;
+	}
+	txtTest3.Text = test3.ToString();	
+	saleso.SORoomBlock.VariancePercentage = double.Parse(test3.ToString());
+	
+		
+	
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}
+	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>7</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtRebateAdj</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.RebateAdjustedRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtRebateAdj</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+
+	//Total Aadj2;
+	decimal vTotalAdj2 = 0;
+	if (!string.IsNullOrEmpty(txtCompAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtCompAdj.Text);
+	}
+	if (!string.IsNullOrEmpty(txtRebateAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtRebateAdj.Text);
+	}	
+	if (!string.IsNullOrEmpty(txtOtherAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtOtherAdj.Text);
+	}	
+	
+	txtTotalAdj2.Text  = vTotalAdj2.ToString();
+	saleso.SORoomBlock.TotalAdjustedRevenue = vTotalAdj2;
+	txtTotalAdj.Text   = vTotalAdj2.ToString();
+	
+	//Adj Actual Revenue
+	
+	decimal vAdjActualRev = 0;
+	if (!string.IsNullOrEmpty(txtTotalRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtROBRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtROBRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtTotalAdj.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalAdj.Text);
+	}
+	
+	txtAdjActualRev.Text  = vAdjActualRev.ToString();
+	saleso.SORoomBlock.AdjustedActualRevenue = vAdjActualRev;
+	
+	//Total Actual Revenue
+	
+	txtActualRev.Text = txtAdjActualRev.Text;
+	saleso.SORoomBlock.TotalActualRevenue = vAdjActualRev;
+	
+	
+		
+	//Variance
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	
+	
+	// 3% test
+	decimal test3 = 0;
+	if (vAdjActualRev > 0) {
+		 test3 = ((1/vVariance)/decimal.Parse(txtActualRev.Text))*100;
+	}
+	txtTest3.Text = test3.ToString();	
+	saleso.SORoomBlock.VariancePercentage = double.Parse(test3.ToString());
+	
+		
+	
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}
+	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>7</Column><Row>11</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtOtherAdj</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.OtherAdjustedRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtOtherAdj</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[
+Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+
+//Total Aadj2;
+	decimal vTotalAdj2 = 0;
+	if (!string.IsNullOrEmpty(txtCompAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtCompAdj.Text);
+	}
+	if (!string.IsNullOrEmpty(txtRebateAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtRebateAdj.Text);
+	}	
+	if (!string.IsNullOrEmpty(txtOtherAdj.Text)){
+		vTotalAdj2 = vTotalAdj2 +decimal.Parse(txtOtherAdj.Text);
+	}	
+	
+	txtTotalAdj2.Text  = vTotalAdj2.ToString();
+	saleso.SORoomBlock.TotalAdjustedRevenue = vTotalAdj2;
+	txtTotalAdj.Text   = vTotalAdj2.ToString();
+	
+	//Adj Actual Revenue
+	
+	decimal vAdjActualRev = 0;
+	if (!string.IsNullOrEmpty(txtTotalRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtROBRoomRev.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtROBRoomRev.Text);
+	}
+	if (!string.IsNullOrEmpty(txtTotalAdj.Text )){
+		vAdjActualRev = vAdjActualRev + decimal.Parse(txtTotalAdj.Text);
+	}
+	
+	txtAdjActualRev.Text  = vAdjActualRev.ToString();
+	saleso.SORoomBlock.AdjustedActualRevenue = vAdjActualRev;
+	
+	//Total Actual Revenue
+	
+	txtActualRev.Text = txtAdjActualRev.Text;
+	saleso.SORoomBlock.TotalActualRevenue = vAdjActualRev;
+	
+	
+		
+	//Variance
+	decimal vVariance = decimal.Parse(txtHotelRev.Text) - decimal.Parse(txtActualRev.Text);
+	txtVariance.Text = vVariance.ToString();
+	saleso.SORoomBlock.VarianceAmount = vVariance;
+	
+	
+	// 3% test
+	decimal test3 = 0;
+	if (vAdjActualRev > 0) {
+		 test3 = ((1/vVariance)/decimal.Parse(txtActualRev.Text))*100;
+	}
+	txtTest3.Text = test3.ToString();	
+	saleso.SORoomBlock.VariancePercentage = double.Parse(test3.ToString());
+	
+	
+		
+	
+	
+	
+	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}
+	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>7</Column><Row>12</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotalAdj2</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.TotalAdjustedRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotalAdj2</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>8</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom5</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom5</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>8</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev5</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev5</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>9</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom6</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom6</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>9</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev6</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev6</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>10</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom7</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom7</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>10</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev7</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev7</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>10</Column><Row>9</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtActualRev</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.TotalActualRevenue</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtActualRev</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXCurrency, Sage.SalesLogix.QuickForms.QFControls"><QFSLXCurrency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>10</Column><Row>10</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtVariance</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.VarianceAmount</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtVariance</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ExchangeRateType>BaseRate</ExchangeRateType></QFSLXCurrency></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>10</Column><Row>11</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTest3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.VariancePercentage</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtTest3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>11</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom8</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom8</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>11</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev8</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev8</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>12</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom9</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom9</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>12</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev9</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev9</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>13</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom10</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom10</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>13</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev10</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev10</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>14</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom11</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom11</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>14</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev11</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev11</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>15</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom12</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom12</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>15</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev12</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev12</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>16</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom13</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom13</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>16</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev13</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev13</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>17</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom14</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom14</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>17</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev14</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev14</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>18</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom15</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom15</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>18</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev15</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev15</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>19</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom16</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom16</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>19</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev16</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev16</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>20</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom17</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom17</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>20</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev17</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev17</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>21</Column><Row>4</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRoom18</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRoom18</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>21</Column><Row>5</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTotRev18</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme>tboxinfo</StyleScheme><OnChangeAction><ResourceKey>txtTotRev18</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Decimal</FormatType></QFSLXNumeric></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFDataSource, Sage.Platform.QuickForms.QFControls"><QFDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>23</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>dsSORoomBlockTypes</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><EntityTypeName>SORoomBlockType</EntityTypeName><GetByMethod /><GetByProperty>SORoomBlockTypes</GetByProperty><UseSmartSelection>true</UseSmartSelection><DataOptional>false</DataOptional></QFDataSource></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormElements>
+  <QuickFormToolElements>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFElementSpacer, Sage.Platform.QuickForms"><QFElementSpacer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId /><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /></QFElementSpacer></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFButton3</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:Save_16x16]</Image><OnClientClick /><OnClickAction><ResourceKey>QFButton3</ResourceKey><RootActionName>BusinessRuleAction</RootActionName><Action><BusinessRule>Save</BusinessRule><Object>SORoomBlock</Object><Parameters /><PassResultsToNextAction>False</PassResultsToNextAction><OnCompleteActionName>CSharpSnippetAction</OnCompleteActionName><OnComplete><CSharpCodeSnippet><![CDATA[	if (!String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+{
+	
+	DateTime varrdate = DateTime.Parse(dtMainArrivDate.Text);
+	
+	//day 1
+	DateTime vdate1 = varrdate.AddDays(-4);
+	string vdaymonth1 = String.Format("{0:MM/dd}", vdate1);  
+	string vdayweek1 = String.Format("{0:ddd}", vdate1);  
+	grdSORoomBlockTypes.Columns[4].HeaderText = vdaymonth1+"-"+vdayweek1;
+
+	//day 2
+	DateTime vdate2 = varrdate.AddDays(-3);
+	string vdaymonth2 = String.Format("{0:MM/dd}", vdate2);  
+	string vdayweek2 = String.Format("{0:ddd}", vdate2);  
+	grdSORoomBlockTypes.Columns[5].HeaderText = vdaymonth2+"-"+vdayweek2;	
+
+	//day 3
+	DateTime vdate3 = varrdate.AddDays(-2);
+	string vdaymonth3 = String.Format("{0:MM/dd}", vdate3);  
+	string vdayweek3 = String.Format("{0:ddd}", vdate3);  
+	grdSORoomBlockTypes.Columns[6].HeaderText = vdaymonth3+"-"+vdayweek3;	
+	
+	//day 4
+	DateTime vdate4 = varrdate.AddDays(-1);
+	string vdaymonth4 = String.Format("{0:MM/dd}", vdate4);  
+	string vdayweek4 = String.Format("{0:ddd}", vdate4);  
+	grdSORoomBlockTypes.Columns[7].HeaderText = vdaymonth4+"-"+vdayweek4;	
+	
+	//day 5
+	DateTime vdate5 = varrdate;
+	string vdaymonth5 = String.Format("{0:MM/dd}", vdate5);  
+	string vdayweek5 = String.Format("{0:ddd}", vdate5);  
+	grdSORoomBlockTypes.Columns[8].HeaderText = vdaymonth5+"-"+vdayweek5;	
+	
+	//day 6
+	DateTime vdate6 = varrdate.AddDays(1);
+	string vdaymonth6 = String.Format("{0:MM/dd}", vdate6);  
+	string vdayweek6 = String.Format("{0:ddd}", vdate6);  
+	grdSORoomBlockTypes.Columns[9].HeaderText = vdaymonth6+"-"+vdayweek6;	
+
+	//day 7
+	DateTime vdate7 = varrdate.AddDays(2);
+	string vdaymonth7 = String.Format("{0:MM/dd}", vdate7);  
+	string vdayweek7 = String.Format("{0:ddd}", vdate7);  
+	grdSORoomBlockTypes.Columns[10].HeaderText = vdaymonth7+"-"+vdayweek7;	
+	
+	//day 8
+	DateTime vdate8 = varrdate.AddDays(3);
+	string vdaymonth8 = String.Format("{0:MM/dd}", vdate8);  
+	string vdayweek8 = String.Format("{0:ddd}", vdate8);  
+	grdSORoomBlockTypes.Columns[11].HeaderText = vdaymonth8+"-"+vdayweek8;	
+	
+	//day 9
+	DateTime vdate9 = varrdate.AddDays(4);
+	string vdaymonth9 = String.Format("{0:MM/dd}", vdate9);  
+	string vdayweek9 = String.Format("{0:ddd}", vdate9);  
+	grdSORoomBlockTypes.Columns[12].HeaderText = vdaymonth9+"-"+vdayweek9;	
+	
+	//day 10
+	DateTime vdate10 = varrdate.AddDays(5);
+	string vdaymonth10 = String.Format("{0:MM/dd}", vdate10);  
+	string vdayweek10 = String.Format("{0:ddd}", vdate10);  
+	grdSORoomBlockTypes.Columns[13].HeaderText = vdaymonth10+"-"+vdayweek10;	
+	
+	//day 11
+	DateTime vdate11 = varrdate.AddDays(6);
+	string vdaymonth11 = String.Format("{0:MM/dd}", vdate11);  
+	string vdayweek11 = String.Format("{0:ddd}", vdate11);  
+	grdSORoomBlockTypes.Columns[14].HeaderText = vdaymonth11+"-"+vdayweek11;	
+	
+	//day 12
+	DateTime vdate12 = varrdate.AddDays(7);
+	string vdaymonth12 = String.Format("{0:MM/dd}", vdate12);  
+	string vdayweek12 = String.Format("{0:ddd}", vdate12);  
+	grdSORoomBlockTypes.Columns[15].HeaderText = vdaymonth12+"-"+vdayweek12;	
+	
+	//day 13
+	DateTime vdate13 = varrdate.AddDays(8);
+	string vdaymonth13 = String.Format("{0:MM/dd}", vdate13);  
+	string vdayweek13 = String.Format("{0:ddd}", vdate13);  
+	grdSORoomBlockTypes.Columns[16].HeaderText = vdaymonth13+"-"+vdayweek13;	
+	
+	//day 14
+	DateTime vdate14 = varrdate.AddDays(9);
+	string vdaymonth14 = String.Format("{0:MM/dd}", vdate14);  
+	string vdayweek14 = String.Format("{0:ddd}", vdate14);  
+	grdSORoomBlockTypes.Columns[17].HeaderText = vdaymonth14+"-"+vdayweek14;	
+	
+	//day 15
+	DateTime vdate15 = varrdate.AddDays(10);
+	string vdaymonth15 = String.Format("{0:MM/dd}", vdate15);  
+	string vdayweek15 = String.Format("{0:ddd}", vdate15);  
+	grdSORoomBlockTypes.Columns[18].HeaderText = vdaymonth15+"-"+vdayweek15;	
+	
+	//day 16
+	DateTime vdate16 = varrdate.AddDays(11);
+	string vdaymonth16 = String.Format("{0:MM/dd}", vdate16);  
+	string vdayweek16 = String.Format("{0:ddd}", vdate16);  
+	grdSORoomBlockTypes.Columns[19].HeaderText = vdaymonth16+"-"+vdayweek16;	
+	
+	//day 17
+	DateTime vdate17 = varrdate.AddDays(12);
+	string vdaymonth17 = String.Format("{0:MM/dd}", vdate17);  
+	string vdayweek17 = String.Format("{0:ddd}", vdate17);  
+	grdSORoomBlockTypes.Columns[20].HeaderText = vdaymonth17+"-"+vdayweek17;	
+	
+	//day 18
+	DateTime vdate18 = varrdate.AddDays(13);
+	string vdaymonth18 = String.Format("{0:MM/dd}", vdate18);  
+	string vdayweek18 = String.Format("{0:ddd}", vdate18);  
+	grdSORoomBlockTypes.Columns[21].HeaderText = vdaymonth18+"-"+vdayweek18;	
+	
+	
+}]]></CSharpCodeSnippet></OnComplete></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>True</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFButton2</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:plus_16x16]</Image><OnClientClick /><OnClickAction><ResourceKey>QFButton2</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.Entity.Interfaces.ISalesOrder;
+if (DialogService != null)
+            {
+                DialogService.SetSpecs(0,0,600,600, "AddEditSORoomblockType","Add Room Block Type",true);
+                DialogService.EntityType = typeof(Sage.Entity.Interfaces.ISORoomBlockType);
+				DialogService.DialogParameters.Add("SalesOrderId", saleso.Id.ToString());
+                DialogService.ShowDialog();
+            }
+
+]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
+  </QuickFormToolElements>
+</QuickFormDefinition>

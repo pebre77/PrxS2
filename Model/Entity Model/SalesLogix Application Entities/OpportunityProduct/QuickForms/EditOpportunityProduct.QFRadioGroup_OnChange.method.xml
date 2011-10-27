@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<method xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="OrmOtherMethod" id="6c6087e0-fa5d-4e11-9686-45a8ad6fb118" lastModifiedUtc="2011-07-22T14:34:02.4507579Z" name="QFRadioGroup_OnChange" methodType="Other" actionType="None" returnMode="None" isInstance="false" containerName="EditOpportunityProduct">
+  <extendedMetaData />
+  <ExtendedPropertiesCollection>
+    <extendee type="Sage.Platform.Orm.Entities.OrmOtherMethod" />
+  </ExtendedPropertiesCollection>
+  <parameter>
+    <OrmEntityMethodParam id="90c4d397-a01c-45c3-bff8-693f0aee8075" paramName="form" sequence="0" paramType="IEditOpportunityProduct" />
+    <OrmEntityMethodParam id="b6912f4d-4662-467f-8de9-e57fb68a7204" paramName="args" sequence="0" paramType="EventArgs" />
+  </parameter>
+  <preExecuteTargets />
+  <methodTargets>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="107d2078-8654-4c45-8838-65795e248334" lastModifiedUtc="2011-07-22T14:23:47.6303883Z" targetType="Sage.BusinessRules.CodeSnippets.EditOpportunityProductEventHandlers, Sage.SnippetLibrary.CSharp" targetMethod="QFRadioGroup_OnChangeStep" active="true" codeSnippetId="43bd035d-c001-4c3d-8eaf-2a1197a0c651">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+  </methodTargets>
+  <postExecuteTargets />
+  <postFlushTargets />
+</method>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="eefdbca1-24c8-42a6-ae2c-7d296c3bf1fc">
+  <ItemId>navEvents</ItemId>
+  <NavUrl>Custevent.aspx</NavUrl>
+  <LargeImageUrl>[Localization!Global_Images:event32x32]</LargeImageUrl>
+  <SmallImageUrl>[Localization!Global_Images:event24x24]</SmallImageUrl>
+  <ContextMenuId>menuEntityEvent</ContextMenuId>
+  <Target />
+  <AppliedSecurity />
+</NavigationItem>

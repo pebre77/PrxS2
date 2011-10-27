@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="65a89348-de1d-4208-9063-6bdf211a413f">
+  <ItemId>navEntityCContract</ItemId>
+  <NavUrl>Custcontract.aspx</NavUrl>
+  <LargeImageUrl>[Localization!Global_Images:contract_navbar_32x32]</LargeImageUrl>
+  <SmallImageUrl>[Localization!Global_Images:contract_detail_24x24]</SmallImageUrl>
+  <ContextMenuId>menuCContract</ContextMenuId>
+  <Target />
+  <AppliedSecurity />
+</NavigationItem>

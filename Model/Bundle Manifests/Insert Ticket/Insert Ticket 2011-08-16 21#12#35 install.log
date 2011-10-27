@@ -1,0 +1,15 @@
+8/16/2011 9:12:35 PM
+INFO  2011-08-16 17:12:34,091 - Installing bundle...
+INFO  2011-08-16 17:12:34,106 - Performing pre-install.
+INFO  2011-08-16 17:12:34,122 - Installing context item: SalesLogix Application Entities (\Entity Model\SalesLogix Application Entities\SalesLogix Application Entities.T.package.xml)
+INFO  2011-08-16 17:12:34,169 - Successfully installed SalesLogix Application Entities (\Entity Model\SalesLogix Application Entities\SalesLogix Application Entities.T.package.xml)
+INFO  2011-08-16 17:12:34,184 - Installing context item: Ticket (\Entity Model\SalesLogix Application Entities\Ticket\Ticket.TICKET.entity.xml)
+INFO  2011-08-16 17:12:35,106 - Successfully installed Ticket (\Entity Model\SalesLogix Application Entities\Ticket\Ticket.TICKET.entity.xml)
+INFO  2011-08-16 17:12:35,106 - Installing model item: InsertTicket (\Entity Model\SalesLogix Application Entities\Ticket\QuickForms\InsertTicket.main.quickform.xml)
+INFO  2011-08-16 17:12:35,294 - Successfully installed InsertTicket (\Entity Model\SalesLogix Application Entities\Ticket\QuickForms\InsertTicket.main.quickform.xml)
+INFO  2011-08-16 17:12:35,309 - Configuring installed items.
+INFO  2011-08-16 17:12:35,309 - Performing pre-commit to target project.
+INFO  2011-08-16 17:12:35,513 - Committing items to target project...
+INFO  2011-08-16 17:12:35,559 - Committing transactions...
+INFO  2011-08-16 17:12:35,919 - Copying bundle manifest to project.
+INFO  2011-08-16 17:12:36,388 - Install complete.
