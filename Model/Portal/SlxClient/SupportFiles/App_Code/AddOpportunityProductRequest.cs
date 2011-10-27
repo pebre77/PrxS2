@@ -301,7 +301,7 @@ namespace Sage.SalesLogix.Client.App_Code
             IRepository<IProduct> productRep = EntityFactory.GetRepository<IProduct>();
             IQueryable qryableProduct = (IQueryable)productRep;
             IExpressionFactory expProduct = qryableProduct.GetExpressionFactory();
-            ICriteria criteriaProduct = qryableProduct.CreateCriteria();
+            ICriteria criteriaProduct = qryableProduct.CreateCriteria();          
 
             if (parameters.ContainsKey("start"))
                 criteriaProduct.SetFirstResult(Convert.ToInt32(parameters["start"]));
@@ -331,9 +331,17 @@ namespace Sage.SalesLogix.Client.App_Code
                 SearchParameter enumCondition = SearchParameter.EqualTo;
                 criteriaProduct.Add(GetExpression(expProduct, enumCondition, "Status", parameters["StatusFilter"]));
             }
+			//PRX - New Filter based on Category
+            if (parameters["CategoryFilter"] != string.Empty)
+            {
+                SearchParameter enumCondition = SearchParameter.EqualTo;
+                criteriaProduct.CreateAlias("ProductCI","pci").Add(GetExpression(expProduct, enumCondition, "pci.Category", parameters["CategoryFilter"]));
+            }
 
 	    	criteriaProduct.AddOrder(expProduct.Asc("Name"));
+            
             List<IProduct> ProductList = criteriaProduct.List<IProduct>() as List<IProduct>;
+            
             return ProductList;
         }
 
