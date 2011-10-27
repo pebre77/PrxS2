@@ -257,7 +257,11 @@ if (state != null)
 	}
 	
 	if (prop9 != null){
-		sql="update OpportunityCIUDF set ConReviewer='"+txtReviewer.Text+"' where Opportunityid='"+custc.Id.ToString()+"'";
+		if (chkNonDisclosure.Checked){
+		sql="update OpportunityCIUDF set NonDisclosure='T' where Opportunityid='"+custc.Id.ToString()+"'";}
+		else{
+			sql="update OpportunityCIUDF set NonDisclosure='F' where Opportunityid='"+custc.Id.ToString()+"'";}
+		}
 		session.CreateQuery(sql)
 		.ExecuteUpdate();	
 	}
