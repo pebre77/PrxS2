@@ -81,6 +81,23 @@
         </td>        
     </tr>
     <tr>
+        <td>
+            <asp:CheckBox ID="chkCategory" class="slxlabel" runat="server" 
+                Text="Category:" />
+        </td>
+        <td>
+            <SalesLogix:PickListControl DisplayMode="AsControl" PickListName="Product Category"
+                ID="pklCategory" runat="server" AlphaSort="True" AutoPostBack="False" 
+                DefaultPickListItem="" LeftMargin="" />
+        </td>
+        <td>
+            &nbsp;</td>
+        <td>
+            &nbsp;</td>  
+        <td style="padding-left: 8px;">
+            &nbsp;</td>        
+    </tr>
+    <tr>
        <td colspan="2">
             <asp:CheckBox AutoPostBack="True" class="slxlabel" ID="chkPackage" style="white-space:nowrap" runat="server"
                 Text="<%$ resources: chkPackage_rsc.Text %>" OnCheckedChanged="chkPackage_CheckedChanged" Visible="false"  />

@@ -98,6 +98,7 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         public string FamilyFilter = string.Empty;
         public string StatusFilter = string.Empty;
         public string SKUFilter = string.Empty;
+        public string Category = string.Empty;
         public int NameCond = 0;
         public int DescCond = 0;
         public int SKUCond = 0;
@@ -157,6 +158,7 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         }
 
         treeConfig.QueryState = BuildQueryFromState();
+        
         btnAdd.Visible = true;
 
         // ToDo: Place this message elsewhere so that it can be displayed when the sdata returns 0
@@ -375,15 +377,18 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         ddlSKU.Text = String.Empty;
         txtName.Text = String.Empty;
         txtSKU.Text = String.Empty;
+        pklCategory.PickListValue = string.Empty;
         chkFamily.Checked = false;
         chkStatus.Checked = false;
         chkPackage.Checked = false;
+        chkCategory.Checked = false; //PRX
         _State.Packages = false;
         _State.NameFilter = string.Empty;
         _State.DescFilter = string.Empty;
         _State.FamilyFilter = string.Empty;
         _State.StatusFilter = string.Empty;
         _State.SKUFilter = string.Empty;
+        _State.Category = string.Empty; //PRX
 
         _Context.SetContext("AddProductStateInfo", _State);
 
@@ -403,6 +408,8 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         _State.FamilyFilter = string.Empty;
         _State.StatusFilter = string.Empty;
         _State.SKUFilter = string.Empty;
+        _State.Category = string.Empty;
+        
         if (chkName.Checked)
         {
             _State.NameFilter = txtName.Text;
@@ -419,6 +426,13 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         {
             _State.FamilyFilter = pklProductFamily.PickListValue;
         }
+
+        //----PRX
+        if (chkCategory.Checked) 
+        {
+            _State.Category = pklCategory.PickListValue;
+        }
+        //--------
 
         if (chkStatus.Checked)
         {

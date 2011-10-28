@@ -281,16 +281,63 @@
       <RootActionName>CSharpSnippetAction</RootActionName>
       <Action>
         <CSharpCodeSnippet><![CDATA[//Required
-txtDescription_lbl.Style["Color"]	= "Red";
-usrUser_lbl.Style["Color"]			= "Red";
-dtpArrivalDate_lbl.Style["Color"]	= "Red";
-dtpDepartDate_lbl.Style["Color"]	= "Red";
-lkpSalesDomain_lbl.Style["Color"]	= "Red";
-pklType_lbl.Style["Color"]			= "Red";
-pklFrequency_lbl.Style["Color"]		= "Red";	
-lueLeadSource_lbl.Style["Color"]	= "Red";
+txtDescription_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+txtDescription_lbl.Style["background-position"]	= "left center";
+txtDescription_lbl.Style["background-repeat"]	= "no-repeat";
+txtDescription_lbl.Style["padding-left"]	= "10px";
+
+//usrUser_lbl.Style["Color"]			= "Red";
+usrUser_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+usrUser_lbl.Style["background-position"]	= "left center";
+usrUser_lbl.Style["background-repeat"]	= "no-repeat";
+usrUser_lbl.Style["padding-left"]	= "10px";
+
+//dtpArrival Date
+dtpArrivalDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpArrivalDate_lbl.Style["background-position"]	= "left center";
+dtpArrivalDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpArrivalDate_lbl.Style["padding-left"]	= "10px";
+
+//Depart Date
+dtpDepartDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpDepartDate_lbl.Style["background-position"]	= "left center";
+dtpDepartDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpDepartDate_lbl.Style["padding-left"]	= "10px";
+
+//lkpSalesDomain_lbl.Style["Color"]	= "Red";
+lkpSalesDomain_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+lkpSalesDomain_lbl.Style["background-position"]	= "left center";
+lkpSalesDomain_lbl.Style["background-repeat"]	= "no-repeat";
+lkpSalesDomain_lbl.Style["padding-left"]	= "10px";
+
+//pklType_lbl.Style["Color"]			= "Red";
+pklType_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+pklType_lbl.Style["background-position"]	= "left center";
+pklType_lbl.Style["background-repeat"]	= "no-repeat";
+pklType_lbl.Style["padding-left"]	= "10px";
+
+
+//pklFrequency_lbl.Style["Color"]		= "Red";	
+pklFrequency_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+pklFrequency_lbl.Style["background-position"]	= "left center";
+pklFrequency_lbl.Style["background-repeat"]	= "no-repeat";
+pklFrequency_lbl.Style["padding-left"]	= "10px";
+
+//lueLeadSource_lbl.Style["Color"]	= "Red";
+lueLeadSource_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+lueLeadSource_lbl.Style["background-position"]	= "left center";
+lueLeadSource_lbl.Style["background-repeat"]	= "no-repeat";
+lueLeadSource_lbl.Style["padding-left"]	= "10px";
+
 //chkFirstTimeEvent.Style["Color"]	= "Red";
-cboFirstTimeEvent_lbl.Style["Color"]	= "Red";]]></CSharpCodeSnippet>
+
+
+//cboFirstTimeEvent_lbl.Style["Color"]	= "Red";
+cboFirstTimeEvent_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+cboFirstTimeEvent_lbl.Style["background-position"]	= "left center";
+cboFirstTimeEvent_lbl.Style["background-repeat"]	= "no-repeat";
+cboFirstTimeEvent_lbl.Style["padding-left"]	= "10px";
+]]></CSharpCodeSnippet>
       </Action>
       <IsDialogCloseAction>False</IsDialogCloseAction>
       <RunOnEveryRePaint>False</RunOnEveryRePaint>
@@ -471,7 +518,13 @@ cboFirstTimeEvent_lbl.Style["Color"]	= "Red";]]></CSharpCodeSnippet>
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>14</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkInternational</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkInternational</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFCheckBox, Sage.Platform.QuickForms.QFControls"><QFCheckBox xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>14</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>chkInternational</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><Checked>false</Checked><OnChangeAction><ResourceKey>chkInternational</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[if (chkInternational.Checked){
+	pklLocation.PickListName = "CI Airport Code International";
+}
+else{
+	pklLocation.PickListName = "CI Airport Code";
+}
+	]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction></QFCheckBox></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>

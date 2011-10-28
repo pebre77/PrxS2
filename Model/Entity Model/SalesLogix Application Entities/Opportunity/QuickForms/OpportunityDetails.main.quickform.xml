@@ -38,7 +38,16 @@ else{
 Sage.SalesLogix.Security.SLXUserService usersvc = (Sage.SalesLogix.Security.SLXUserService)Sage.Platform.Application.ApplicationContext.Current.Services.Get<Sage.Platform.Security.IUserService>();
 Sage.Entity.Interfaces.IUser user = usersvc.GetUser();
 
+//Enable/Disable - Event ID
+if  (user.Id.ToString().Trim()=="ADMIN"){
+	txtEventId.Enabled = true;
+	txtEventId.ReadOnly = false;
+}else{
+	txtEventId.Enabled = false;
+	txtEventId.ReadOnly = true;
+}
 //Enable/Disable - Bus Dev Rep
+
 
 if  (user.Id.ToString().Trim()=="ADMIN"){
 	lkpBusDevRep.Enabled  = true;
@@ -91,19 +100,95 @@ if (string.IsNullOrEmpty(opty.AccountManager.Id.ToString())){
 }
 
 //Assgin Required Fields
-usrUser_lbl.Style["Color"]			= "Red";
-dtpArrivalDate_lbl.Style["Color"]	= "Red";
-dtpDepartDate_lbl.Style["Color"]	= "Red";
-lkpSalesDomain_lbl.Style["Color"]	= "Red";
-pklType_lbl.Style["Color"]			= "Red";
-pklFrequency_lbl.Style["Color"]		= "Red";	
-lkpOppLeadSource_lbl.Style["Color"]	= "Red";
-dtpEstimatedClose_lbl.Style["Color"]= "Red";	               
-//chkFirstTimeEvent.Style["Color"]	= "Red";
-cboFirstTimeEvent_lbl.Style["Color"]	= "Red";
-lkpVenue_lbl.Style["Color"]			= "Red";
-dtpBeginDate_lbl.Style["Color"]		= "Red";	
-dtpEndDate_lbl.Style["Color"]		= "Red";	]]></CSharpCodeSnippet>
+
+//Required
+txtDescription_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+txtDescription_lbl.Style["background-position"]	= "left center";
+txtDescription_lbl.Style["background-repeat"]	= "no-repeat";
+txtDescription_lbl.Style["padding-left"]	= "10px";
+
+//usrUser_lbl.Style["Color"]			= "Red";
+usrUser_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+usrUser_lbl.Style["background-position"]	= "left center";
+usrUser_lbl.Style["background-repeat"]	= "no-repeat";
+usrUser_lbl.Style["padding-left"]	= "10px";
+
+//dtpArrival Date
+dtpArrivalDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpArrivalDate_lbl.Style["background-position"]	= "left center";
+dtpArrivalDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpArrivalDate_lbl.Style["padding-left"]	= "10px";
+
+//Depart Date
+dtpDepartDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpDepartDate_lbl.Style["background-position"]	= "left center";
+dtpDepartDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpDepartDate_lbl.Style["padding-left"]	= "10px";
+
+//lkpSalesDomain_lbl.Style["Color"]	= "Red";
+lkpSalesDomain_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+lkpSalesDomain_lbl.Style["background-position"]	= "left center";
+lkpSalesDomain_lbl.Style["background-repeat"]	= "no-repeat";
+lkpSalesDomain_lbl.Style["padding-left"]	= "10px";
+
+//pklType_lbl.Style["Color"]			= "Red";
+pklType_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+pklType_lbl.Style["background-position"]	= "left center";
+pklType_lbl.Style["background-repeat"]	= "no-repeat";
+pklType_lbl.Style["padding-left"]	= "10px";
+
+
+//pklFrequency_lbl.Style["Color"]		= "Red";	
+pklFrequency_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+pklFrequency_lbl.Style["background-position"]	= "left center";
+pklFrequency_lbl.Style["background-repeat"]	= "no-repeat";
+pklFrequency_lbl.Style["padding-left"]	= "10px";
+
+//lueLeadSource_lbl.Style["Color"]	= "Red";
+lkpOppLeadSource_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+lkpOppLeadSource_lbl.Style["background-position"]	= "left center";
+lkpOppLeadSource_lbl.Style["background-repeat"]	= "no-repeat";
+lkpOppLeadSource_lbl.Style["padding-left"]	= "10px";
+
+//chkEdgeRequired
+chkEdgeRequired.Style["background-image"]	= "url(images/icons/asterisk.png)";
+chkEdgeRequired.Style["background-position"]	= "left center";
+chkEdgeRequired.Style["background-repeat"]	= "no-repeat";
+chkEdgeRequired.Style["padding-left"]	= "10px";
+
+
+//cboFirstTimeEvent_lbl.Style["Color"]	= "Red";
+cboFirstTimeEvent_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+cboFirstTimeEvent_lbl.Style["background-position"]	= "left center";
+cboFirstTimeEvent_lbl.Style["background-repeat"]	= "no-repeat";
+cboFirstTimeEvent_lbl.Style["padding-left"]	= "10px";
+
+
+//dtpEstimatedClose_lbl.Style["Color"]= "Red";	
+dtpEstimatedClose_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpEstimatedClose_lbl.Style["background-position"]	= "left center";
+dtpEstimatedClose_lbl.Style["background-repeat"]	= "no-repeat";
+dtpEstimatedClose_lbl.Style["padding-left"]	= "10px"; 
+
+//lkpVenue_lbl.Style["Color"]			= "Red";
+lkpVenue_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+lkpVenue_lbl.Style["background-position"]	= "left center";
+lkpVenue_lbl.Style["background-repeat"]	= "no-repeat";
+lkpVenue_lbl.Style["padding-left"]	= "10px";
+
+//dtpBeginDate_lbl.Style["Color"]		= "Red";	
+dtpBeginDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpBeginDate_lbl.Style["background-position"]	= "left center";
+dtpBeginDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpBeginDate_lbl.Style["padding-left"]	= "10px";
+
+
+//dtpEndDate_lbl.Style["Color"]		= "Red";	
+dtpEndDate_lbl.Style["background-image"]	= "url(images/icons/asterisk.png)";
+dtpEndDate_lbl.Style["background-position"]	= "left center";
+dtpEndDate_lbl.Style["background-repeat"]	= "no-repeat";
+dtpEndDate_lbl.Style["padding-left"]	= "10px";
+]]></CSharpCodeSnippet>
       </Action>
       <IsDialogCloseAction>False</IsDialogCloseAction>
       <RunOnEveryRePaint>True</RunOnEveryRePaint>
@@ -188,7 +273,7 @@ if (state!=null){
 		opportunity.Save();
 	}
 }
-]]></CSharpCodeSnippet></OnSuccess></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ShowNonLoginUsers>false</ShowNonLoginUsers><LookupBindingMode>Object</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><AutoPostBack>false</AutoPostBack><Required>false</Required></QFSLXUser></Property>
+]]></CSharpCodeSnippet></OnSuccess></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><ShowNonLoginUsers>false</ShowNonLoginUsers><LookupBindingMode>Object</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><AutoPostBack>false</AutoPostBack><Required>true</Required></QFSLXUser></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
@@ -276,7 +361,7 @@ if (state!=null){
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklType</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Type</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklType</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>Meeting Type</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>10</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklType</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>Type</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklType</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>true</Required><AutoPostBack>false</AutoPostBack><PickListName>Meeting Type</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
@@ -286,7 +371,7 @@ if (state!=null){
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>11</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFrequency</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityCIUDF.Frequency</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFrequency</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>false</Required><AutoPostBack>false</AutoPostBack><PickListName>CI Frequency</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXPickList, Sage.SalesLogix.QuickForms.QFControls"><QFSLXPickList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>11</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>pklFrequency</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityCIUDF.Frequency</DataItemName><ControlItemName>PickListValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>pklFrequency</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><Required>true</Required><AutoPostBack>false</AutoPostBack><PickListName>CI Frequency</PickListName><StorageMode>Text</StorageMode><NameFormatString /><AllowMultiples>false</AllowMultiples><AlphaSort>false</AlphaSort><MustExistInList>false</MustExistInList><NoneEditable>false</NoneEditable><PickListId /><ValueStoredAsText>true</ValueStoredAsText></QFSLXPickList></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
@@ -306,7 +391,7 @@ if (state!=null){
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>13</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lkpOppLeadSource</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>LeadSource</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>lkpOppLeadSource</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>Object</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>false</Required><DropDownDisplayProperty /><AddEmptyListItem>false</AddEmptyListItem><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>LeadSource</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.ILeadSource, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>Description</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>Description</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters /></QFSLXLookup></Property>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>13</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lkpOppLeadSource</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>LeadSource</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>lkpOppLeadSource</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>Object</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>true</Required><DropDownDisplayProperty /><AddEmptyListItem>false</AddEmptyListItem><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>LeadSource</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.ILeadSource, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>Description</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>Description</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters /></QFSLXLookup></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
@@ -326,7 +411,7 @@ if (state!=null){
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>15</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lkpVenue</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityCIUDF.VenueID</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>lkpVenue</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>String</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>false</Required><DropDownDisplayProperty /><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>Account</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.IAccount, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>AccountName</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>Account</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters><LookupPreFilter><LookupEntityName>IAccount</LookupEntityName><PropertyType>System.String</PropertyType><OperatorCode>%xx</OperatorCode><PickListName /><PropertyName>Type</PropertyName><FilterValue>Hotel</FilterValue></LookupPreFilter></LookupPreFilters></QFSLXLookup></Property>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXLookup, Sage.SalesLogix.QuickForms.QFControls"><QFSLXLookup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>15</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>lkpVenue</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>OpportunityCIUDF.VenueID</DataItemName><ControlItemName>LookupResultValue</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>lkpVenue</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><LookupImage /><LookupDialogWidth xsi:nil="true" /><LookupDialogHeight xsi:nil="true" /><LookupBindingMode>String</LookupBindingMode><LookupResultValue xsi:type="xsd:string" /><SeedProperty /><SeedValue /><Required>true</Required><DropDownDisplayProperty /><AllowClearingResult>false</AllowClearingResult><OverrideSeedOnSearch>false</OverrideSeedOnSearch><LookupEntityName>Account</LookupEntityName><LookupEntityTypeName>Sage.Entity.Interfaces.IAccount, Sage.Entity.Interfaces, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</LookupEntityTypeName><AutoPostBack>false</AutoPostBack><EnableHyperLinking>false</EnableHyperLinking><InitializeLookup>false</InitializeLookup><LookupProperties><LookupProperty><PropertyName>AccountName</PropertyName><PropertyType>System.String</PropertyType><PropertyHeader>Account</PropertyHeader><PropertyFormat>None</PropertyFormat><UseAsResult>true</UseAsResult><ExcludeFromFilters>false</ExcludeFromFilters></LookupProperty></LookupProperties><LookupPreFilters><LookupPreFilter><LookupEntityName>IAccount</LookupEntityName><PropertyType>System.String</PropertyType><OperatorCode>%xx</OperatorCode><PickListName /><PropertyName>Type</PropertyName><FilterValue>Hotel</FilterValue></LookupPreFilter></LookupPreFilters></QFSLXLookup></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
