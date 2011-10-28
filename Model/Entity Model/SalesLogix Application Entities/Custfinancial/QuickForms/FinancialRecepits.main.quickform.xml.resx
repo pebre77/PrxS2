@@ -135,4 +135,7 @@
   <data name="QFDataGrid.776a0d3a-dcf9-40e5-a6cb-619e1657b466.ColumnHeading" xml:space="preserve">
     <value>Account No.</value>
   </data>
+  <data name="QFDataGrid.cc029971-da84-4e7f-a396-38cd0e3a1b65.ColumnHeading" xml:space="preserve">
+    <value>Receipt Amount</value>
+  </data>
 </root>
