@@ -260,7 +260,7 @@ if (state != null)
 		if (chkNonDisclosure.Checked){
 		sql="update OpportunityCIUDF set NonDisclosure='T' where Opportunityid='"+custc.Id.ToString()+"'";}
 		else{
-			sql="update OpportunityCIUDF set NonDisclosure='F' where Opportunityid='"+custc.Id.ToString()+"'";}
+			sql="update OpportunityCIUDF set NonDisclosure='F' where Opportunityid='"+custc.Id.ToString()+"'";
 		}
 		session.CreateQuery(sql)
 		.ExecuteUpdate();	
