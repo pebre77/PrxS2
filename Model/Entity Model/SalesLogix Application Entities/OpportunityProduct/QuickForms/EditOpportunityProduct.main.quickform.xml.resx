@@ -321,4 +321,16 @@
   <data name="0475bdd6-28fc-4ee6-8bb8-2b6093e792e7.Message" xml:space="preserve">
     <value>Sales Order Conversion process was completed successfully.</value>
   </data>
+  <data name="txtTotal2.Caption" xml:space="preserve">
+    <value>= $</value>
+  </data>
+  <data name="txtTotal3.Caption" xml:space="preserve">
+    <value>= $</value>
+  </data>
+  <data name="txtTotal4.Caption" xml:space="preserve">
+    <value>= $</value>
+  </data>
+  <data name="txtTotal1.Caption" xml:space="preserve">
+    <value>= $</value>
+  </data>
 </root>

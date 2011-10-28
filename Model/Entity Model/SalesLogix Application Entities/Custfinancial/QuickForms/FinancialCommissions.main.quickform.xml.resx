@@ -157,7 +157,7 @@
     <value>Amount</value>
   </data>
   <data name="dgCommissions.e3b2dd51-1b74-4877-b354-d3f84cafe4b4.ColumnHeading" xml:space="preserve">
-    <value>Amount</value>
+    <value>p.Amount</value>
   </data>
   <data name="dgCommissions.a607ef29-393d-416c-8c69-6a03091623d2.ColumnHeading" xml:space="preserve">
     <value>Sales Order Number</value>
@@ -179,5 +179,11 @@
   </data>
   <data name="dgCommissions.5e7af19b-f7b9-4b91-8966-52eefa6a6ba2.ColumnHeading" xml:space="preserve">
     <value>Sales Person</value>
+  </data>
+  <data name="dgCommissions.c3d71ed3-ca58-4d77-8424-ae13b5932867.ColumnHeading" xml:space="preserve">
+    <value>p.Amount</value>
+  </data>
+  <data name="dgCommissions.78358a54-a5a4-4756-a7ad-dfc3a38c682a.ColumnHeading" xml:space="preserve">
+    <value>Amount</value>
   </data>
 </root>
