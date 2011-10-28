@@ -176,8 +176,8 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
     private string BuildQueryFromState()
     {
         StringBuilder queryStringState = new StringBuilder();
-        queryStringState.AppendFormat("&Packages={0}&NameFilter={1}&FamilyFilter={2}&NameCond={3}", 
-            _State.Packages,_State.NameFilter,_State.FamilyFilter,_State.NameCond);
+        queryStringState.AppendFormat("&Packages={0}&NameFilter={1}&FamilyFilter={2}&NameCond={3}&CategoryFilter={4}", 
+            _State.Packages,_State.NameFilter,_State.FamilyFilter,_State.NameCond,_State.Category);
         queryStringState.AppendFormat("&StatusFilter={0}&SKUFilter={1}&SKUCond={2}",
             _State.StatusFilter,_State.SKUFilter,_State.SKUCond);
         
@@ -374,7 +374,7 @@ public partial class SmartParts_AddOpportunityProduct : EntityBoundSmartPartInfo
         chkName.Checked = false;
         chkSKU.Checked = false;
         ddlName.Text = String.Empty;
-        ddlSKU.Text = String.Empty;
+        //ddlSKU.Text = String.Empty;
         txtName.Text = String.Empty;
         txtSKU.Text = String.Empty;
         pklCategory.PickListValue = string.Empty;
