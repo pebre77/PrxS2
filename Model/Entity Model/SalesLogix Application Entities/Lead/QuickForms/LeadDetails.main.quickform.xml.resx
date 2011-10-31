@@ -246,4 +246,7 @@
   <data name="nmeLeadName.ButtonToolTip" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="QFButton.ToolTip" xml:space="preserve">
+    <value>Lead Summary</value>
+  </data>
 </root>

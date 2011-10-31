@@ -195,4 +195,10 @@
   <data name="WebAddress.ButtonToolTip" xml:space="preserve">
     <value>WWW</value>
   </data>
+  <data name="PrintAcctSummary.ToolTip" xml:space="preserve">
+    <value>Account Summary</value>
+  </data>
+  <data name="PrintClientOrgProfile.ToolTip" xml:space="preserve">
+    <value>Client Organizational Profile</value>
+  </data>
 </root>

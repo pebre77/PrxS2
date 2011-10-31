@@ -532,5 +532,23 @@
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
+    <QuickFormElement>
+      <Properties>
+        <Property name="EntityMappingType" type="System.String">None</Property>
+      </Properties>
+      <ControlDefinition>
+        <Properties>
+          <Property name="Control" type="Sage.Platform.QuickForms.Controls.QFButton, Sage.Platform.QuickForms"><QFButton xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>0</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>printContactSummary</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><ButtonType>Icon</ButtonType><Image>[Localization!Global_Images:Print_View_16x16]</Image><OnClientClick /><OnClickAction><ResourceKey>printContactSummary</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.IContact contact = BindingSource.Current as Sage.Entity.Interfaces.IContact;	
+
+StringBuilder script = new StringBuilder();
+script.Append("javascript:ShowReport('Contact:Contact Summary','CONTACT','"+contact.Id.ToString()+"');");
+ScriptManager.RegisterClientScriptBlock(this, GetType(), "InitScript", script.ToString(), true);
+
+
+
+]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnClickAction></QFButton></Property>
+        </Properties>
+      </ControlDefinition>
+    </QuickFormElement>
   </QuickFormToolElements>
 </QuickFormDefinition>

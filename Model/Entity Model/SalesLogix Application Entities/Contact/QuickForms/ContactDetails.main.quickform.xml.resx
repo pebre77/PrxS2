@@ -279,4 +279,7 @@
   <data name="nmeContactName.ButtonToolTip" xml:space="preserve">
     <value>Edit</value>
   </data>
+  <data name="printContactSummary.ToolTip" xml:space="preserve">
+    <value>Contact Summary</value>
+  </data>
 </root>
