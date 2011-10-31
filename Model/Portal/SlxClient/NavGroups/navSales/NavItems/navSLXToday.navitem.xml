@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<NavigationItem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" id="f6de2278-54c5-4dfd-8100-1b925d298eab">
+  <ItemId>navSLXToday</ItemId>
+  <NavUrl>https://extranet.experient-inc.com/collaboration/SLX/default.aspx</NavUrl>
+  <LargeImageUrl>[Localization!Global_Images:default_favicon_24x24]</LargeImageUrl>
+  <SmallImageUrl>[Localization!Global_Images:default_favicon]</SmallImageUrl>
+  <ContextMenuId />
+  <Target />
+  <AppliedSecurity />
+</NavigationItem>

@@ -7,9 +7,14 @@
   <parameter />
   <preExecuteTargets />
   <methodTargets>
-    <methodTarget id="19320fd4-e799-4c28-802b-7265b4c8a4b9" lastModifiedUtc="2011-06-27T21:31:49.7792177Z" targetType="Sage.Platform.Orm.DefaultCRUDEventHandler, Sage.Platform" targetMethod="OnAfterInsert" active="true">
+    <methodTarget id="19320fd4-e799-4c28-802b-7265b4c8a4b9" lastModifiedUtc="2011-10-28T15:54:02.8597616Z" targetType="Sage.Platform.Orm.DefaultCRUDEventHandler, Sage.Platform" targetMethod="OnAfterInsert" active="false">
       <ExtendedPropertiesCollection>
         <extendee type="Sage.Platform.Orm.Entities.OrmMethodTarget" />
+      </ExtendedPropertiesCollection>
+    </methodTarget>
+    <methodTarget xsi:type="OrmMethodTargetSnippet" id="1881744e-9052-4d9c-985b-196f4ea22b80" lastModifiedUtc="2011-10-28T16:15:32.0637632Z" targetType="Sage.BusinessRules.CodeSnippets.MeetingTeamBusinessRules, Sage.SnippetLibrary.CSharp" targetMethod="OnAfterInsertStep" active="true" codeSnippetId="2a700cd2-d4c7-4183-ac83-659415302e6d">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmMethodTargetSnippet" />
       </ExtendedPropertiesCollection>
     </methodTarget>
   </methodTargets>

@@ -396,7 +396,7 @@
   <data name="QFTextBox18.Caption" xml:space="preserve">
     <value>Main Departure:</value>
   </data>
-  <data name="QFTextBox19.Caption" xml:space="preserve">
+  <data name="txtEventId.Caption" xml:space="preserve">
     <value>Event ID:</value>
   </data>
   <data name="txtBillToAccTNO.Caption" xml:space="preserve">
@@ -476,5 +476,8 @@
   </data>
   <data name="PrintHTML.Caption" xml:space="preserve">
     <value />
+  </data>
+  <data name="QFButton.Caption" xml:space="preserve">
+    <value>Financials</value>
   </data>
 </root>
