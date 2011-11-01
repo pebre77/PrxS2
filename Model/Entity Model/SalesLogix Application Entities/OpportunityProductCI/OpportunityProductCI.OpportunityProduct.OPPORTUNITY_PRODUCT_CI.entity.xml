@@ -619,5 +619,93 @@
         </TextDataType>
       </SystemDataType>
     </property>
+    <property xsi:type="OrmFieldProperty" id="47d9ee73-ff72-48bf-9351-033153bb45eb" lastModifiedUtc="2011-11-01T19:35:22.3003568Z" name="EstimatedCost" audited="false" columnName="ESTIMATEDCOST" maxLength="0" precision="17" scale="4" ordinal="69" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="ea7a6851-2566-4493-b6a4-68f29c8e86b5" lastModifiedUtc="2011-11-01T19:35:22.3003568Z" name="TotalForMinProfit" audited="false" columnName="TOTALFORMINPROFIT" maxLength="0" precision="17" scale="4" ordinal="70" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="78f97261-449a-41a6-891e-91c88744ad6b" lastModifiedUtc="2011-11-01T19:35:22.3003568Z" name="FundingService1" audited="false" columnName="FUNDINGSERVICE1" maxLength="0" precision="17" scale="4" ordinal="71" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="a7f7a7c2-bef6-4458-b4a7-0720269b5985" lastModifiedUtc="2011-11-01T19:35:22.3003568Z" name="FundingService2" audited="false" columnName="FUNDINGSERVICE2" maxLength="0" precision="17" scale="4" ordinal="72" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="84d3b169-ebfe-4d42-be57-b700dde26f7a" lastModifiedUtc="2011-11-01T19:35:22.3003568Z" name="FundingService3" audited="false" columnName="FUNDINGSERVICE3" maxLength="0" precision="17" scale="4" ordinal="73" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="a8d9cc7e-93ef-49be-85a8-4c072bd48897" lastModifiedUtc="2011-11-01T19:35:22.315982Z" name="FundingService4" audited="false" columnName="FUNDINGSERVICE4" maxLength="0" precision="17" scale="4" ordinal="74" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="428fd3a0-944f-4a12-b3a2-2482b768378b" lastModifiedUtc="2011-11-01T19:35:22.315982Z" name="WeightedRevenue" audited="false" columnName="WEIGHTEDREVENUE" maxLength="0" precision="17" scale="4" ordinal="75" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
+    <property xsi:type="OrmFieldProperty" id="03f03199-3114-4a99-a534-7385cd2dbf7c" lastModifiedUtc="2011-11-01T19:35:22.315982Z" name="EdgeEstPotentialRevenue" audited="false" columnName="EDGEESTPOTENTIALREVENUE" maxLength="0" precision="17" scale="4" ordinal="76" isReadOnly="false">
+      <ExtendedPropertiesCollection>
+        <extendee type="Sage.Platform.Orm.Entities.OrmFieldProperty" />
+      </ExtendedPropertiesCollection>
+      <SystemDataType guid="2596d57d-89d6-4b72-9036-b18c64c5324c">
+        <DecimalDataType>
+          <Precision>17</Precision>
+          <Scale>4</Scale>
+        </DecimalDataType>
+      </SystemDataType>
+    </property>
   </properties>
 </entity>

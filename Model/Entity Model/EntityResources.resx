@@ -13566,4 +13566,28 @@
   <data name="Custcontract.Concomments.DisplayName" xml:space="preserve">
     <value>Concomments</value>
   </data>
+  <data name="OpportunityProductCI.EstimatedCost.DisplayName" xml:space="preserve">
+    <value>EstimatedCost</value>
+  </data>
+  <data name="OpportunityProductCI.TotalForMinProfit.DisplayName" xml:space="preserve">
+    <value>TotalForMinProfit</value>
+  </data>
+  <data name="OpportunityProductCI.FundingService1.DisplayName" xml:space="preserve">
+    <value>FundingService1</value>
+  </data>
+  <data name="OpportunityProductCI.FundingService2.DisplayName" xml:space="preserve">
+    <value>FundingService2</value>
+  </data>
+  <data name="OpportunityProductCI.FundingService3.DisplayName" xml:space="preserve">
+    <value>FundingService3</value>
+  </data>
+  <data name="OpportunityProductCI.FundingService4.DisplayName" xml:space="preserve">
+    <value>FundingService4</value>
+  </data>
+  <data name="OpportunityProductCI.WeightedRevenue.DisplayName" xml:space="preserve">
+    <value>WeightedRevenue</value>
+  </data>
+  <data name="OpportunityProductCI.EdgeEstPotentialRevenue.DisplayName" xml:space="preserve">
+    <value>EdgeEstPotentialRevenue</value>
+  </data>
 </root>
