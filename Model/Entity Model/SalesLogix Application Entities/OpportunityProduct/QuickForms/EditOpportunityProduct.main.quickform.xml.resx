@@ -147,7 +147,7 @@
   <data name="btnCancel.Caption" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="QFDateTimePicker.Caption" xml:space="preserve">
+  <data name="dtEstimatedClose.Caption" xml:space="preserve">
     <value>Estimated Close</value>
   </data>
   <data name="txtNotes.Caption" xml:space="preserve">
