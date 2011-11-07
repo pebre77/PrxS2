@@ -108,6 +108,11 @@ ticket.SubmittedByID  = user.Id.ToString();
 							ticket.Contact = Sage.SalesLogix.BusinessRules.BusinessRuleHelper.GetPrimaryContact(ticket.Account);
 							ticket.SalesOrderNoID = saleso.DocumentId;
 							
+							if (saleso.Opportunity != null){
+								ticket.EventIDID = saleso.Opportunity.OpportunityCIUDF.Meeting_Id;
+								ticket.EventNameID = saleso.Opportunity.Id.ToString();
+							}
+							
 						}
 						flag = true; //Only First Record of History
 						break;

@@ -281,8 +281,8 @@ if (!string.IsNullOrEmpty(screent)){
 			//Charge Values
 			if ((QFRadioGroup.SelectedIndex==0)&&(!string.IsNullOrEmpty(txtRoomNights.Text)) && (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)))
 			{
-			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
-			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult1  = (double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * (double.Parse(txtCommission.Text)/100));
+			double vresult2  = ((double.Parse(txtRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * (double.Parse(txtCommission.Text)/100))*(double.Parse(txtDropOff.Text)));
 			double vresult = vresult1 - vresult2;
 			txtPotRev.Text = vresult.ToString();
 			}
@@ -325,7 +325,7 @@ if (!string.IsNullOrEmpty(screent)){
 			
 			if ((QFRadioGroup.SelectedIndex==0) &&(!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtDropOff.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)))
 			{
-				double vres = (double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtAvgRoomRate.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				double vres = (double.Parse(txtAvgRoomRate.Text)*(double.Parse(txtCommission.Text)/100))-((double.Parse(txtAvgRoomRate.Text)*(double.Parse(txtCommission.Text)/100))*(double.Parse(txtDropOff.Text)));
 				txtPotRev.Text = vres.ToString();
 			}
 			
@@ -623,7 +623,7 @@ if (QFRadioGroup.SelectedIndex==0)
 	txtCommission.ReadOnly	= false;
 	txtAvgRoomRate.ReadOnly	= false;
 	//Default Value
-	oppprod.OpportunityProductCI.Commission = float.Parse("0.1");
+	oppprod.OpportunityProductCI.Commission = 10;
 	oppprod.OpportunityProductCI.Discount = 0.15;
 	oppprod.OpportunityProductCI.Other_fees = 0;
 }
@@ -634,7 +634,7 @@ else
 	txtAvgRoomRate.ReadOnly	= true;
 	
 	oppprod.OpportunityProductCI.Discount = 0.15;
-	oppprod.OpportunityProductCI.Commission = float.Parse("0");	
+	oppprod.OpportunityProductCI.Commission = 0;
 }
 		
 			
@@ -748,7 +748,7 @@ if (!string.IsNullOrEmpty(screent)){
 			
 			break;
 	}
-}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+}]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>

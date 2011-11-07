@@ -27,7 +27,7 @@ bool vtypeso =saleso.Actual.Value;
 
 //Hotel
 
-
+if (saleso.Billtoaccount!=null){
 string sql = "Select Account From Account Where AccountID = '"+saleso.Billtoaccount.ToString()+"'";
 string fswon = session.CreateSQLQuery(sql).UniqueResult<string>();
 string result = fswon;
@@ -35,8 +35,9 @@ string result = fswon;
 if (!string.IsNullOrEmpty(result)){
 	txtHotel.Text = result;
 }
-
+}
 // Event ID
+if (saleso.Opportunity !=null){
 string sql2 = "Select MEETING_ID From OPPORTUNITY_CI_UDF Where OPPORTUNITYID = '"+saleso.Opportunity.Id.ToString()+"'";
 string fswon2 = session.CreateSQLQuery(sql2).UniqueResult<string>();
 string result2 = fswon2;
@@ -44,11 +45,11 @@ string result2 = fswon2;
 if (!string.IsNullOrEmpty(result2)){
 	txtEventId.Text = result2;
 }
-
+}
 
 
 //Main Arrival Date Init
-if (String.IsNullOrEmpty(this.dtMainArrivDate.Text))
+if (String.IsNullOrEmpty(this.dtMainArrivDate.Text) & (saleso.Opportunity !=null))
 {
 	
 	//DialogService.ShowMessage(saleso.Opportunity.OpportunityCIUDF.Main_arrival_Date.ToString());
@@ -2287,7 +2288,7 @@ Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.E
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>10</Column><Row>11</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTest3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.VariancePercentage</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtTest3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+          <Property name="Control" type="Sage.SalesLogix.QuickForms.QFControls.QFSLXNumeric, Sage.SalesLogix.QuickForms.QFControls"><QFSLXNumeric xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><ColumnSpan>3</ColumnSpan><Column>10</Column><Row>11</Row><IsReadOnly>true</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>txtTest3</ControlId><DataBindings><QuickFormPropertyDataBindingDefinition><DataSourceID>MainEntity</DataSourceID><DataItemName>SORoomBlock.VariancePercentage</DataItemName><ControlItemName>Text</ControlItemName><FormatString /><NullValueString /></QuickFormPropertyDataBindingDefinition></DataBindings><ControlLabelPlacement>top</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><OnChangeAction><ResourceKey>txtTest3</ResourceKey><RootActionName>NoActionAction</RootActionName><Action /><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
@@ -2517,7 +2518,7 @@ Sage.Entity.Interfaces.ISalesOrder saleso = this.BindingSource.Current as Sage.E
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFDataSource, Sage.Platform.QuickForms.QFControls"><QFDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>23</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>dsSORoomBlockTypes</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><EntityTypeName>SORoomBlockType</EntityTypeName><GetByMethod /><GetByProperty>SORoomBlockTypes</GetByProperty><UseSmartSelection>true</UseSmartSelection><DataOptional>false</DataOptional></QFDataSource></Property>
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFDataSource, Sage.Platform.QuickForms.QFControls"><QFDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>13</Row><IsReadOnly>false</IsReadOnly><Visible>false</Visible><HotKey>48</HotKey><TabIndex>0</TabIndex><ControlId>dsSORoomBlockTypes</ControlId><DataBindings /><ControlLabelPlacement>none</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><EntityTypeName>SORoomBlockType</EntityTypeName><GetByMethod /><GetByProperty>SORoomBlockTypes</GetByProperty><UseSmartSelection>true</UseSmartSelection><DataOptional>false</DataOptional></QFDataSource></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>

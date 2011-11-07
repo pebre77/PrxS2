@@ -273,30 +273,12 @@ if (!string.IsNullOrEmpty(screent)){
 			
 				
 			
-			if ((string.IsNullOrEmpty(txtCommission.Text)) & (!string.IsNullOrEmpty(txtFlatFee.Text))) {
-				QFRadioGroup.SelectedIndex	= 1;
-				txtCommission.ReadOnly		= true;
-				txtFlatFee.ReadOnly			= false;
-			
-			}
-			else if ((!string.IsNullOrEmpty(txtCommission.Text)) & (string.IsNullOrEmpty(txtFlatFee.Text))) {
-				QFRadioGroup.SelectedIndex	= 0;
-				txtCommission.ReadOnly		= false;
-			  	txtFlatFee.ReadOnly			= true;
-			
-			}
-			else {
-				QFRadioGroup.SelectedIndex	= 0;
-				txtCommission.ReadOnly		= false;
-				txtFlatFee.ReadOnly			= true;
-			}
-				
 			
 			//Charge Values
 			if ((QFRadioGroup.SelectedIndex==0)&(!string.IsNullOrEmpty(txtTotRoomNights.Text)) & (!string.IsNullOrEmpty(txtAvgRoomRate.Text)) && (!string.IsNullOrEmpty(txtCommission.Text)) & (!string.IsNullOrEmpty(txtDropOff.Text)))
 			{
-			double vresult1  = (double.Parse(txtTotRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text));
-			double vresult2  = ((double.Parse(txtTotRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+			double vresult1  = (double.Parse(txtTotRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * (double.Parse(txtCommission.Text)/100));
+			double vresult2  = ((double.Parse(txtTotRoomNights.Text) * double.Parse(txtAvgRoomRate.Text) * (double.Parse(txtCommission.Text)/100))*(double.Parse(txtDropOff.Text)));
 			double vresult = vresult1 - vresult2;
 			txtAnticRevenue.Text = vresult.ToString();
 			}
@@ -341,33 +323,12 @@ if (!string.IsNullOrEmpty(screent)){
 			txtAnticRevenue_lbl.Visible = true;			
 			QFRadioGroup.Visible		= true;
 
-			
-			if ((string.IsNullOrEmpty(txtCommission.Text)) & (!string.IsNullOrEmpty(txtFlatFee.Text))) {
-				QFRadioGroup.SelectedIndex	= 1;
-				txtCommission.ReadOnly		= true;
-				txtFlatFee.ReadOnly			= false;
-				txtCommRev.ReadOnly 		= true;
-				txtCommRev.Text 			= "";
-			
-			}
-			else if ((!string.IsNullOrEmpty(txtCommission.Text)) & (string.IsNullOrEmpty(txtFlatFee.Text))) {
-				QFRadioGroup.SelectedIndex	= 0;
-				txtCommission.ReadOnly		= false;
-			  	txtFlatFee.ReadOnly			= true;
-				txtCommRev.ReadOnly			= false;
-				
-			}
-			else {
-				QFRadioGroup.SelectedIndex	= 0;
-				txtCommission.ReadOnly		= false;
-				txtFlatFee.ReadOnly			= true;
-				txtCommRev.ReadOnly			= false;				
-			}
+
 			
 			
 			if ((QFRadioGroup.SelectedIndex==0) &(!string.IsNullOrEmpty(txtCommRev.Text)) & (!string.IsNullOrEmpty(txtDropOff.Text)) & (!string.IsNullOrEmpty(txtCommission.Text)))
 			{
-				double vres = (double.Parse(txtCommRev.Text)*double.Parse(txtCommission.Text))-((double.Parse(txtCommRev.Text)*double.Parse(txtCommission.Text))*(double.Parse(txtDropOff.Text)));
+				double vres = (double.Parse(txtCommRev.Text)*(double.Parse(txtCommission.Text)/100))-((double.Parse(txtCommRev.Text)*(double.Parse(txtCommission.Text)/100))*(double.Parse(txtDropOff.Text)));
 				txtAnticRevenue.Text = vres.ToString();
 			}
 			
@@ -650,12 +611,18 @@ catch
       </Properties>
       <ControlDefinition>
         <Properties>
-          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFRadioGroup, Sage.Platform.QuickForms.QFControls"><QFRadioGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>2</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFRadioGroup</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><SelectedIndex>0</SelectedIndex><Items><Item><Key>QFRadioGroup_item0.Value</Key><Value>Commission</Value></Item><Item><Key>QFRadioGroup_item1.Value</Key><Value>FlatFee</Value></Item></Items><OnChangeAction><ResourceKey>QFRadioGroup</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[if (QFRadioGroup.SelectedIndex==0){
+          <Property name="Control" type="Sage.Platform.QuickForms.QFControls.QFRadioGroup, Sage.Platform.QuickForms.QFControls"><QFRadioGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"><Column>0</Column><Row>2</Row><IsReadOnly>false</IsReadOnly><HotKey>0</HotKey><TabIndex>0</TabIndex><ControlId>QFRadioGroup</ControlId><DataBindings /><ControlLabelPlacement>left</ControlLabelPlacement><CaptionAlignment>left</CaptionAlignment><StyleScheme /><SelectedIndex>0</SelectedIndex><Items><Item><Key>QFRadioGroup_item0.Value</Key><Value>Commission</Value></Item><Item><Key>QFRadioGroup_item1.Value</Key><Value>FlatFee</Value></Item></Items><OnChangeAction><ResourceKey>QFRadioGroup</ResourceKey><RootActionName>CSharpSnippetAction</RootActionName><Action><CSharpCodeSnippet><![CDATA[Sage.Entity.Interfaces.ISalesorderdetail soitem = BindingSource.Current as Sage.Entity.Interfaces.ISalesorderdetail;	
+if (QFRadioGroup.SelectedIndex==0){
 	txtCommission.ReadOnly	= false;
 	txtAvgRoomRate.ReadOnly	= false;
 	txtFlatFee.Text = "";
 	txtFlatFee.ReadOnly		= true;
 	txtCommRev.ReadOnly = false;
+	
+		soitem.Commission = 10;
+	soitem.Discount = 0.15;
+	soitem.Other_fees = 0;
+	
 }
 else{
 	txtFlatFee.ReadOnly		= false;
@@ -664,6 +631,9 @@ else{
 	txtCommission.Text = "";
 	txtCommRev.Text = "";
 	txtCommRev.ReadOnly = true;
+	
+	soitem.Commission = 0;
+	soitem.Discount = 0.15;
 }]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><DataSource /><TextField /><ValueField /></QFRadioGroup></Property>
         </Properties>
       </ControlDefinition>
@@ -738,7 +708,7 @@ if (!string.IsNullOrEmpty(screent)){
 
 
 
-]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Percent</FormatType></QFSLXNumeric></Property>
+]]></CSharpCodeSnippet></Action><IsDialogCloseAction>False</IsDialogCloseAction><RunOnEveryRePaint>False</RunOnEveryRePaint><DialogActionResult>NoResult</DialogActionResult><PerformsUpdate>False</PerformsUpdate><AppliedSecurity /></OnChangeAction><FormatType>Number</FormatType></QFSLXNumeric></Property>
         </Properties>
       </ControlDefinition>
     </QuickFormElement>
